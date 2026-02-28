@@ -16,11 +16,14 @@
         :root {
             --ember-orange: #E8541E;
             --ember-amber: #F4900C;
-            --ember-dark: #1A1A2E;
-            --ember-charcoal: #2D2D3A;
-            --ember-light: #F8F8FA;
-            --ember-gray: #6B7280;
-            --ember-white: #FFFFFF;
+            --ember-dark: #0D0D14;
+            --ember-charcoal: #1A1A2E;
+            --ember-light: #141420;
+            --ember-gray: #9CA3AF;
+            --ember-white: #E8E8ED;
+            --ember-bg: #0D0D14;
+            --ember-card: #1A1A2E;
+            --ember-border: rgba(255,255,255,0.06);
         }
 
         * {
@@ -31,8 +34,8 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: var(--ember-dark);
-            background: var(--ember-white);
+            color: var(--ember-white);
+            background: var(--ember-bg);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
@@ -47,9 +50,9 @@
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: rgba(255,255,255,0.95);
+            background: rgba(13,13,20,0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid var(--ember-border);
         }
 
         .logo {
@@ -75,7 +78,7 @@
         .logo-text {
             font-weight: 700;
             font-size: 1.25rem;
-            color: var(--ember-dark);
+            color: var(--ember-white);
         }
 
         .logo-text span {
@@ -107,14 +110,14 @@
 
         .hero-badge {
             display: inline-block;
-            background: rgba(232, 84, 30, 0.08);
+            background: rgba(232, 84, 30, 0.12);
             color: var(--ember-orange);
             padding: 0.4rem 1rem;
             border-radius: 50px;
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            border: 1px solid rgba(232, 84, 30, 0.15);
+            border: 1px solid rgba(232, 84, 30, 0.2);
         }
 
         .hero h1 {
@@ -123,7 +126,7 @@
             line-height: 1.1;
             margin-bottom: 1.5rem;
             letter-spacing: -0.03em;
-            color: var(--ember-dark);
+            color: var(--ember-white);
         }
 
         .hero h1 .highlight {
@@ -203,12 +206,13 @@
         }
 
         .section-dark {
-            background: var(--ember-dark);
+            background: #090910;
             color: var(--ember-white);
         }
 
         .section-light {
             background: var(--ember-light);
+            color: var(--ember-white);
         }
 
         .container {
@@ -240,7 +244,7 @@
         }
 
         .section-dark p.lead {
-            color: #9CA3AF;
+            color: #7B8290;
         }
 
         /* FEATURES GRID */
@@ -252,22 +256,22 @@
         }
 
         .feature {
-            background: var(--ember-white);
+            background: var(--ember-card);
             padding: 2rem;
             border-radius: 12px;
-            border: 1px solid rgba(0,0,0,0.06);
+            border: 1px solid var(--ember-border);
             transition: all 0.2s;
         }
 
         .feature:hover {
-            border-color: rgba(232, 84, 30, 0.2);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-color: rgba(232, 84, 30, 0.3);
+            box-shadow: 0 4px 20px rgba(232, 84, 30, 0.1);
         }
 
         .feature-icon {
             width: 48px;
             height: 48px;
-            background: rgba(232, 84, 30, 0.08);
+            background: rgba(232, 84, 30, 0.12);
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -541,7 +545,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer style="border-top: 1px solid var(--ember-border);">
         <p>© 2026 Ember SEO. Built in Santa Cruz, CA. <a href="mailto:hello@emberseo.ai">hello@emberseo.ai</a></p>
     </footer>
 
