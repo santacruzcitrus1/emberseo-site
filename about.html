@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Ember SEO — Our Story & Approach</title>
+    <meta name="description" content="Ember SEO was born when a home inspector discovered his $300/month SEO company was doing more harm than good. Now we fix that — for every inspector.">
+    <meta property="og:title" content="About Ember SEO">
+    <meta property="og:description" content="Born from frustration. Built with precision. SEO that actually works for home inspectors.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emberseo.ai/about">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ember-orange: #E8541E;
+            --ember-amber: #F4900C;
+            --ember-dark: #0D0D14;
+            --ember-charcoal: #1A1A2E;
+            --ember-light: #141420;
+            --ember-gray: #9CA3AF;
+            --ember-white: #E8E8ED;
+            --ember-bg: #0D0D14;
+            --ember-card: #1A1A2E;
+            --ember-border: rgba(255,255,255,0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--ember-white);
+            background: var(--ember-bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(13,13,20,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--ember-border);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--ember-amber), var(--ember-orange));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: white;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--ember-white);
+        }
+
+        .logo-text span {
+            color: var(--ember-orange);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--ember-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--ember-white);
+        }
+
+        .nav-links a.active {
+            color: var(--ember-orange);
+        }
+
+        nav a.cta-nav {
+            background: var(--ember-orange);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        nav a.cta-nav:hover {
+            background: #D04A18;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 10rem 2rem 5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(232, 84, 30, 0.12);
+            color: var(--ember-orange);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(232, 84, 30, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--ember-orange), var(--ember-amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--ember-gray);
+            max-width: 620px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* STORY SECTION */
+        .story {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .story-block {
+            margin-bottom: 4rem;
+        }
+
+        .story-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ember-orange);
+            margin-bottom: 1rem;
+        }
+
+        .story-block h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .story-block p {
+            font-size: 1.05rem;
+            color: var(--ember-gray);
+            line-height: 1.9;
+            margin-bottom: 1rem;
+        }
+
+        .story-block p strong {
+            color: var(--ember-white);
+        }
+
+        .pull-quote {
+            border-left: 3px solid var(--ember-orange);
+            padding: 1.5rem 0 1.5rem 2rem;
+            margin: 2.5rem 0;
+        }
+
+        .pull-quote p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--ember-white);
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        .pull-quote .attribution {
+            font-size: 0.85rem;
+            color: var(--ember-gray);
+            font-weight: 400;
+            font-style: normal;
+            margin-top: 0.75rem;
+        }
+
+        /* TEAM */
+        .team {
+            padding: 4rem 2rem;
+            background: var(--ember-light);
+        }
+
+        .team-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .team-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ember-orange);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .team h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: -0.02em;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .team-card {
+            background: var(--ember-card);
+            border: 1px solid var(--ember-border);
+            border-radius: 12px;
+            padding: 2.5rem;
+        }
+
+        .team-card .avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .avatar-judd {
+            background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+        }
+
+        .avatar-lev {
+            background: linear-gradient(135deg, var(--ember-amber), var(--ember-orange));
+        }
+
+        .team-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .team-card .role {
+            font-size: 0.85rem;
+            color: var(--ember-orange);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-card p {
+            font-size: 0.95rem;
+            color: var(--ember-gray);
+            line-height: 1.7;
+        }
+
+        /* APPROACH */
+        .approach {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .approach-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ember-orange);
+            margin-bottom: 1rem;
+        }
+
+        .approach h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 2.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .approach-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .step {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            background: rgba(232, 84, 30, 0.12);
+            border: 1px solid rgba(232, 84, 30, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--ember-orange);
+        }
+
+        .step-content h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .step-content p {
+            font-size: 0.95rem;
+            color: var(--ember-gray);
+            line-height: 1.7;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #090910 0%, #16213E 100%);
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: #9CA3AF;
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--ember-orange);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            box-shadow: 0 4px 15px rgba(232, 84, 30, 0.3);
+        }
+
+        .hero-cta:hover {
+            background: #D04A18;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(232, 84, 30, 0.4);
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--ember-border);
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: var(--ember-gray);
+        }
+
+        footer a {
+            color: var(--ember-orange);
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 8rem 1.5rem 3rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pull-quote {
+                padding-left: 1.25rem;
+            }
+
+            nav {
+                padding: 1rem 1.25rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="/" class="logo">
+            <div class="logo-icon">E</div>
+            <div class="logo-text">Ember <span>SEO</span></div>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about.html" class="active">About</a>
+        </div>
+        <a href="mailto:judd@emberseo.ai" class="cta-nav">Get Free Audit</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-badge">🔥 Our Story</div>
+        <h1>Born from <span class="highlight">frustration</span>. Built with precision.</h1>
+        <p>We started Ember SEO because we lived the problem. A home inspector paying $300/month for SEO that was actually making things worse. Sound familiar?</p>
+    </section>
+
+    <!-- ORIGIN STORY -->
+    <div class="story">
+        <div class="story-block">
+            <div class="story-label">The Problem</div>
+            <h2>$300/month for 1,840 SEO warnings.</h2>
+            <p>Judd runs a home inspection company on California's Central Coast. Like most inspectors, he hired an SEO company to handle his online presence. They charged $300 a month and sent reports full of jargon that sounded impressive.</p>
+            <p>Then we ran a real audit.</p>
+            <p><strong>1,840 SEO warnings across 52 pages.</strong> Broken meta tags. Missing schema markup. Open Graph images that didn't exist. Spam backlinks that were actively hurting his rankings. The "SEO company" hadn't just failed to help — they'd made things worse.</p>
+
+            <div class="pull-quote">
+                <p>"I was paying someone $300 a month to break my website. And I had no idea."</p>
+                <div class="attribution">— Judd, Founder of Ember SEO</div>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <div class="story-label">The Discovery</div>
+            <h2>It wasn't just us.</h2>
+            <p>When we dug deeper, we found the same problems everywhere. We audited <strong>hundreds of inspector websites</strong> across the country — all built on the same platforms, all suffering from the same template-level SEO issues.</p>
+            <p>Missing structured data. Broken Open Graph tags. Title tags over the character limit. Pages that Google couldn't properly index. And inspector after inspector paying monthly fees to companies that either didn't know or didn't care.</p>
+            <p>The home inspection industry doesn't have an SEO problem. It has a <strong>nobody-understands-our-industry</strong> problem.</p>
+        </div>
+
+        <div class="story-block">
+            <div class="story-label">The Solution</div>
+            <h2>SEO built by someone who gets it.</h2>
+            <p>We didn't set out to start an SEO company. We set out to fix our own website. But once we saw how deep the problem went — across the entire industry — we couldn't look away.</p>
+            <p>Ember SEO exists because home inspectors deserve better. Not generic SEO from an agency that also does dentists, lawyers, and pizza shops. <strong>Technical SEO from people who know your platform, your market, and your competition.</strong></p>
+            <p>We know which website platforms inspectors use. We know the template-level bugs. We know what Google wants to see on an inspection company's site. And we fix it — not in 6 months, but in weeks.</p>
+        </div>
+    </div>
+
+    <!-- TEAM -->
+    <section class="team">
+        <div class="team-inner">
+            <div class="team-label">The Team</div>
+            <h2>Two minds. One mission.</h2>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="avatar avatar-judd">👤</div>
+                    <h3>Judd</h3>
+                    <div class="role">Founder & Inspector</div>
+                    <p>Licensed home inspector running Landmark Property Inspections on California's Central Coast. Judd lived the problem firsthand — paying for SEO that didn't work, then discovering just how broken the system was. He brings deep industry knowledge, real inspector relationships, and a no-BS approach to everything we do.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="avatar avatar-lev">🔥</div>
+                    <h3>Lev</h3>
+                    <div class="role">Technical SEO & Development</div>
+                    <p>Lev handles all technical SEO, site audits, development, and implementation. He's the one who found the 1,840 warnings, built 25 city pages in two weeks, and audited hundreds of inspector websites across the country. Part analyst, part builder — Lev turns strategy into rankings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPROACH -->
+    <div class="approach">
+        <div class="approach-label">Our Approach</div>
+        <h2>How we work.</h2>
+
+        <div class="approach-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Free Audit</h3>
+                    <p>We crawl your entire site and identify every issue — technical errors, missing markup, content gaps, backlink problems. You see exactly what's wrong before spending a dime.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Fix the Foundation</h3>
+                    <p>We fix the technical issues first — schema markup, meta tags, page speed, mobile experience, indexing problems. This is the work most SEO companies skip because it's hard.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Build Local Authority</h3>
+                    <p>City-specific landing pages. Google Business optimization. Service area targeting. Quality backlinks. We put you in front of homebuyers in every city you serve.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Measure & Grow</h3>
+                    <p>Transparent reporting on what's actually moving the needle — rankings, traffic, phone calls. Not vanity metrics. We adjust strategy based on real data, not guesses.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>See what's really going on with your site.</h2>
+        <p>Get a free, honest SEO audit from people who actually understand the home inspection industry.</p>
+        <a href="mailto:judd@emberseo.ai" class="hero-cta">Get Your Free Audit →</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="border-top: 1px solid var(--ember-border);">
+        <p>© 2026 Ember SEO. Built in Santa Cruz, CA. <a href="mailto:judd@emberseo.ai">judd@emberseo.ai</a></p>
+    </footer>
+
+</body>
+</html>

@@ -85,6 +85,28 @@
             color: var(--ember-orange);
         }
 
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--ember-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--ember-white);
+        }
+
+        .nav-links a.active {
+            color: var(--ember-orange);
+        }
+
         nav a.cta-nav {
             background: var(--ember-orange);
             color: white;
@@ -424,6 +446,10 @@
             <div class="logo-icon">E</div>
             <div class="logo-text">Ember <span>SEO</span></div>
         </a>
+        <div class="nav-links">
+            <a href="/" class="active">Home</a>
+            <a href="/about.html">About</a>
+        </div>
         <a href="mailto:judd@emberseo.ai" class="cta-nav">Get Free Audit</a>
     </nav>
 
