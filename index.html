@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ember SEO | Technical SEO for Home Inspectors</title>
+    <meta name="description" content="Ember SEO helps home inspection companies rank higher, get found locally, and turn clicks into booked inspections. Built by inspectors, powered by AI.">
+    <meta property="og:title" content="Ember SEO | Technical SEO for Home Inspectors">
+    <meta property="og:description" content="Technical SEO built specifically for the home inspection industry. Real results, not reports.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emberseo.ai">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ember-orange: #E8541E;
+            --ember-amber: #F4900C;
+            --ember-dark: #1A1A2E;
+            --ember-charcoal: #2D2D3A;
+            --ember-light: #F8F8FA;
+            --ember-gray: #6B7280;
+            --ember-white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--ember-dark);
+            background: var(--ember-white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--ember-amber), var(--ember-orange));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: white;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--ember-dark);
+        }
+
+        .logo-text span {
+            color: var(--ember-orange);
+        }
+
+        nav a.cta-nav {
+            background: var(--ember-orange);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        nav a.cta-nav:hover {
+            background: #D04A18;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 10rem 2rem 6rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(232, 84, 30, 0.08);
+            color: var(--ember-orange);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(232, 84, 30, 0.15);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+            color: var(--ember-dark);
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--ember-orange), var(--ember-amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--ember-gray);
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--ember-orange);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            box-shadow: 0 4px 15px rgba(232, 84, 30, 0.3);
+        }
+
+        .hero-cta:hover {
+            background: #D04A18;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(232, 84, 30, 0.4);
+        }
+
+        .hero-sub {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--ember-gray);
+        }
+
+        /* STATS BAR */
+        .stats {
+            max-width: 800px;
+            margin: 0 auto 5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--ember-orange), var(--ember-amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--ember-gray);
+            margin-top: 0.25rem;
+        }
+
+        /* PROBLEM/SOLUTION */
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        .section-dark {
+            background: var(--ember-dark);
+            color: var(--ember-white);
+        }
+
+        .section-light {
+            background: var(--ember-light);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ember-orange);
+            margin-bottom: 0.75rem;
+        }
+
+        .section h2 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section p.lead {
+            font-size: 1.1rem;
+            color: var(--ember-gray);
+            max-width: 700px;
+            line-height: 1.8;
+        }
+
+        .section-dark p.lead {
+            color: #9CA3AF;
+        }
+
+        /* FEATURES GRID */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            background: var(--ember-white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.06);
+            transition: all 0.2s;
+        }
+
+        .feature:hover {
+            border-color: rgba(232, 84, 30, 0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(232, 84, 30, 0.08);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature p {
+            font-size: 0.95rem;
+            color: var(--ember-gray);
+            line-height: 1.7;
+        }
+
+        /* WHY DIFFERENT */
+        .diff-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .diff-col h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--ember-white);
+        }
+
+        .diff-item {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+            align-items: flex-start;
+        }
+
+        .diff-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            margin-top: 2px;
+        }
+
+        .diff-icon.bad {
+            background: rgba(239, 68, 68, 0.15);
+            color: #EF4444;
+        }
+
+        .diff-icon.good {
+            background: rgba(34, 197, 94, 0.15);
+            color: #22C55E;
+        }
+
+        .diff-item span {
+            font-size: 0.95rem;
+            color: #9CA3AF;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--ember-dark) 0%, #16213E 100%);
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-section p {
+            font-size: 1.15rem;
+            color: #9CA3AF;
+            margin-bottom: 2.5rem;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-section .hero-cta {
+            font-size: 1.15rem;
+            padding: 1.1rem 2.5rem;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: var(--ember-gray);
+        }
+
+        footer a {
+            color: var(--ember-orange);
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero {
+                padding: 8rem 1.5rem 4rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .diff-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section h2 {
+                font-size: 1.75rem;
+            }
+
+            nav {
+                padding: 1rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="/" class="logo">
+            <div class="logo-icon">E</div>
+            <div class="logo-text">Ember <span>SEO</span></div>
+        </a>
+        <a href="mailto:hello@emberseo.ai" class="cta-nav">Get Free Audit</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-badge">🔥 Built for Home Inspectors</div>
+        <h1>Your website should <span class="highlight">book inspections</span>, not just exist.</h1>
+        <p>Most inspector websites are invisible on Google. We fix that. Technical SEO built specifically for the home inspection industry — real rankings, real leads, real results.</p>
+        <a href="mailto:hello@emberseo.ai" class="hero-cta">Get Your Free SEO Audit →</a>
+        <p class="hero-sub">No contracts. No fluff. See what's broken before you spend a dime.</p>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-number">1,840+</div>
+            <div class="stat-label">SEO issues found in a typical inspector site</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">73%</div>
+            <div class="stat-label">of inspectors are invisible in local search</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">25+</div>
+            <div class="stat-label">city pages built for one client in 2 weeks</div>
+        </div>
+    </div>
+
+    <!-- WHAT WE DO -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-label">What We Do</div>
+            <h2>SEO that actually moves the needle.</h2>
+            <p class="lead">We don't send you a 50-page report and disappear. We diagnose, fix, and build — so your phone rings more.</p>
+
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Technical SEO Audit</h3>
+                    <p>We crawl every page, check your schema, meta tags, load speed, mobile experience, and indexing — then tell you exactly what's costing you rankings.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📍</div>
+                    <h3>Local Search Dominance</h3>
+                    <p>City pages, Google Business optimization, local schema markup, and service area targeting that puts you in front of homebuyers in your territory.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Content & Authority</h3>
+                    <p>Blog posts, backlink campaigns, and FAQ content that builds your authority with Google and trust with homeowners — written by people who understand inspections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY DIFFERENT -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-label">Why We're Different</div>
+            <h2>Not another generic SEO agency.</h2>
+            <p class="lead">We only work with home inspectors. We know your market, your competition, and your website platform inside and out.</p>
+
+            <div class="diff-grid">
+                <div class="diff-col">
+                    <h3>Typical SEO Company</h3>
+                    <div class="diff-item">
+                        <div class="diff-icon bad">✕</div>
+                        <span>Generic strategy for every industry</span>
+                    </div>
+                    <div class="diff-item">
+                        <div class="diff-icon bad">✕</div>
+                        <span>Monthly reports you never read</span>
+                    </div>
+                    <div class="diff-item">
+                        <div class="diff-icon bad">✕</div>
+                        <span>$300/month for vague "optimization"</span>
+                    </div>
+                    <div class="diff-item">
+                        <div class="diff-icon bad">✕</div>
+                        <span>No idea how Spectora or ISN works</span>
+                    </div>
+                    <div class="diff-item">
+                        <div class="diff-icon bad">✕</div>
+                        <span>Buys spammy backlinks that hurt you</span>
+                    </div>
+                </div>
+                <div class="diff-col">
+                    <h3>Ember SEO</h3>
+                    <div class="diff-item">
+                        <div class="diff-icon good">✓</div>
+                        <span>Built exclusively for home inspectors</span>
+                    </div>
+                    <div class="diff-item">
+                        <div class="diff-icon good">✓</div>
+                        <span>You see the work — live, in real-time</span>
+                    </div>
+                    <div class="diff-item">
+                        <div class="diff-icon good">✓</div>
+                        <span>Transparent pricing, measurable results</span>
+                    </div>
+                    <div class="diff-item">
+                        <div class="diff-icon good">✓</div>
+                        <span>Deep knowledge of inspector website platforms</span>
+                    </div>
+                    <div class="diff-item">
+                        <div class="diff-icon good">✓</div>
+                        <span>Clean, white-hat SEO that compounds over time</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Ready to get found?</h2>
+        <p>Get a free, no-obligation SEO audit of your inspection website. We'll show you exactly what's holding you back — and what to do about it.</p>
+        <a href="mailto:hello@emberseo.ai" class="hero-cta">Get Your Free Audit →</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Ember SEO. Built in Santa Cruz, CA. <a href="mailto:hello@emberseo.ai">hello@emberseo.ai</a></p>
+    </footer>
+
+</body>
+</html>
