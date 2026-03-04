@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Onboarding | Ember SEO</title>
+    <meta name="description" content="Welcome to Ember SEO. Tell us about your business, your market, and your goals — so we can build SEO that actually fits.">
+    <meta property="og:title" content="Client Onboarding | Ember SEO">
+    <meta property="og:description" content="Tell us about your inspection business so we can build SEO that works for your market.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emberseo.ai/onboarding">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/png" href="assets/ember-icon.png">
+    <link rel="apple-touch-icon" href="assets/ember-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ember-orange: #E8541E;
+            --ember-amber: #F4900C;
+            --ember-dark: #0D0D14;
+            --ember-charcoal: #1A1A2E;
+            --ember-light: #141420;
+            --ember-gray: #9CA3AF;
+            --ember-white: #E8E8ED;
+            --ember-bg: #0D0D14;
+            --ember-card: #1A1A2E;
+            --ember-border: rgba(255,255,255,0.06);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--ember-white);
+            background: var(--ember-bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(13,13,20,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--ember-border);
+        }
+
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+
+        .nav-links { display: flex; align-items: center; gap: 2rem; }
+        .nav-links a {
+            color: var(--ember-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--ember-white); }
+        .nav-links a.active { color: var(--ember-orange); }
+
+        nav a.cta-nav {
+            background: var(--ember-orange);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        nav a.cta-nav:hover { background: #D04A18; }
+
+        /* HERO */
+        .hero {
+            padding: 8rem 2rem 3rem;
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(232, 84, 30, 0.12);
+            color: var(--ember-orange);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(232, 84, 30, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--ember-orange), var(--ember-amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            color: var(--ember-gray);
+            font-size: 1.1rem;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        /* PROGRESS BAR */
+        .progress-container {
+            max-width: 720px;
+            margin: 0 auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .progress-bar {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .progress-step {
+            flex: 1;
+            height: 4px;
+            background: var(--ember-charcoal);
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .progress-step.active {
+            background: var(--ember-orange);
+        }
+
+        .progress-step.completed {
+            background: var(--ember-amber);
+        }
+
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--ember-gray);
+        }
+
+        .progress-labels span.active {
+            color: var(--ember-orange);
+            font-weight: 600;
+        }
+
+        /* FORM */
+        .form-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .form-section {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .form-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-header {
+            margin-bottom: 2rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--ember-gray);
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--ember-white);
+        }
+
+        .form-group label .optional {
+            color: var(--ember-gray);
+            font-weight: 400;
+            font-size: 0.8rem;
+        }
+
+        .form-group label .hint {
+            display: block;
+            color: var(--ember-gray);
+            font-weight: 400;
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background: var(--ember-charcoal);
+            border: 1px solid var(--ember-border);
+            border-radius: 8px;
+            color: var(--ember-white);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+            outline: none;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: var(--ember-orange);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239CA3AF' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+        }
+
+        select option {
+            background: var(--ember-charcoal);
+            color: var(--ember-white);
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.7rem 1rem;
+            background: var(--ember-charcoal);
+            border: 1px solid var(--ember-border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .checkbox-item:hover {
+            border-color: rgba(232, 84, 30, 0.3);
+        }
+
+        .checkbox-item.checked {
+            border-color: var(--ember-orange);
+            background: rgba(232, 84, 30, 0.08);
+        }
+
+        .checkbox-item input {
+            display: none;
+        }
+
+        .checkbox-item .checkmark {
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--ember-gray);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+
+        .checkbox-item.checked .checkmark {
+            background: var(--ember-orange);
+            border-color: var(--ember-orange);
+        }
+
+        .checkbox-item.checked .checkmark::after {
+            content: '✓';
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* FILE UPLOAD */
+        .file-upload {
+            border: 2px dashed var(--ember-border);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .file-upload:hover {
+            border-color: rgba(232, 84, 30, 0.4);
+            background: rgba(232, 84, 30, 0.03);
+        }
+
+        .file-upload.dragover {
+            border-color: var(--ember-orange);
+            background: rgba(232, 84, 30, 0.06);
+        }
+
+        .file-upload-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .file-upload p {
+            color: var(--ember-gray);
+            font-size: 0.9rem;
+        }
+
+        .file-upload p span {
+            color: var(--ember-orange);
+            font-weight: 600;
+        }
+
+        .file-upload input {
+            display: none;
+        }
+
+        .uploaded-files {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .uploaded-file {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--ember-charcoal);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+        }
+
+        .uploaded-file .remove {
+            color: var(--ember-gray);
+            cursor: pointer;
+            font-size: 1rem;
+            line-height: 1;
+        }
+
+        .uploaded-file .remove:hover {
+            color: var(--ember-orange);
+        }
+
+        /* BUTTONS */
+        .form-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--ember-border);
+        }
+
+        .btn {
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-next {
+            background: var(--ember-orange);
+            color: white;
+        }
+
+        .btn-next:hover {
+            background: #D04A18;
+        }
+
+        .btn-back {
+            background: transparent;
+            color: var(--ember-gray);
+            border: 1px solid var(--ember-border);
+        }
+
+        .btn-back:hover {
+            color: var(--ember-white);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, var(--ember-orange), var(--ember-amber));
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+        }
+
+        .btn-submit:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        /* SUCCESS */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .success-message.active {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .success-message h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .success-message p {
+            color: var(--ember-gray);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--ember-gray);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--ember-orange);
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav { padding: 1rem; }
+            nav a.cta-nav { display: none; }
+            .nav-links { gap: 1rem; }
+            .hero { padding: 7rem 1.5rem 2rem; }
+            .hero h1 { font-size: 1.75rem; }
+            .form-container { padding: 0 1.5rem 3rem; }
+            .form-row { grid-template-columns: 1fr; }
+            .checkbox-group { grid-template-columns: 1fr; }
+            .progress-labels { font-size: 0.65rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="/" class="logo">
+            <img src="assets/ember-wordmark.png" alt="Ember SEO" style="height: 45px;">
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+        </div>
+        <a href="mailto:judd@emberseo.ai" class="cta-nav">Contact</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-badge">🔥 Welcome to Ember</div>
+        <h1>Let's build SEO that <span class="highlight">fits your market</span></h1>
+        <p>This takes about 10 minutes. The more you tell us, the better your content and strategy will be — because generic SEO is dead SEO.</p>
+    </section>
+
+    <!-- PROGRESS -->
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress-step active" data-step="1"></div>
+            <div class="progress-step" data-step="2"></div>
+            <div class="progress-step" data-step="3"></div>
+            <div class="progress-step" data-step="4"></div>
+            <div class="progress-step" data-step="5"></div>
+        </div>
+        <div class="progress-labels">
+            <span class="active">Your Business</span>
+            <span>Your Market</span>
+            <span>Your Customers</span>
+            <span>Brand & Content</span>
+            <span>Access</span>
+        </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-container">
+        <form id="onboardingForm">
+
+            <!-- STEP 1: YOUR BUSINESS -->
+            <div class="form-section active" data-step="1">
+                <div class="section-header">
+                    <h2>📋 Tell us about your business</h2>
+                    <p>The basics — who you are and where you work.</p>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" name="company_name" placeholder="e.g. Landmark Property Inspections" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" name="owner_name" placeholder="e.g. Judd Bergman" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="you@yourcompany.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" placeholder="(555) 123-4567">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Website URL</label>
+                    <input type="url" name="website" placeholder="https://www.yoursite.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>How long have you been in business?</label>
+                    <select name="years_in_business">
+                        <option value="">Select...</option>
+                        <option value="less_than_1">Less than 1 year</option>
+                        <option value="1_3">1–3 years</option>
+                        <option value="3_5">3–5 years</option>
+                        <option value="5_10">5–10 years</option>
+                        <option value="10_plus">10+ years</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Service Areas <span class="hint">List every city, county, or region you serve. The more specific, the better.</span></label>
+                    <textarea name="service_areas" placeholder="e.g. Santa Cruz, Capitola, Scotts Valley, Aptos, Watsonville, Soquel, all of Santa Cruz County..." rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Certifications & Specialties <span class="hint">Check all that apply</span></label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="certs" value="internachi">
+                            <span class="checkmark"></span>
+                            InterNACHI
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="certs" value="ashi">
+                            <span class="checkmark"></span>
+                            ASHI
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="certs" value="creia">
+                            <span class="checkmark"></span>
+                            CREIA
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="certs" value="radon">
+                            <span class="checkmark"></span>
+                            Radon Testing
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="certs" value="mold">
+                            <span class="checkmark"></span>
+                            Mold Inspection
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="certs" value="sewer">
+                            <span class="checkmark"></span>
+                            Sewer Scope
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="certs" value="thermal">
+                            <span class="checkmark"></span>
+                            Thermal Imaging
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="certs" value="wind_mit">
+                            <span class="checkmark"></span>
+                            Wind Mitigation
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="certs" value="4point">
+                            <span class="checkmark"></span>
+                            4-Point Inspection
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="certs" value="commercial">
+                            <span class="checkmark"></span>
+                            Commercial
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="certs" value="pool_spa">
+                            <span class="checkmark"></span>
+                            Pool & Spa
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="certs" value="new_construction">
+                            <span class="checkmark"></span>
+                            New Construction
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Other certifications or specialties? <span class="optional">(optional)</span></label>
+                    <input type="text" name="other_certs" placeholder="e.g. Drone roof inspections, stucco, foundation specialist...">
+                </div>
+
+                <div class="form-group">
+                    <label>What makes you different from other inspectors in your area?
+                        <span class="hint">This is important — it shapes everything we write about you. What do clients tell you they love? What's your edge?</span>
+                    </label>
+                    <textarea name="differentiator" placeholder="e.g. I've been in construction for 20 years so I see things other inspectors miss. I include thermal imaging on every inspection at no extra charge..." rows="4"></textarea>
+                </div>
+
+                <div class="form-nav">
+                    <div></div>
+                    <button type="button" class="btn btn-next" onclick="nextStep()">Next: Your Market →</button>
+                </div>
+            </div>
+
+            <!-- STEP 2: YOUR MARKET -->
+            <div class="form-section" data-step="2">
+                <div class="section-header">
+                    <h2>🏠 Tell us about your market</h2>
+                    <p>This is what makes our content real instead of generic. Nobody knows your area like you do.</p>
+                </div>
+
+                <div class="form-group">
+                    <label>What types of homes are most common in your area?
+                        <span class="hint">Think about age, style, construction — whatever you see most on inspections.</span>
+                    </label>
+                    <textarea name="housing_stock" placeholder="e.g. Lots of 1950s-70s ranch homes with pier and beam foundations. Some newer construction in the subdivisions. A few Victorian-era homes downtown..." rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>What are the most common issues you find during inspections?
+                        <span class="hint">The things you write up on almost every report. This becomes incredible content.</span>
+                    </label>
+                    <textarea name="common_issues" placeholder="e.g. Moisture intrusion in crawl spaces, old electrical panels (Federal Pacific), wood-destroying organisms, roof wear from coastal weather..." rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Any local factors that affect homes in your area?
+                        <span class="hint">Climate, soil, pests, flood zones, wildfire risk, earthquake, coastal exposure, etc.</span>
+                    </label>
+                    <textarea name="local_factors" placeholder="e.g. Sandy soil near the coast causes foundation settling. High moisture from fog means mold is always a concern. We're in a wildfire zone so defensible space matters..." rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Who are your main competitors? <span class="hint">Names, websites, or just general description.</span></label>
+                    <textarea name="competitors" placeholder="e.g. Apex Inspections (they do a lot of marketing), Martin Hewitt (been around forever, has 3 websites)..." rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Where does most of your business come from today?</label>
+                    <select name="lead_source">
+                        <option value="">Select primary source...</option>
+                        <option value="agent_referrals">Real estate agent referrals</option>
+                        <option value="google">Google / search engines</option>
+                        <option value="word_of_mouth">Word of mouth</option>
+                        <option value="social_media">Social media</option>
+                        <option value="directories">Directories (Yelp, Angi, etc.)</option>
+                        <option value="mixed">Mix of several sources</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Anything else about your local market we should know? <span class="optional">(optional)</span>
+                        <span class="hint">Hot neighborhoods, seasonal trends, new developments, local quirks — anything helps.</span>
+                    </label>
+                    <textarea name="market_notes" placeholder="e.g. The westside is where all the high-value homes are. Summer is our busy season because of tourism buyers. There's a big new development going in on the north side..." rows="3"></textarea>
+                </div>
+
+                <div class="form-nav">
+                    <button type="button" class="btn btn-back" onclick="prevStep()">← Back</button>
+                    <button type="button" class="btn btn-next" onclick="nextStep()">Next: Your Customers →</button>
+                </div>
+            </div>
+
+            <!-- STEP 3: YOUR CUSTOMERS -->
+            <div class="form-section" data-step="3">
+                <div class="section-header">
+                    <h2>👥 Tell us about your customers</h2>
+                    <p>Understanding who books inspections in your area helps us write content that speaks to them.</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Who are your typical clients? <span class="hint">Check all that apply</span></label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="clients" value="first_time_buyers">
+                            <span class="checkmark"></span>
+                            First-time homebuyers
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="clients" value="repeat_buyers">
+                            <span class="checkmark"></span>
+                            Repeat / move-up buyers
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="clients" value="investors">
+                            <span class="checkmark"></span>
+                            Real estate investors
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="clients" value="sellers">
+                            <span class="checkmark"></span>
+                            Sellers (pre-listing)
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="clients" value="agents">
+                            <span class="checkmark"></span>
+                            Real estate agents
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheck(this)">
+                            <input type="checkbox" name="clients" value="commercial">
+                            <span class="checkmark"></span>
+                            Commercial clients
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What's the average home price in your market?</label>
+                    <select name="avg_home_price">
+                        <option value="">Select range...</option>
+                        <option value="under_200k">Under $200,000</option>
+                        <option value="200_400k">$200,000 – $400,000</option>
+                        <option value="400_600k">$400,000 – $600,000</option>
+                        <option value="600k_1m">$600,000 – $1,000,000</option>
+                        <option value="over_1m">Over $1,000,000</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>What questions do your clients ask most?
+                        <span class="hint">These become FAQ content and blog topics — the stuff people are actually searching for.</span>
+                    </label>
+                    <textarea name="client_questions" placeholder="e.g. How long does an inspection take? What's included? Should I be there? What happens if you find something bad? Do you check the roof?" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>How many inspections do you typically do per month?</label>
+                    <select name="monthly_inspections">
+                        <option value="">Select range...</option>
+                        <option value="1_5">1–5</option>
+                        <option value="5_10">5–10</option>
+                        <option value="10_20">10–20</option>
+                        <option value="20_40">20–40</option>
+                        <option value="40_plus">40+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>What's your goal? What does success look like for you?
+                        <span class="hint">Be honest — more bookings? Dominate a specific area? Reduce reliance on agent referrals? We shape the strategy around this.</span>
+                    </label>
+                    <textarea name="goals" placeholder="e.g. I want to show up on Google when people search for home inspectors in my area. Right now all my business comes from agent referrals and I want to diversify..." rows="4"></textarea>
+                </div>
+
+                <div class="form-nav">
+                    <button type="button" class="btn btn-back" onclick="prevStep()">← Back</button>
+                    <button type="button" class="btn btn-next" onclick="nextStep()">Next: Brand & Content →</button>
+                </div>
+            </div>
+
+            <!-- STEP 4: BRAND & CONTENT -->
+            <div class="form-section" data-step="4">
+                <div class="section-header">
+                    <h2>🎨 Brand & Content</h2>
+                    <p>Help us match your voice and look. Everything we create should feel like YOU.</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Upload your logo <span class="optional">(optional)</span></label>
+                    <div class="file-upload" onclick="this.querySelector('input').click()" id="logoUpload">
+                        <input type="file" name="logo" accept="image/*">
+                        <div class="file-upload-icon">🖼️</div>
+                        <p><span>Click to upload</span> or drag and drop</p>
+                        <p style="font-size: 0.8rem; margin-top: 0.25rem;">PNG, JPG, or SVG</p>
+                    </div>
+                    <div class="uploaded-files" id="logoFiles"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Upload inspection photos <span class="optional">(optional)</span>
+                        <span class="hint">Photos from actual inspections make your site stand out. Crawl spaces, roofs, electrical panels, anything real. We'll optimize and use them throughout your site.</span>
+                    </label>
+                    <div class="file-upload" onclick="this.querySelector('input').click()" id="photosUpload">
+                        <input type="file" name="photos" accept="image/*" multiple>
+                        <div class="file-upload-icon">📸</div>
+                        <p><span>Click to upload</span> or drag and drop</p>
+                        <p style="font-size: 0.8rem; margin-top: 0.25rem;">Up to 20 photos • JPG or PNG</p>
+                    </div>
+                    <div class="uploaded-files" id="photoFiles"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>What tone fits your brand?</label>
+                    <select name="tone">
+                        <option value="">Select...</option>
+                        <option value="professional">Professional & authoritative</option>
+                        <option value="friendly">Friendly & approachable</option>
+                        <option value="casual">Casual & down-to-earth</option>
+                        <option value="technical">Technical & detailed</option>
+                        <option value="mix">Mix — professional but personable</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Do you have any existing content you like? <span class="optional">(optional)</span>
+                        <span class="hint">Blog posts, pages on your site, or even a competitor's content that you think is well done.</span>
+                    </label>
+                    <textarea name="content_references" placeholder="e.g. I wrote a blog post about radon testing that got good feedback. Our About page has good info about our background..." rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Anything we should know about your brand? <span class="optional">(optional)</span>
+                        <span class="hint">Brand colors, tagline, things you definitely want or don't want on your site.</span>
+                    </label>
+                    <textarea name="brand_notes" placeholder="e.g. Our colors are navy and gold. We never want to use fear-based marketing. We always want to mention we're family-owned..." rows="3"></textarea>
+                </div>
+
+                <div class="form-nav">
+                    <button type="button" class="btn btn-back" onclick="prevStep()">← Back</button>
+                    <button type="button" class="btn btn-next" onclick="nextStep()">Next: Access →</button>
+                </div>
+            </div>
+
+            <!-- STEP 5: ACCESS -->
+            <div class="form-section" data-step="5">
+                <div class="section-header">
+                    <h2>🔑 Website & Account Access</h2>
+                    <p>We need access to your website and search tools to get to work. Everything is kept secure and confidential.</p>
+                </div>
+
+                <div class="form-group">
+                    <label>What platform is your website built on?</label>
+                    <select name="platform">
+                        <option value="">Select...</option>
+                        <option value="spectora">Spectora</option>
+                        <option value="homegauge">HomeGauge</option>
+                        <option value="home_inspector_pro">Home Inspector Pro</option>
+                        <option value="wordpress">WordPress</option>
+                        <option value="wix">Wix</option>
+                        <option value="squarespace">Squarespace</option>
+                        <option value="other">Other</option>
+                        <option value="not_sure">Not sure</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Website CMS Login URL <span class="optional">(optional — we can find this)</span></label>
+                    <input type="url" name="cms_login" placeholder="e.g. https://yoursite.com/wp-admin or your Spectora dashboard URL">
+                </div>
+
+                <div class="form-group">
+                    <label>Do you have Google Search Console set up?</label>
+                    <select name="has_gsc">
+                        <option value="">Select...</option>
+                        <option value="yes">Yes, it's set up</option>
+                        <option value="no">No</option>
+                        <option value="not_sure">Not sure</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Do you have a Google Business Profile?</label>
+                    <select name="has_gbp">
+                        <option value="">Select...</option>
+                        <option value="yes">Yes, claimed and active</option>
+                        <option value="yes_inactive">Yes, but I don't update it</option>
+                        <option value="no">No</option>
+                        <option value="not_sure">Not sure</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Do you have Google Analytics set up?</label>
+                    <select name="has_ga">
+                        <option value="">Select...</option>
+                        <option value="ga4">Yes, GA4</option>
+                        <option value="ua">Yes, but the old version (Universal Analytics)</option>
+                        <option value="no">No</option>
+                        <option value="not_sure">Not sure</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Anything else we should know? <span class="optional">(optional)</span>
+                        <span class="hint">Previous SEO work, concerns, questions, deadlines — anything at all.</span>
+                    </label>
+                    <textarea name="other_notes" placeholder="e.g. I had a bad experience with my last SEO company. I'm launching a second office next month. I need help with my Google reviews too..." rows="4"></textarea>
+                </div>
+
+                <div class="form-nav">
+                    <button type="button" class="btn btn-back" onclick="prevStep()">← Back</button>
+                    <button type="button" class="btn btn-submit" onclick="submitForm()">Submit & Let's Get Started 🔥</button>
+                </div>
+            </div>
+
+        </form>
+
+        <!-- SUCCESS MESSAGE -->
+        <div class="success-message" id="successMessage">
+            <div class="success-icon">🔥</div>
+            <h2>You're all set!</h2>
+            <p>We've got everything we need to get started. Here's what happens next:</p>
+            <div style="text-align: left; max-width: 400px; margin: 2rem auto; color: var(--ember-gray);">
+                <p style="margin-bottom: 1rem;">📧 <strong style="color: var(--ember-white);">Within 24 hours</strong> — We'll send you a confirmation email and any follow-up questions.</p>
+                <p style="margin-bottom: 1rem;">🔍 <strong style="color: var(--ember-white);">Within 48 hours</strong> — Your full technical audit will be complete.</p>
+                <p style="margin-bottom: 1rem;">📞 <strong style="color: var(--ember-white);">This week</strong> — We'll schedule a 30-minute kick-off call to walk through findings and the plan.</p>
+            </div>
+            <p style="margin-top: 2rem;">Questions? Email us at <a href="mailto:judd@emberseo.ai" style="color: var(--ember-orange);">judd@emberseo.ai</a></p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="border-top: 1px solid var(--ember-border);">
+        <div style="margin-bottom: 1rem;">
+            <img src="assets/ember-wordmark.png" alt="Ember SEO" style="height: 50px; opacity: 0.9;">
+        </div>
+        <p>© 2026 Ember SEO. Built in Santa Cruz, CA. <a href="mailto:judd@emberseo.ai">judd@emberseo.ai</a></p>
+    </footer>
+
+    <script>
+        let currentStep = 1;
+        const totalSteps = 5;
+
+        function updateProgress() {
+            document.querySelectorAll('.progress-step').forEach((step, i) => {
+                step.classList.remove('active', 'completed');
+                if (i + 1 === currentStep) step.classList.add('active');
+                if (i + 1 < currentStep) step.classList.add('completed');
+            });
+            document.querySelectorAll('.progress-labels span').forEach((label, i) => {
+                label.classList.toggle('active', i + 1 === currentStep);
+            });
+        }
+
+        function showStep(step) {
+            document.querySelectorAll('.form-section').forEach(s => s.classList.remove('active'));
+            document.querySelector(`.form-section[data-step="${step}"]`).classList.add('active');
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        }
+
+        function nextStep() {
+            if (currentStep < totalSteps) {
+                currentStep++;
+                showStep(currentStep);
+                updateProgress();
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                showStep(currentStep);
+                updateProgress();
+            }
+        }
+
+        function toggleCheck(el) {
+            el.classList.toggle('checked');
+            const input = el.querySelector('input');
+            input.checked = !input.checked;
+        }
+
+        // File upload handling
+        function setupFileUpload(uploadId, filesId, multiple) {
+            const upload = document.getElementById(uploadId);
+            const filesContainer = document.getElementById(filesId);
+            const input = upload.querySelector('input');
+
+            ['dragover', 'dragenter'].forEach(e => {
+                upload.addEventListener(e, (ev) => { ev.preventDefault(); upload.classList.add('dragover'); });
+            });
+            ['dragleave', 'drop'].forEach(e => {
+                upload.addEventListener(e, (ev) => { ev.preventDefault(); upload.classList.remove('dragover'); });
+            });
+
+            upload.addEventListener('drop', (e) => {
+                const files = e.dataTransfer.files;
+                handleFiles(files, filesContainer);
+            });
+
+            input.addEventListener('change', () => {
+                handleFiles(input.files, filesContainer);
+            });
+        }
+
+        function handleFiles(files, container) {
+            Array.from(files).forEach(file => {
+                const fileEl = document.createElement('div');
+                fileEl.className = 'uploaded-file';
+                fileEl.innerHTML = `📎 ${file.name} <span class="remove" onclick="this.parentElement.remove()">×</span>`;
+                container.appendChild(fileEl);
+            });
+        }
+
+        setupFileUpload('logoUpload', 'logoFiles', false);
+        setupFileUpload('photosUpload', 'photoFiles', true);
+
+        function submitForm() {
+            // Collect form data
+            const form = document.getElementById('onboardingForm');
+            const formData = new FormData(form);
+            const data = {};
+
+            for (let [key, value] of formData.entries()) {
+                if (data[key]) {
+                    if (!Array.isArray(data[key])) data[key] = [data[key]];
+                    data[key].push(value);
+                } else {
+                    data[key] = value;
+                }
+            }
+
+            // For now, send via mailto with form data (upgrade to backend later)
+            const subject = encodeURIComponent(`New Ember Client: ${data.company_name || 'Unknown'}`);
+            const body = encodeURIComponent(Object.entries(data)
+                .filter(([k, v]) => v && v !== '')
+                .map(([k, v]) => `${k.replace(/_/g, ' ').toUpperCase()}: ${Array.isArray(v) ? v.join(', ') : v}`)
+                .join('\n\n'));
+
+            // Show success
+            document.getElementById('onboardingForm').style.display = 'none';
+            document.querySelector('.progress-container').style.display = 'none';
+            document.getElementById('successMessage').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Send email
+            window.location.href = `mailto:judd@emberseo.ai?subject=${subject}&body=${body}`;
+        }
+    </script>
+
+</body>
+</html>
