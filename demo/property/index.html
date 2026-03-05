@@ -36,7 +36,7 @@
                         <p class="text-brand-100 text-sm" data-en="Submit a repair request" data-es="Enviar una solicitud de reparación">Submit a repair request</p>
                     </div>
                     <button onclick="toggleLang()" class="bg-brand-600 hover:bg-brand-500 px-3 py-1.5 rounded-lg text-sm font-medium transition">
-                        <span id="lang-toggle">🇪🇸 Español</span>
+                        <span id="lang-toggle">🇲🇽 Español</span>
                     </button>
                 </div>
             </div>
@@ -144,7 +144,7 @@
 
         function toggleLang() {
             lang = lang === 'en' ? 'es' : 'en';
-            document.getElementById('lang-toggle').textContent = lang === 'en' ? '🇪🇸 Español' : '🇺🇸 English';
+            document.getElementById('lang-toggle').textContent = lang === 'en' ? '🇲🇽 Español' : '🇺🇸 English';
             
             // Update all translatable elements
             document.querySelectorAll('[data-en]').forEach(el => {
