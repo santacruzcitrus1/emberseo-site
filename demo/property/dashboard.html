@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Manager Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in { animation: fadeIn 0.3s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+    <!-- Top Nav -->
+    <nav class="bg-white shadow-sm border-b sticky top-0 z-20">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl">🏠</span>
+                <div>
+                    <h1 class="text-lg font-bold text-gray-900">Paul's Properties</h1>
+                    <p class="text-xs text-gray-500">Property Manager Dashboard</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center pulse" id="notification-badge">3</span>
+                    <span class="text-xl cursor-pointer">🔔</span>
+                </div>
+                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold">P</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 py-6">
+
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+                <p class="text-sm text-gray-500">Open Requests</p>
+                <p class="text-3xl font-bold text-red-600">3</p>
+                <p class="text-xs text-red-500 mt-1">1 urgent</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+                <p class="text-sm text-gray-500">In Progress</p>
+                <p class="text-3xl font-bold text-yellow-600">2</p>
+                <p class="text-xs text-gray-400 mt-1">Vendors scheduled</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+                <p class="text-sm text-gray-500">Completed (30d)</p>
+                <p class="text-3xl font-bold text-green-600">8</p>
+                <p class="text-xs text-gray-400 mt-1">Avg 2.1 days to close</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+                <p class="text-sm text-gray-500">Total Units</p>
+                <p class="text-3xl font-bold text-blue-600">12</p>
+                <p class="text-xs text-gray-400 mt-1">All occupied</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <!-- Requests List (2 cols) -->
+            <div class="md:col-span-2 space-y-4">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-lg font-bold text-gray-900">Repair Requests</h2>
+                    <div class="flex gap-2">
+                        <button class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">New (3)</button>
+                        <button class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-medium">In Progress (2)</button>
+                        <button class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-medium">All</button>
+                    </div>
+                </div>
+
+                <!-- URGENT Request -->
+                <div class="bg-white rounded-xl shadow-sm border-l-4 border-red-500 overflow-hidden fade-in">
+                    <div class="p-4">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="bg-red-100 text-red-700 px-2 py-0.5 rounded-full text-xs font-bold">🔴 URGENTE</span>
+                                    <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-xs">🔧 Plomería</span>
+                                    <span class="text-xs text-gray-400">PR-847291 • 25 min ago</span>
+                                </div>
+                                <h3 class="font-semibold text-gray-900 mt-2">Water leak under kitchen sink — water spreading to floor</h3>
+                                <div class="mt-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
+                                    <p class="text-xs text-amber-700 font-medium mb-1">🌐 Original message (Spanish):</p>
+                                    <p class="text-sm text-amber-900 italic">"Hay una fuga de agua debajo del fregadero de la cocina. El agua se está extendiendo por el piso. Necesitamos ayuda urgente por favor."</p>
+                                </div>
+                                <div class="flex items-center gap-4 mt-3 text-sm text-gray-500">
+                                    <span>🏠 Unit 4B — Maria Gonzalez</span>
+                                    <span>📞 (831) 555-0147</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 mt-4">
+                            <button onclick="dispatchVendor(this)" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-1">
+                                📞 Dispatch Vendor
+                            </button>
+                            <button class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition">
+                                💬 Reply to Tenant
+                            </button>
+                            <button class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition">
+                                ✏️ Update Status
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Normal Request -->
+                <div class="bg-white rounded-xl shadow-sm border-l-4 border-yellow-400 overflow-hidden fade-in">
+                    <div class="p-4">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full text-xs font-bold">🟡 Normal</span>
+                                    <span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-xs">⚡ Electrical</span>
+                                    <span class="text-xs text-gray-400">PR-847288 • 2 hours ago</span>
+                                </div>
+                                <h3 class="font-semibold text-gray-900 mt-2">Bathroom outlet not working — tried resetting breaker, no change</h3>
+                                <div class="flex items-center gap-4 mt-3 text-sm text-gray-500">
+                                    <span>🏠 Unit 2A — James Wilson</span>
+                                    <span>📞 (831) 555-0233</span>
+                                </div>
+                            </div>
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect fill='%23e5e7eb' width='60' height='60' rx='8'/%3E%3Ctext x='30' y='35' text-anchor='middle' fill='%239ca3af' font-size='20'%3E📷%3C/text%3E%3C/svg%3E" class="w-16 h-16 rounded-lg" title="Photo attached">
+                        </div>
+                        <div class="flex gap-2 mt-4">
+                            <button onclick="dispatchVendor(this)" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-1">
+                                📞 Dispatch Vendor
+                            </button>
+                            <button class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition">
+                                💬 Reply to Tenant
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Low Priority Request (Spanish) -->
+                <div class="bg-white rounded-xl shadow-sm border-l-4 border-green-400 overflow-hidden fade-in">
+                    <div class="p-4">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-bold">🟢 Baja</span>
+                                    <span class="bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full text-xs">🏠 Appliance</span>
+                                    <span class="text-xs text-gray-400">PR-847285 • 5 hours ago</span>
+                                </div>
+                                <h3 class="font-semibold text-gray-900 mt-2">Dishwasher making loud noise during wash cycle — still works but very loud</h3>
+                                <div class="mt-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
+                                    <p class="text-xs text-amber-700 font-medium mb-1">🌐 Original message (Spanish):</p>
+                                    <p class="text-sm text-amber-900 italic">"El lavaplatos hace mucho ruido durante el ciclo de lavado. Todavía funciona pero es muy ruidoso. No es urgente."</p>
+                                </div>
+                                <div class="flex items-center gap-4 mt-3 text-sm text-gray-500">
+                                    <span>🏠 Unit 7C — Carlos Ramirez</span>
+                                    <span>📞 (831) 555-0389</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 mt-4">
+                            <button onclick="dispatchVendor(this)" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-1">
+                                📞 Dispatch Vendor
+                            </button>
+                            <button class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition">
+                                💬 Reply to Tenant
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- In-Progress Request -->
+                <div class="bg-white rounded-xl shadow-sm border-l-4 border-blue-400 overflow-hidden opacity-75">
+                    <div class="p-4">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-xs font-bold">🔵 In Progress</span>
+                            <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-xs">🔧 Plumbing</span>
+                            <span class="text-xs text-gray-400">PR-847201 • 2 days ago</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mt-2">Slow drain in bathtub</h3>
+                        <div class="flex items-center gap-4 mt-2 text-sm text-gray-500">
+                            <span>🏠 Unit 1A — Robert Chen</span>
+                            <span class="text-blue-600 font-medium">🔧 ABC Plumbing scheduled — Tomorrow 10 AM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="space-y-4">
+
+                <!-- Vendor Directory -->
+                <div class="bg-white rounded-xl shadow-sm p-4">
+                    <h3 class="font-bold text-gray-900 mb-3">📒 Vendor Directory</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
+                            <div>
+                                <p class="font-medium text-sm">ABC Plumbing</p>
+                                <p class="text-xs text-gray-500">🔧 Plumbing</p>
+                            </div>
+                            <a href="tel:+18315550100" class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">📞 Call</a>
+                        </div>
+                        <div class="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
+                            <div>
+                                <p class="font-medium text-sm">Spark Electric</p>
+                                <p class="text-xs text-gray-500">⚡ Electrical</p>
+                            </div>
+                            <a href="tel:+18315550200" class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">📞 Call</a>
+                        </div>
+                        <div class="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
+                            <div>
+                                <p class="font-medium text-sm">CoolBreeze HVAC</p>
+                                <p class="text-xs text-gray-500">🌡️ Heating/Cooling</p>
+                            </div>
+                            <a href="tel:+18315550300" class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">📞 Call</a>
+                        </div>
+                        <div class="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
+                            <div>
+                                <p class="font-medium text-sm">HandyPro Services</p>
+                                <p class="text-xs text-gray-500">📋 General/Appliance</p>
+                            </div>
+                            <a href="tel:+18315550400" class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">📞 Call</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Summary -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl shadow-sm p-4 border border-blue-200">
+                    <h3 class="font-bold text-gray-900 mb-2">🤖 AI Summary</h3>
+                    <div class="text-sm text-gray-700 space-y-2">
+                        <p>⚠️ <strong>Urgent:</strong> Active water leak in Unit 4B — recommend dispatching plumber ASAP to prevent water damage.</p>
+                        <p>📊 <strong>Trend:</strong> 3 plumbing issues this month (Units 1A, 4B, 6A). May indicate shared pipe issues in Building A.</p>
+                        <p>💰 <strong>Pending payments:</strong> 2 vendor invoices due this week ($340 total)</p>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="bg-white rounded-xl shadow-sm p-4">
+                    <h3 class="font-bold text-gray-900 mb-3">⚡ Quick Actions</h3>
+                    <div class="space-y-2">
+                        <button class="w-full text-left p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition text-sm">
+                            📨 Send notice to all tenants
+                        </button>
+                        <button class="w-full text-left p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition text-sm">
+                            💳 Pay vendor invoices
+                        </button>
+                        <button class="w-full text-left p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition text-sm">
+                            📋 View maintenance history
+                        </button>
+                        <button class="w-full text-left p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition text-sm">
+                            🏠 Manage units & tenants
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor Dispatch Modal -->
+    <div id="dispatch-modal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center">
+        <div class="bg-white rounded-2xl shadow-xl max-w-md w-full mx-4 overflow-hidden fade-in">
+            <div class="bg-blue-600 text-white p-4">
+                <h3 class="font-bold text-lg">📞 Dispatch Vendor</h3>
+                <p class="text-blue-100 text-sm">Choose a vendor and schedule the repair</p>
+            </div>
+            <div class="p-4 space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Select Vendor</label>
+                    <select class="w-full border-2 border-gray-200 rounded-lg p-2.5">
+                        <option>ABC Plumbing — (831) 555-0100</option>
+                        <option>Spark Electric — (831) 555-0200</option>
+                        <option>CoolBreeze HVAC — (831) 555-0300</option>
+                        <option>HandyPro Services — (831) 555-0400</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Message to Vendor</label>
+                    <textarea class="w-full border-2 border-gray-200 rounded-lg p-2.5 h-24" placeholder="AI-generated message...">Repair needed at Unit 4B — Water leak under kitchen sink, water spreading to floor. Tenant reports this is urgent. Please advise on earliest availability.</textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Send via</label>
+                    <div class="flex gap-2">
+                        <button class="flex-1 bg-green-100 hover:bg-green-200 text-green-700 py-2 rounded-lg text-sm font-medium transition">📱 Text</button>
+                        <button class="flex-1 bg-blue-100 hover:bg-blue-200 text-blue-700 py-2 rounded-lg text-sm font-medium transition">📧 Email</button>
+                        <button class="flex-1 bg-purple-100 hover:bg-purple-200 text-purple-700 py-2 rounded-lg text-sm font-medium transition">📞 Call</button>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="confirmDispatch()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg font-medium transition">
+                        ✅ Send to Vendor
+                    </button>
+                    <button onclick="closeModal()" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2.5 rounded-lg font-medium transition">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dispatch Confirmation Toast -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-green-600 text-white px-6 py-3 rounded-xl shadow-lg hidden fade-in z-50">
+        <p class="font-medium">✅ Vendor notified! Waiting for confirmation...</p>
+    </div>
+
+    <script>
+        function dispatchVendor(btn) {
+            document.getElementById('dispatch-modal').classList.remove('hidden');
+            document.getElementById('dispatch-modal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('dispatch-modal').classList.add('hidden');
+            document.getElementById('dispatch-modal').classList.remove('flex');
+        }
+
+        function confirmDispatch() {
+            closeModal();
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 4000);
+        }
+    </script>
+</body>
+</html>

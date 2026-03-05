@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul's Properties — Tenant Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in { animation: fadeIn 0.3s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .chat-bubble { max-width: 80%; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+    <!-- Language Toggle -->
+    <div id="app">
+        <!-- TENANT VIEW -->
+        <div id="tenant-view" class="max-w-lg mx-auto">
+            <!-- Header -->
+            <div class="bg-brand-700 text-white p-4 sticky top-0 z-10">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h1 class="text-xl font-bold" data-en="Property Maintenance" data-es="Mantenimiento de Propiedad">Property Maintenance</h1>
+                        <p class="text-brand-100 text-sm" data-en="Submit a repair request" data-es="Enviar una solicitud de reparación">Submit a repair request</p>
+                    </div>
+                    <button onclick="toggleLang()" class="bg-brand-600 hover:bg-brand-500 px-3 py-1.5 rounded-lg text-sm font-medium transition">
+                        <span id="lang-toggle">🇪🇸 Español</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Interface -->
+            <div id="chat-container" class="p-4 pb-32 space-y-3" style="min-height: calc(100vh - 140px);">
+                <!-- Welcome message -->
+                <div class="chat-bubble bg-white rounded-2xl rounded-tl-md p-4 shadow-sm fade-in">
+                    <p class="text-gray-800" id="welcome-msg">👋 Hi! I'm your property maintenance assistant. I can help you submit a repair request in English or Spanish.</p>
+                    <p class="text-gray-600 text-sm mt-2" id="welcome-prompt">What's the issue you're experiencing?</p>
+                </div>
+
+                <!-- Quick Category Buttons -->
+                <div id="quick-categories" class="flex flex-wrap gap-2 fade-in">
+                    <button onclick="selectCategory('plumbing')" class="cat-btn bg-white border-2 border-gray-200 hover:border-brand-500 hover:bg-brand-50 rounded-full px-4 py-2 text-sm font-medium transition">
+                        🔧 <span data-en="Plumbing" data-es="Plomería">Plumbing</span>
+                    </button>
+                    <button onclick="selectCategory('electrical')" class="cat-btn bg-white border-2 border-gray-200 hover:border-brand-500 hover:bg-brand-50 rounded-full px-4 py-2 text-sm font-medium transition">
+                        ⚡ <span data-en="Electrical" data-es="Eléctrico">Electrical</span>
+                    </button>
+                    <button onclick="selectCategory('hvac')" class="cat-btn bg-white border-2 border-gray-200 hover:border-brand-500 hover:bg-brand-50 rounded-full px-4 py-2 text-sm font-medium transition">
+                        🌡️ <span data-en="Heating/Cooling" data-es="Calefacción/AC">Heating/Cooling</span>
+                    </button>
+                    <button onclick="selectCategory('appliance')" class="cat-btn bg-white border-2 border-gray-200 hover:border-brand-500 hover:bg-brand-50 rounded-full px-4 py-2 text-sm font-medium transition">
+                        🏠 <span data-en="Appliance" data-es="Electrodoméstico">Appliance</span>
+                    </button>
+                    <button onclick="selectCategory('pest')" class="cat-btn bg-white border-2 border-gray-200 hover:border-brand-500 hover:bg-brand-50 rounded-full px-4 py-2 text-sm font-medium transition">
+                        🐛 <span data-en="Pest Control" data-es="Control de Plagas">Pest Control</span>
+                    </button>
+                    <button onclick="selectCategory('other')" class="cat-btn bg-white border-2 border-gray-200 hover:border-brand-500 hover:bg-brand-50 rounded-full px-4 py-2 text-sm font-medium transition">
+                        📋 <span data-en="Other" data-es="Otro">Other</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Input Bar -->
+            <div class="fixed bottom-0 left-0 right-0 max-w-lg mx-auto bg-white border-t p-3">
+                <div class="flex gap-2">
+                    <label class="flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full cursor-pointer transition">
+                        📷
+                        <input type="file" accept="image/*" capture="environment" class="hidden" onchange="handlePhoto(this)">
+                    </label>
+                    <input type="text" id="chat-input" 
+                        placeholder="Describe the problem..." 
+                        data-en-placeholder="Describe the problem..."
+                        data-es-placeholder="Describa el problema..."
+                        class="flex-1 border-2 border-gray-200 focus:border-brand-500 rounded-full px-4 py-2 outline-none transition"
+                        onkeydown="if(event.key==='Enter')sendMessage()">
+                    <button onclick="sendMessage()" class="bg-brand-600 hover:bg-brand-700 text-white rounded-full w-10 h-10 flex items-center justify-center transition">
+                        ➤
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let lang = 'en';
+        let conversationState = 'start'; // start, category_selected, details, unit_info, confirm, done
+        let currentRequest = { category: '', description: '', unit: '', urgency: 'normal', photos: [], lang: 'en' };
+
+        const translations = {
+            welcome: {
+                en: "👋 Hi! I'm your property maintenance assistant. I can help you submit a repair request in English or Spanish.",
+                es: "👋 ¡Hola! Soy su asistente de mantenimiento de propiedad. Puedo ayudarle a enviar una solicitud de reparación en inglés o español."
+            },
+            welcomePrompt: {
+                en: "What's the issue you're experiencing?",
+                es: "¿Cuál es el problema que está experimentando?"
+            },
+            placeholder: {
+                en: "Describe the problem...",
+                es: "Describa el problema..."
+            },
+            categorySelected: {
+                en: (cat) => `Got it — ${cat} issue. Can you describe what's happening? The more detail the better.`,
+                es: (cat) => `Entendido — problema de ${cat}. ¿Puede describir qué está pasando? Mientras más detalles, mejor.`
+            },
+            askUnit: {
+                en: "Thanks for the details. What's your unit number or address?",
+                es: "Gracias por los detalles. ¿Cuál es su número de unidad o dirección?"
+            },
+            askUrgency: {
+                en: "How urgent is this?",
+                es: "¿Qué tan urgente es esto?"
+            },
+            confirm: {
+                en: (req) => `Here's a summary of your request:\n\n📋 Category: ${req.category}\n📝 Issue: ${req.description}\n🏠 Unit: ${req.unit}\n⚡ Urgency: ${req.urgency}\n\nDoes this look right?`,
+                es: (req) => `Aquí está el resumen de su solicitud:\n\n📋 Categoría: ${req.category}\n📝 Problema: ${req.description}\n🏠 Unidad: ${req.unit}\n⚡ Urgencia: ${req.urgency}\n\n¿Se ve correcto?`
+            },
+            submitted: {
+                en: "✅ Your repair request has been submitted! Paul will be notified immediately. You'll receive updates as the repair is scheduled.\n\nReference #: ",
+                es: "✅ ¡Su solicitud de reparación ha sido enviada! Paul será notificado inmediatamente. Recibirá actualizaciones cuando se programe la reparación.\n\nReferencia #: "
+            }
+        };
+
+        const categoryNames = {
+            plumbing: { en: 'Plumbing', es: 'Plomería' },
+            electrical: { en: 'Electrical', es: 'Eléctrico' },
+            hvac: { en: 'Heating/Cooling', es: 'Calefacción/AC' },
+            appliance: { en: 'Appliance', es: 'Electrodoméstico' },
+            pest: { en: 'Pest Control', es: 'Control de Plagas' },
+            other: { en: 'Other', es: 'Otro' }
+        };
+
+        function toggleLang() {
+            lang = lang === 'en' ? 'es' : 'en';
+            document.getElementById('lang-toggle').textContent = lang === 'en' ? '🇪🇸 Español' : '🇺🇸 English';
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+            document.getElementById('welcome-msg').textContent = translations.welcome[lang];
+            document.getElementById('welcome-prompt').textContent = translations.welcomePrompt[lang];
+            document.getElementById('chat-input').placeholder = translations.placeholder[lang];
+            currentRequest.lang = lang;
+        }
+
+        function addBubble(text, isUser = false, extra = '') {
+            const container = document.getElementById('chat-container');
+            const bubble = document.createElement('div');
+            bubble.className = `chat-bubble ${isUser ? 'bg-brand-600 text-white ml-auto' : 'bg-white'} rounded-2xl ${isUser ? 'rounded-tr-md' : 'rounded-tl-md'} p-4 shadow-sm fade-in`;
+            bubble.innerHTML = `<p class="${isUser ? 'text-white' : 'text-gray-800'}" style="white-space: pre-line">${text}</p>${extra}`;
+            container.appendChild(bubble);
+            bubble.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        }
+
+        function selectCategory(cat) {
+            currentRequest.category = categoryNames[cat][lang];
+            conversationState = 'category_selected';
+            
+            // Remove category buttons
+            document.getElementById('quick-categories')?.remove();
+            
+            // Show user selection
+            addBubble(`${categoryNames[cat][lang]}`, true);
+            
+            // Bot response
+            setTimeout(() => {
+                addBubble(translations.categorySelected[lang](categoryNames[cat][lang]));
+            }, 500);
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+            
+            input.value = '';
+            addBubble(text, true);
+
+            if (conversationState === 'start' || conversationState === 'category_selected') {
+                // They described the issue
+                currentRequest.description = text;
+                conversationState = 'details';
+                document.getElementById('quick-categories')?.remove();
+                
+                setTimeout(() => {
+                    addBubble(translations.askUnit[lang]);
+                }, 500);
+            }
+            else if (conversationState === 'details') {
+                // They gave unit info
+                currentRequest.unit = text;
+                conversationState = 'urgency';
+                
+                setTimeout(() => {
+                    addBubble(translations.askUrgency[lang], false, `
+                        <div class="flex gap-2 mt-3">
+                            <button onclick="setUrgency('low')" class="bg-green-100 hover:bg-green-200 text-green-800 px-3 py-1.5 rounded-full text-sm font-medium transition">
+                                ${lang === 'es' ? '🟢 Baja' : '🟢 Low'}
+                            </button>
+                            <button onclick="setUrgency('normal')" class="bg-yellow-100 hover:bg-yellow-200 text-yellow-800 px-3 py-1.5 rounded-full text-sm font-medium transition">
+                                ${lang === 'es' ? '🟡 Normal' : '🟡 Normal'}
+                            </button>
+                            <button onclick="setUrgency('urgent')" class="bg-red-100 hover:bg-red-200 text-red-800 px-3 py-1.5 rounded-full text-sm font-medium transition">
+                                ${lang === 'es' ? '🔴 Urgente' : '🔴 Urgent'}
+                            </button>
+                        </div>
+                    `);
+                }, 500);
+            }
+            else if (conversationState === 'confirm') {
+                if (text.toLowerCase().match(/yes|sí|si|correct|correcto|yeah|yep/)) {
+                    submitRequest();
+                } else {
+                    addBubble(lang === 'es' ? '¿Qué le gustaría cambiar?' : "What would you like to change?");
+                }
+            }
+        }
+
+        function setUrgency(level) {
+            const labels = { low: {en:'Low',es:'Baja'}, normal: {en:'Normal',es:'Normal'}, urgent: {en:'Urgent',es:'Urgente'} };
+            currentRequest.urgency = labels[level][lang];
+            conversationState = 'confirm';
+            
+            addBubble(currentRequest.urgency, true);
+            
+            setTimeout(() => {
+                addBubble(translations.confirm[lang](currentRequest), false, `
+                    <div class="flex gap-2 mt-3">
+                        <button onclick="submitRequest()" class="bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-full text-sm font-medium transition">
+                            ${lang === 'es' ? '✅ Enviar' : '✅ Submit'}
+                        </button>
+                        <button onclick="conversationState='start';addBubble('${lang==='es'?'Empecemos de nuevo':'Let\\'s start over'}', true);location.reload();" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-full text-sm font-medium transition">
+                            ${lang === 'es' ? '↩️ Empezar de nuevo' : '↩️ Start Over'}
+                        </button>
+                    </div>
+                `);
+            }, 500);
+        }
+
+        function handlePhoto(input) {
+            if (input.files && input.files[0]) {
+                const file = input.files[0];
+                currentRequest.photos.push(file.name);
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const container = document.getElementById('chat-container');
+                    const bubble = document.createElement('div');
+                    bubble.className = 'chat-bubble bg-brand-600 ml-auto rounded-2xl rounded-tr-md p-2 shadow-sm fade-in';
+                    bubble.innerHTML = `<img src="${e.target.result}" class="rounded-xl max-h-48 w-auto">`;
+                    container.appendChild(bubble);
+                    bubble.scrollIntoView({ behavior: 'smooth' });
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function submitRequest() {
+            conversationState = 'done';
+            const refNum = 'PR-' + Date.now().toString().slice(-6);
+            
+            // Save to backend
+            const requestData = {
+                ...currentRequest,
+                refNumber: refNum,
+                submittedAt: new Date().toISOString(),
+                status: 'new',
+                originalLang: lang
+            };
+
+            fetch('/api/requests', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(requestData)
+            }).catch(() => {}); // Silently fail for demo
+
+            setTimeout(() => {
+                addBubble(translations.submitted[lang] + refNum);
+            }, 800);
+        }
+    </script>
+</body>
+</html>
