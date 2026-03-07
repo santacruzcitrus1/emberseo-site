@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Ember SEO — SEO for Home Inspectors & Trades</title>
+    <meta name="description" content="Transparent SEO pricing for home inspectors and trades businesses. One-time site optimization or ongoing monthly plans. No contracts, no fluff.">
+    <meta property="og:title" content="Pricing | Ember SEO">
+    <meta property="og:description" content="Transparent SEO pricing built for trades businesses. See what you get before you pay.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emberseo.ai/pricing.html">
+    <link rel="icon" type="image/png" href="assets/ember-icon.png">
+    <link rel="apple-touch-icon" href="assets/ember-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ember-orange: #E8541E;
+            --ember-amber: #F4900C;
+            --ember-dark: #0D0D14;
+            --ember-charcoal: #1A1A2E;
+            --ember-light: #141420;
+            --ember-gray: #9CA3AF;
+            --ember-white: #E8E8ED;
+            --ember-bg: #0D0D14;
+            --ember-card: #1A1A2E;
+            --ember-border: rgba(255,255,255,0.06);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--ember-white);
+            background: var(--ember-bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(13,13,20,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--ember-border);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--ember-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--ember-white); }
+        .nav-links a.active { color: var(--ember-orange); }
+
+        nav a.cta-nav {
+            background: var(--ember-orange);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        nav a.cta-nav:hover { background: #D04A18; }
+
+        /* PAGE HEADER */
+        .page-header {
+            padding: 9rem 2rem 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .page-header h1 span {
+            background: linear-gradient(135deg, var(--ember-orange), var(--ember-amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-header p {
+            font-size: 1.15rem;
+            color: var(--ember-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ONE-TIME FIX BANNER */
+        .fix-banner {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            padding: 2rem 2.5rem;
+            background: linear-gradient(135deg, rgba(232,84,30,0.08), rgba(244,144,12,0.06));
+            border: 1px solid rgba(232,84,30,0.2);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .fix-banner-content h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .fix-banner-content h3 .price {
+            color: var(--ember-orange);
+        }
+
+        .fix-banner-content p {
+            color: var(--ember-gray);
+            font-size: 0.95rem;
+        }
+
+        .fix-banner-cta {
+            background: var(--ember-orange);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .fix-banner-cta:hover {
+            background: #D04A18;
+            transform: translateY(-1px);
+        }
+
+        /* PRICING CARDS */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .pricing-card {
+            background: var(--ember-card);
+            border: 1px solid var(--ember-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            position: relative;
+            transition: border-color 0.3s, transform 0.2s;
+        }
+
+        .pricing-card:hover {
+            border-color: rgba(232,84,30,0.3);
+            transform: translateY(-2px);
+        }
+
+        .pricing-card.popular {
+            border-color: var(--ember-orange);
+            box-shadow: 0 0 40px rgba(232,84,30,0.1);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--ember-orange), var(--ember-amber));
+            color: white;
+            padding: 0.3rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card .price {
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+        }
+
+        .pricing-card .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--ember-gray);
+        }
+
+        .pricing-card .price-note {
+            color: var(--ember-gray);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-card .price-note strong {
+            color: var(--ember-orange);
+        }
+
+        .pricing-card .divider {
+            height: 1px;
+            background: var(--ember-border);
+            margin: 1.5rem 0;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-card ul li {
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            color: var(--ember-gray);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .pricing-card ul li .check {
+            color: var(--ember-orange);
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .pricing-card .card-cta {
+            display: block;
+            width: 100%;
+            padding: 0.9rem;
+            text-align: center;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .card-cta-outline {
+            background: transparent;
+            color: var(--ember-white);
+            border: 2px solid var(--ember-border);
+        }
+
+        .card-cta-outline:hover {
+            border-color: var(--ember-orange);
+            color: var(--ember-orange);
+        }
+
+        .card-cta-primary {
+            background: var(--ember-orange);
+            color: white;
+            border: 2px solid var(--ember-orange);
+        }
+
+        .card-cta-primary:hover {
+            background: #D04A18;
+            transform: translateY(-1px);
+        }
+
+        /* FAQ */
+        .faq-section {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 2rem 5rem;
+        }
+
+        .faq-section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--ember-border);
+            padding: 1.25rem 0;
+        }
+
+        .faq-item summary {
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            color: var(--ember-white);
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item summary::-webkit-details-marker { display: none; }
+
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.25rem;
+            color: var(--ember-orange);
+            transition: transform 0.2s;
+        }
+
+        .faq-item[open] summary::after {
+            content: '−';
+        }
+
+        .faq-item p {
+            color: var(--ember-gray);
+            font-size: 0.9rem;
+            margin-top: 0.75rem;
+            line-height: 1.7;
+        }
+
+        /* BOTTOM CTA */
+        .bottom-cta {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, rgba(232,84,30,0.06), rgba(244,144,12,0.04));
+            border-top: 1px solid var(--ember-border);
+        }
+
+        .bottom-cta h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+
+        .bottom-cta p {
+            color: var(--ember-gray);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .bottom-cta a {
+            display: inline-block;
+            background: var(--ember-orange);
+            color: white;
+            padding: 0.9rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .bottom-cta a:hover {
+            background: #D04A18;
+            transform: translateY(-1px);
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--ember-border);
+        }
+
+        footer p { font-size: 0.85rem; color: var(--ember-gray); }
+        footer a { color: var(--ember-orange); text-decoration: none; }
+
+        /* CRYPTO BADGE */
+        .crypto-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--ember-border);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--ember-gray);
+            margin-top: 1.5rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2.25rem; }
+            .page-header { padding: 7rem 1.5rem 2rem; }
+
+            .fix-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                padding: 0 1.5rem 3rem;
+            }
+
+            .pricing-card .price { font-size: 2.25rem; }
+
+            nav { padding: 0.75rem 1.25rem; }
+
+            nav a.cta-nav {
+                font-size: 0.65rem;
+                padding: 0.4rem 0.6rem;
+                border-radius: 6px;
+            }
+
+            .nav-links { gap: 1rem; }
+            .nav-links a { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="/" class="logo">
+            <img src="assets/ember-wordmark.png" alt="Ember SEO" style="height: 45px;">
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/pricing.html" class="active">Pricing</a>
+        </div>
+        <a href="/onboarding.html" class="cta-nav">Get Free Audit</a>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="page-header">
+        <h1>Simple pricing. <span>Real results.</span></h1>
+        <p>No long-term contracts. No hidden fees. Start with a one-time fix or go all-in with a monthly plan. Cancel anytime.</p>
+    </section>
+
+    <!-- ONE-TIME FIX -->
+    <div class="fix-banner">
+        <div class="fix-banner-content">
+            <h3>Site Optimization — <span class="price">$750</span> one-time</h3>
+            <p>Complete technical SEO audit and repair. Schema, structured data, meta optimization, AI search signals, and a detailed report. Results in days, not months.</p>
+        </div>
+        <a href="#" id="link-fix" class="fix-banner-cta">Get Started →</a>
+    </div>
+
+    <!-- MONTHLY PLANS -->
+    <div class="pricing-grid">
+
+        <!-- BASIC -->
+        <div class="pricing-card">
+            <h3>Basic</h3>
+            <div class="price">$299<span>/mo</span></div>
+            <div class="price-note">Site optimization add-on: <strong>$350</strong> <span style="text-decoration: line-through; opacity: 0.5;">$750</span></div>
+            <div class="divider"></div>
+            <ul>
+                <li><span class="check">✓</span> Technical SEO maintenance</li>
+                <li><span class="check">✓</span> Basic AI search optimization</li>
+                <li><span class="check">✓</span> 5 city/service area pages</li>
+                <li><span class="check">✓</span> 1 blog post per month</li>
+                <li><span class="check">✓</span> Google Business Profile integration</li>
+                <li><span class="check">✓</span> NAP synchronization</li>
+                <li><span class="check">✓</span> Basic backlink package</li>
+                <li><span class="check">✓</span> Monthly performance report</li>
+            </ul>
+            <a href="#" id="link-basic" class="card-cta card-cta-outline">Choose Basic →</a>
+        </div>
+
+        <!-- GROWTH -->
+        <div class="pricing-card popular">
+            <div class="popular-badge">Most Popular</div>
+            <h3>Growth</h3>
+            <div class="price">$499<span>/mo</span></div>
+            <div class="price-note">Site optimization <strong>included free</strong> ($750 value)</div>
+            <div class="divider"></div>
+            <ul>
+                <li><span class="check">✓</span> <strong style="color: var(--ember-white);">Everything in Basic, plus:</strong></li>
+                <li><span class="check">✓</span> Full AI search optimization</li>
+                <li><span class="check">✓</span> 15+ city/service area pages</li>
+                <li><span class="check">✓</span> 2 blog posts per month</li>
+                <li><span class="check">✓</span> GEO citation strategy</li>
+                <li><span class="check">✓</span> AI crawler management</li>
+                <li><span class="check">✓</span> Full backlink package</li>
+                <li><span class="check">✓</span> Keyword management</li>
+                <li><span class="check">✓</span> Review integration</li>
+                <li><span class="check">✓</span> Detailed monthly report</li>
+            </ul>
+            <a href="#" id="link-growth" class="card-cta card-cta-primary">Choose Growth →</a>
+        </div>
+
+    </div>
+
+    <div style="text-align: center; margin-bottom: 3rem;">
+        <div class="crypto-badge">
+            💳 Cards · Apple Pay · Google Pay · Crypto (USDC) accepted
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <h2>Questions? We got you.</h2>
+
+        <details class="faq-item">
+            <summary>Is there a contract or commitment?</summary>
+            <p>Nope. Both plans are month-to-month. Stay because it's working, not because you're locked in. We recommend giving SEO at least 3 months to see real traction, but you can cancel anytime.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>What's the difference between the one-time fix and a monthly plan?</summary>
+            <p>The one-time fix is a deep audit and repair of your existing site — schema, meta tags, structured data, AI signals. It's a snapshot fix. Monthly plans include that ongoing maintenance plus content creation, city pages, backlinks, and strategic growth. Think of the fix as a tune-up; monthly plans are the full pit crew.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Do you work with platforms other than Spectora?</summary>
+            <p>Yes. We work with Spectora, HomeGauge, InspectorPages, WordPress, Squarespace, and custom sites. If your site runs on the internet, we can optimize it.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>How fast will I see results?</summary>
+            <p>Technical fixes (schema, meta, structured data) can impact rankings within 2-4 weeks. Content-driven SEO (city pages, blogs, backlinks) typically shows meaningful movement in 60-90 days. We'll set honest expectations upfront — no "page 1 in 7 days" nonsense.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>I already pay someone for SEO. Why switch?</summary>
+            <p>Ask them to show you exactly what they've done in the last 3 months. If they can't point to specific pages built, schema added, or rankings moved — you're paying for reports, not results. We'll give you a free audit so you can compare.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Do you only work with home inspectors?</summary>
+            <p>We started with home inspectors because it's what we know best. But our SEO approach works for any trades business — electricians, plumbers, HVAC, roofers. If you serve local customers and need to be found online, we can help.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Can I pay with crypto?</summary>
+            <p>Yes! We accept stablecoins (USDC) through Stripe at checkout, plus all major cards, Apple Pay, and Google Pay. More crypto options coming soon.</p>
+        </details>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="bottom-cta">
+        <h2>Not sure which plan? Start with a free audit.</h2>
+        <p>We'll show you exactly what's broken on your site — no charge, no pressure. Then you decide.</p>
+        <a href="/onboarding.html">Get Your Free Audit →</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div style="margin-bottom: 1rem;">
+            <img src="assets/ember-wordmark.png" alt="Ember SEO" style="height: 50px; opacity: 0.9;">
+        </div>
+        <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; font-size: 0.9rem;">
+            <a href="/" style="color: var(--ember-gray); text-decoration: none;">Home</a>
+            <a href="/about.html" style="color: var(--ember-gray); text-decoration: none;">About</a>
+            <a href="/pricing.html" style="color: var(--ember-orange); text-decoration: none;">Pricing</a>
+            <a href="/onboarding.html" style="color: var(--ember-gray); text-decoration: none;">Free Audit</a>
+        </div>
+        <p>© 2026 Ember SEO. Built in Santa Cruz, CA.</p>
+        <p style="margin-top: 0.5rem;"><a href="mailto:judd@emberseo.ai">judd@emberseo.ai</a> · <a href="tel:8314408089" style="color: var(--ember-gray); text-decoration: none;">(831) 440-8089</a></p>
+    </footer>
+
+    <script>
+    // Payment links - REPLACE THESE with live Stripe links once activated
+    // Currently set to test/sandbox links
+    const PAYMENT_LINKS = {
+        fix: '#',     // Will be replaced with live link
+        basic: '#',   // Will be replaced with live link
+        growth: '#'   // Will be replaced with live link
+    };
+
+    document.getElementById('link-fix').href = PAYMENT_LINKS.fix;
+    document.getElementById('link-basic').href = PAYMENT_LINKS.basic;
+    document.getElementById('link-growth').href = PAYMENT_LINKS.growth;
+    </script>
+
+</body>
+</html>
