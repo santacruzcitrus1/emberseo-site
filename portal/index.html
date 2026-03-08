@@ -548,7 +548,7 @@
 const SUPABASE_URL = 'https://vuzaqdiesojwzptxssex.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ1emFxZGllc29qd3pwdHhzc2V4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5MzU0NTEsImV4cCI6MjA4ODUxMTQ1MX0.Z56T5RUKB5-BuhvgoI2ccOMYgsILAQxrr2KqmXC9C1U';
 
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const _sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // ─── Auth ───
 async function handleLogin(e) {
@@ -562,7 +562,7 @@ async function handleLogin(e) {
     btn.textContent = 'Signing in...';
     errEl.textContent = '';
 
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    const { data, error } = await _sb.auth.signInWithPassword({ email, password });
 
     if (error) {
         errEl.textContent = error.message;
@@ -575,14 +575,14 @@ async function handleLogin(e) {
 }
 
 async function handleLogout() {
-    await supabase.auth.signOut();
+    await _sb.auth.signOut();
     document.getElementById('loginContainer').classList.remove('hidden');
     document.getElementById('dashboard').classList.remove('active');
 }
 
 // ─── Check existing session ───
 async function checkSession() {
-    const { data: { session } } = await supabase.auth.getSession();
+    const { data: { session } } = await _sb.auth.getSession();
     if (session) {
         showDashboard(session.user);
     }
@@ -595,7 +595,7 @@ async function showDashboard(user) {
     document.getElementById('userName').textContent = user.email;
 
     // Fetch client profile
-    const { data: profile } = await supabase
+    const { data: profile } = await _sb
         .from('clients')
         .select('*')
         .eq('user_id', user.id)
@@ -607,7 +607,7 @@ async function showDashboard(user) {
     }
 
     // Fetch audit history
-    const { data: audits } = await supabase
+    const { data: audits } = await _sb
         .from('audits')
         .select('*')
         .eq('client_id', profile?.id)
