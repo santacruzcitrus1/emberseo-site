@@ -492,6 +492,26 @@
                 </div>
             </div>
 
+            <!-- Content Stats Row -->
+            <div class="stats-row" id="contentStatsRow">
+                <div class="stat-card">
+                    <div class="stat-value" id="statBlogs" style="color: #818cf8;">0</div>
+                    <div class="stat-label">📝 Blog Posts</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="statBacklinks" style="color: #34d399;">0</div>
+                    <div class="stat-label">🔗 Backlinks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="statPagesIndexed" style="color: #fbbf24;">0</div>
+                    <div class="stat-label">📄 Pages Indexed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="statCityPages" style="color: #f472b6;">0</div>
+                    <div class="stat-label">🏙️ City Pages</div>
+                </div>
+            </div>
+
             <!-- Score Card -->
             <div class="score-card" id="scoreCard">
                 <div class="score-ring">
@@ -689,6 +709,13 @@ function renderDashboard(audits, profile) {
 
     document.getElementById('scoreMeta').textContent =
         `Last updated: ${new Date(latest.created_at).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`;
+
+    // Content metrics
+    const metrics = latest.metrics || {};
+    document.getElementById('statBlogs').textContent = metrics.blog_posts || 0;
+    document.getElementById('statBacklinks').textContent = metrics.backlinks || 0;
+    document.getElementById('statPagesIndexed').textContent = metrics.pages_indexed || 0;
+    document.getElementById('statCityPages').textContent = metrics.city_pages || 0;
 
     // Issues list
     const issueList = document.getElementById('issueList');
