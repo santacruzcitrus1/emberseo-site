@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Client Portal — Ember SEO</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
     <style>
@@ -428,7 +431,7 @@
         <div class="login-logo"><img src="../assets/ember-icon.png" alt="Ember" class="logo-img"> <span>Ember</span> SEO</div>
         <div class="login-subtitle">Client Portal</div>
 
-        <form id="loginForm" onsubmit="handleLogin(event)">
+        <form id="loginForm">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="you@example.com" required>
@@ -825,6 +828,12 @@ function drawChart(audits) {
 }
 
 // ─── Init ───
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    handleLogin(e);
+    return false;
+});
 checkSession();
 </script>
 
