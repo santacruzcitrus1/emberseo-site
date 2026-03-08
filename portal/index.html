@@ -389,6 +389,223 @@
             margin-top: 4px;
         }
 
+        /* ─── Tab Nav ─── */
+        .dash-tabs {
+            display: flex;
+            gap: 4px;
+            background: var(--ember-bg);
+            border-radius: 10px;
+            padding: 4px;
+            margin-bottom: 28px;
+            width: fit-content;
+        }
+
+        .dash-tab {
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--ember-muted);
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            background: none;
+            font-family: inherit;
+        }
+
+        .dash-tab:hover { color: var(--ember-text); }
+
+        .dash-tab.active {
+            background: var(--ember-card);
+            color: var(--ember-accent);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* ─── Onboarding Form (Portal) ─── */
+        .ob-section { margin-bottom: 24px; }
+        .ob-section-header {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ob-form .form-group {
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .ob-form .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--ember-muted);
+            margin-bottom: 6px;
+        }
+
+        .ob-form .form-group label .hint {
+            display: block;
+            font-weight: 400;
+            font-size: 12px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .ob-form input[type="text"],
+        .ob-form input[type="email"],
+        .ob-form input[type="url"],
+        .ob-form input[type="tel"],
+        .ob-form textarea,
+        .ob-form select {
+            width: 100%;
+            padding: 10px 14px;
+            background: var(--ember-bg);
+            border: 1px solid var(--ember-border);
+            border-radius: 8px;
+            color: var(--ember-text);
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .ob-form input:focus,
+        .ob-form textarea:focus,
+        .ob-form select:focus {
+            border-color: var(--ember-accent);
+        }
+
+        .ob-form textarea { resize: vertical; min-height: 80px; }
+
+        .ob-form select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238888AA' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 32px;
+        }
+
+        .ob-form select option { background: var(--ember-card); color: var(--ember-text); }
+
+        .ob-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .ob-check-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .ob-check {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: var(--ember-bg);
+            border: 1px solid var(--ember-border);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: border-color 0.2s, background 0.2s;
+            user-select: none;
+        }
+
+        .ob-check:hover { border-color: rgba(255, 107, 53, 0.3); }
+
+        .ob-check.checked {
+            border-color: var(--ember-accent);
+            background: rgba(255, 107, 53, 0.08);
+        }
+
+        .ob-check input { display: none; }
+
+        .ob-check .mark {
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--ember-muted);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.2s;
+            font-size: 10px;
+        }
+
+        .ob-check.checked .mark {
+            background: var(--ember-accent);
+            border-color: var(--ember-accent);
+            color: white;
+        }
+
+        .ob-progress {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 24px;
+        }
+
+        .ob-progress-step {
+            flex: 1;
+            height: 4px;
+            background: var(--ember-border);
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .ob-progress-step.active { background: var(--ember-accent); }
+        .ob-progress-step.done { background: var(--ember-success); }
+
+        .ob-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid var(--ember-border);
+        }
+
+        .ob-btn {
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            font-family: inherit;
+        }
+
+        .ob-btn-next { background: var(--ember-accent); color: white; }
+        .ob-btn-next:hover { background: #e55a2a; }
+        .ob-btn-back { background: transparent; color: var(--ember-muted); border: 1px solid var(--ember-border); }
+        .ob-btn-back:hover { color: var(--ember-text); border-color: #444; }
+        .ob-btn-submit { background: linear-gradient(135deg, #FF6B35, #F4900C); color: white; padding: 12px 32px; font-size: 15px; }
+        .ob-btn-submit:hover { opacity: 0.9; }
+
+        .ob-success {
+            text-align: center;
+            padding: 48px 24px;
+        }
+
+        .ob-success .icon { font-size: 48px; margin-bottom: 16px; }
+        .ob-success h3 { font-size: 20px; margin-bottom: 8px; }
+        .ob-success p { color: var(--ember-muted); font-size: 14px; }
+
+        .ob-card {
+            background: var(--ember-card);
+            border: 1px solid var(--ember-border);
+            border-radius: 16px;
+            padding: 28px;
+        }
+
         /* Loading */
         .loading {
             display: flex;
@@ -420,6 +637,7 @@
 
         @media (max-width: 480px) {
             .stats-row { grid-template-columns: 1fr 1fr; }
+            .ob-form .form-row { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -464,6 +682,15 @@
     <div class="dash-content">
         <div class="dash-welcome" id="dashWelcome">Welcome back</div>
         <div class="dash-welcome-sub" id="dashWelcomeSub">Here's how your site is performing.</div>
+
+        <!-- Tab Navigation -->
+        <div class="dash-tabs">
+            <button class="dash-tab active" onclick="switchTab('dashboard')">📊 Dashboard</button>
+            <button class="dash-tab" onclick="switchTab('onboarding')">📋 Onboarding</button>
+        </div>
+
+        <!-- Dashboard Tab -->
+        <div class="tab-content active" id="tab-dashboard">
 
         <div class="loading" id="dashLoading">
             <div class="spinner"></div>
@@ -560,6 +787,288 @@
             </div>
 
         </div>
+    </div>
+
+    </div><!-- end tab-dashboard -->
+
+    <!-- Onboarding Tab -->
+    <div class="tab-content" id="tab-onboarding">
+        <div class="ob-card">
+            <div id="obFormContainer">
+                <div style="text-align: center; margin-bottom: 24px;">
+                    <div style="font-size: 28px; margin-bottom: 8px;">📋</div>
+                    <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 4px;">Tell Us About Your Business</h2>
+                    <p style="color: var(--ember-muted); font-size: 13px;">The more you tell us, the better your content and strategy will be.</p>
+                </div>
+
+                <!-- Progress -->
+                <div class="ob-progress">
+                    <div class="ob-progress-step active" data-ob="1"></div>
+                    <div class="ob-progress-step" data-ob="2"></div>
+                    <div class="ob-progress-step" data-ob="3"></div>
+                    <div class="ob-progress-step" data-ob="4"></div>
+                    <div class="ob-progress-step" data-ob="5"></div>
+                </div>
+
+                <form id="obForm">
+
+                    <!-- Step 1: Your Business -->
+                    <div class="ob-step" data-ob="1">
+                        <div class="ob-section-header">📋 Your Business</div>
+                        <div class="ob-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Company Name</label>
+                                    <input type="text" name="ob_company" placeholder="e.g. Landmark Property Inspections">
+                                </div>
+                                <div class="form-group">
+                                    <label>Your Name</label>
+                                    <input type="text" name="ob_name" placeholder="e.g. Judd Bergman">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" name="ob_email" placeholder="you@yourcompany.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="tel" name="ob_phone" placeholder="(555) 123-4567">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Website URL</label>
+                                <input type="url" name="ob_website" placeholder="https://www.yoursite.com">
+                            </div>
+                            <div class="form-group">
+                                <label>How long have you been in business?</label>
+                                <select name="ob_years">
+                                    <option value="">Select...</option>
+                                    <option value="less_than_1">Less than 1 year</option>
+                                    <option value="1_3">1–3 years</option>
+                                    <option value="3_5">3–5 years</option>
+                                    <option value="5_10">5–10 years</option>
+                                    <option value="10_plus">10+ years</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Service Areas <span class="hint">List every city, county, or region you serve.</span></label>
+                                <textarea name="ob_areas" placeholder="e.g. Santa Cruz, Capitola, Scotts Valley, Aptos..." rows="2"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Certifications & Specialties</label>
+                                <div class="ob-check-group">
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="internachi"><span class="mark"></span>InterNACHI</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="ashi"><span class="mark"></span>ASHI</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="creia"><span class="mark"></span>CREIA</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="radon"><span class="mark"></span>Radon</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="mold"><span class="mark"></span>Mold</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="sewer"><span class="mark"></span>Sewer Scope</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="thermal"><span class="mark"></span>Thermal</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="commercial"><span class="mark"></span>Commercial</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="pool"><span class="mark"></span>Pool & Spa</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>What makes you different? <span class="hint">What do clients love about you? What's your edge?</span></label>
+                                <textarea name="ob_differentiator" placeholder="e.g. 20 years in construction, thermal imaging included free..." rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="ob-nav">
+                            <div></div>
+                            <button type="button" class="ob-btn ob-btn-next" onclick="obNext()">Next: Your Market →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Your Market -->
+                    <div class="ob-step" data-ob="2" style="display:none;">
+                        <div class="ob-section-header">🏠 Your Market</div>
+                        <div class="ob-form">
+                            <div class="form-group">
+                                <label>What types of homes are most common? <span class="hint">Age, style, construction — whatever you see most.</span></label>
+                                <textarea name="ob_housing" placeholder="e.g. 1950s-70s ranch homes, pier and beam foundations..." rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Most common issues you find? <span class="hint">The things on almost every report. This becomes great content.</span></label>
+                                <textarea name="ob_issues" placeholder="e.g. Moisture intrusion, old panels, wood-destroying organisms..." rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Local factors affecting homes? <span class="hint">Climate, soil, pests, flood/fire zones, coastal exposure, etc.</span></label>
+                                <textarea name="ob_factors" placeholder="e.g. Sandy soil, fog/moisture causes mold, wildfire zone..." rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Main competitors?</label>
+                                <textarea name="ob_competitors" placeholder="e.g. Apex Inspections, Martin Hewitt..." rows="2"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Where does most business come from today?</label>
+                                <select name="ob_lead_source">
+                                    <option value="">Select...</option>
+                                    <option value="agent_referrals">Agent referrals</option>
+                                    <option value="google">Google / search</option>
+                                    <option value="word_of_mouth">Word of mouth</option>
+                                    <option value="social">Social media</option>
+                                    <option value="directories">Directories (Yelp, Angi)</option>
+                                    <option value="mixed">Mix of several</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="ob-nav">
+                            <button type="button" class="ob-btn ob-btn-back" onclick="obPrev()">← Back</button>
+                            <button type="button" class="ob-btn ob-btn-next" onclick="obNext()">Next: Customers →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Your Customers -->
+                    <div class="ob-step" data-ob="3" style="display:none;">
+                        <div class="ob-section-header">👥 Your Customers</div>
+                        <div class="ob-form">
+                            <div class="form-group">
+                                <label>Who are your typical clients?</label>
+                                <div class="ob-check-group">
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="first_time"><span class="mark"></span>First-time buyers</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="repeat"><span class="mark"></span>Repeat buyers</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="investors"><span class="mark"></span>Investors</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="sellers"><span class="mark"></span>Sellers (pre-listing)</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="agents"><span class="mark"></span>Real estate agents</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="commercial"><span class="mark"></span>Commercial</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Average home price in your market?</label>
+                                <select name="ob_price">
+                                    <option value="">Select...</option>
+                                    <option value="under_200k">Under $200K</option>
+                                    <option value="200_400k">$200K – $400K</option>
+                                    <option value="400_600k">$400K – $600K</option>
+                                    <option value="600k_1m">$600K – $1M</option>
+                                    <option value="over_1m">Over $1M</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>What questions do clients ask most? <span class="hint">These become FAQ content and blog topics.</span></label>
+                                <textarea name="ob_questions" placeholder="e.g. How long does inspection take? What's included? Should I be there?" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Inspections per month?</label>
+                                <select name="ob_volume">
+                                    <option value="">Select...</option>
+                                    <option value="1_5">1–5</option>
+                                    <option value="5_10">5–10</option>
+                                    <option value="10_20">10–20</option>
+                                    <option value="20_40">20–40</option>
+                                    <option value="40_plus">40+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>What's your goal? <span class="hint">More bookings? Dominate an area? Less reliance on referrals?</span></label>
+                                <textarea name="ob_goals" placeholder="e.g. Show up on Google, diversify beyond agent referrals..." rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="ob-nav">
+                            <button type="button" class="ob-btn ob-btn-back" onclick="obPrev()">← Back</button>
+                            <button type="button" class="ob-btn ob-btn-next" onclick="obNext()">Next: Brand →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Brand & Content -->
+                    <div class="ob-step" data-ob="4" style="display:none;">
+                        <div class="ob-section-header">🎨 Brand & Content</div>
+                        <div class="ob-form">
+                            <div class="form-group">
+                                <label>What tone fits your brand?</label>
+                                <select name="ob_tone">
+                                    <option value="">Select...</option>
+                                    <option value="professional">Professional & authoritative</option>
+                                    <option value="friendly">Friendly & approachable</option>
+                                    <option value="casual">Casual & down-to-earth</option>
+                                    <option value="technical">Technical & detailed</option>
+                                    <option value="mix">Professional but personable</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Existing content you like? <span class="hint">Blog posts, pages, or competitor content that's well done.</span></label>
+                                <textarea name="ob_content_ref" placeholder="e.g. I wrote a blog about radon testing that got good feedback..." rows="2"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Brand notes <span class="hint">Colors, tagline, things you want or don't want on your site.</span></label>
+                                <textarea name="ob_brand" placeholder="e.g. Navy and gold colors. No fear-based marketing. Always mention family-owned..." rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div class="ob-nav">
+                            <button type="button" class="ob-btn ob-btn-back" onclick="obPrev()">← Back</button>
+                            <button type="button" class="ob-btn ob-btn-next" onclick="obNext()">Next: Access →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Access -->
+                    <div class="ob-step" data-ob="5" style="display:none;">
+                        <div class="ob-section-header">🔑 Website & Account Access</div>
+                        <div class="ob-form">
+                            <div class="form-group">
+                                <label>Website platform?</label>
+                                <select name="ob_platform">
+                                    <option value="">Select...</option>
+                                    <option value="spectora">Spectora</option>
+                                    <option value="homegauge">HomeGauge</option>
+                                    <option value="hip">Home Inspector Pro</option>
+                                    <option value="wordpress">WordPress</option>
+                                    <option value="wix">Wix</option>
+                                    <option value="squarespace">Squarespace</option>
+                                    <option value="other">Other</option>
+                                    <option value="not_sure">Not sure</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>CMS Login URL (optional)</label>
+                                <input type="url" name="ob_cms" placeholder="e.g. https://yoursite.com/wp-admin">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Google Search Console?</label>
+                                    <select name="ob_gsc">
+                                        <option value="">Select...</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                        <option value="not_sure">Not sure</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Google Business Profile?</label>
+                                    <select name="ob_gbp">
+                                        <option value="">Select...</option>
+                                        <option value="yes">Yes, active</option>
+                                        <option value="yes_inactive">Yes, inactive</option>
+                                        <option value="no">No</option>
+                                        <option value="not_sure">Not sure</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Anything else? <span class="hint">Previous SEO, concerns, questions, deadlines — anything at all.</span></label>
+                                <textarea name="ob_notes" placeholder="e.g. Bad experience with last SEO company. Launching second office next month..." rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="ob-nav">
+                            <button type="button" class="ob-btn ob-btn-back" onclick="obPrev()">← Back</button>
+                            <button type="button" class="ob-btn ob-btn-submit" onclick="obSubmit()">Submit & Let's Get Started 🔥</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- Success -->
+            <div id="obSuccess" style="display:none;">
+                <div class="ob-success">
+                    <div class="icon">🔥</div>
+                    <h3>All set!</h3>
+                    <p>We've got everything we need. We'll use this to build your custom SEO strategy. Expect to hear from us within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </div><!-- end tab-onboarding -->
+
     </div>
 </div>
 
@@ -862,6 +1371,87 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     return false;
 });
 checkSession();
+
+// ─── Tab Switching ───
+function switchTab(tab) {
+    document.querySelectorAll('.dash-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('active');
+    document.querySelector(`.dash-tab[onclick*="${tab}"]`).classList.add('active');
+}
+
+// ─── Onboarding Form Logic ───
+let obStep = 1;
+const obTotal = 5;
+
+function obUpdateProgress() {
+    document.querySelectorAll('.ob-progress-step').forEach((s, i) => {
+        s.classList.remove('active', 'done');
+        if (i + 1 === obStep) s.classList.add('active');
+        if (i + 1 < obStep) s.classList.add('done');
+    });
+}
+
+function obShowStep(n) {
+    document.querySelectorAll('.ob-step').forEach(s => s.style.display = 'none');
+    const target = document.querySelector(`.ob-step[data-ob="${n}"]`);
+    if (target) target.style.display = 'block';
+}
+
+function obNext() {
+    if (obStep < obTotal) { obStep++; obShowStep(obStep); obUpdateProgress(); }
+}
+
+function obPrev() {
+    if (obStep > 1) { obStep--; obShowStep(obStep); obUpdateProgress(); }
+}
+
+function obToggle(el) {
+    el.classList.toggle('checked');
+    const inp = el.querySelector('input');
+    inp.checked = !inp.checked;
+}
+
+async function obSubmit() {
+    const form = document.getElementById('obForm');
+    const fd = new FormData(form);
+    const data = {};
+
+    for (let [k, v] of fd.entries()) {
+        if (data[k]) {
+            if (!Array.isArray(data[k])) data[k] = [data[k]];
+            data[k].push(v);
+        } else {
+            data[k] = v;
+        }
+    }
+
+    // Try saving to Supabase
+    try {
+        const { data: { session } } = await _sb.auth.getSession();
+        if (session) {
+            await _sb.from('onboarding_responses').insert([{
+                user_id: session.user.id,
+                data: data,
+                created_at: new Date().toISOString()
+            }]);
+        }
+    } catch(e) { /* Table may not exist yet */ }
+
+    // Also send email notification
+    const subject = encodeURIComponent('📋 Client Onboarding: ' + (data.ob_company || 'Unknown'));
+    const body = encodeURIComponent(
+        Object.entries(data)
+            .filter(([k, v]) => v && v !== '')
+            .map(([k, v]) => k.replace(/^ob_/, '').replace(/_/g, ' ').toUpperCase() + ': ' + (Array.isArray(v) ? v.join(', ') : v))
+            .join('\n\n')
+    );
+    window.location.href = 'mailto:judd@emberseo.ai?subject=' + subject + '&body=' + body;
+
+    // Show success
+    document.getElementById('obFormContainer').style.display = 'none';
+    document.getElementById('obSuccess').style.display = 'block';
+}
 </script>
 
 </body>
