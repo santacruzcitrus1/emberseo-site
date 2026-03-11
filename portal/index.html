@@ -819,11 +819,11 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label>Company Name</label>
-                                    <input type="text" name="ob_company" placeholder="e.g. Landmark Property Inspections">
+                                    <input type="text" name="ob_company" placeholder="e.g. Arch Electric">
                                 </div>
                                 <div class="form-group">
                                     <label>Your Name</label>
-                                    <input type="text" name="ob_name" placeholder="e.g. Judd Bergman">
+                                    <input type="text" name="ob_name" placeholder="e.g. Levi Mentz">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -856,22 +856,29 @@
                                 <textarea name="ob_areas" placeholder="e.g. Santa Cruz, Capitola, Scotts Valley, Aptos..." rows="2"></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Certifications & Specialties</label>
-                                <div class="ob-check-group">
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="internachi"><span class="mark"></span>InterNACHI</label>
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="ashi"><span class="mark"></span>ASHI</label>
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="creia"><span class="mark"></span>CREIA</label>
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="radon"><span class="mark"></span>Radon</label>
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="mold"><span class="mark"></span>Mold</label>
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="sewer"><span class="mark"></span>Sewer Scope</label>
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="thermal"><span class="mark"></span>Thermal</label>
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="commercial"><span class="mark"></span>Commercial</label>
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_certs" value="pool"><span class="mark"></span>Pool & Spa</label>
-                                </div>
+                                <label>What type of trade/service?</label>
+                                <select name="ob_trade">
+                                    <option value="">Select...</option>
+                                    <option value="electrician">Electrician</option>
+                                    <option value="plumber">Plumber</option>
+                                    <option value="hvac">HVAC</option>
+                                    <option value="roofer">Roofer</option>
+                                    <option value="inspector">Home Inspector</option>
+                                    <option value="painter">Painter</option>
+                                    <option value="landscaper">Landscaper</option>
+                                    <option value="general_contractor">General Contractor</option>
+                                    <option value="pest_control">Pest Control</option>
+                                    <option value="solar">Solar</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Licenses & Certifications <span class="hint">License numbers, trade certs, bonded/insured status, etc.</span></label>
+                                <textarea name="ob_certs" placeholder="e.g. CA Electrical License #945992, bonded & insured..." rows="2"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>What makes you different? <span class="hint">What do clients love about you? What's your edge?</span></label>
-                                <textarea name="ob_differentiator" placeholder="e.g. 20 years in construction, thermal imaging included free..." rows="3"></textarea>
+                                <textarea name="ob_differentiator" placeholder="e.g. 15 years experience, family-owned, same-day service, free estimates..." rows="3"></textarea>
                             </div>
                         </div>
                         <div class="ob-nav">
@@ -885,16 +892,16 @@
                         <div class="ob-section-header">🏠 Your Market</div>
                         <div class="ob-form">
                             <div class="form-group">
-                                <label>What types of homes are most common? <span class="hint">Age, style, construction — whatever you see most.</span></label>
-                                <textarea name="ob_housing" placeholder="e.g. 1950s-70s ranch homes, pier and beam foundations..." rows="3"></textarea>
+                                <label>What types of jobs do you do most? <span class="hint">Residential, commercial, new construction, repairs — whatever keeps you busy.</span></label>
+                                <textarea name="ob_job_types" placeholder="e.g. Panel upgrades, whole-house rewires, new construction, EV charger installs..." rows="3"></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Most common issues you find? <span class="hint">The things on almost every report. This becomes great content.</span></label>
-                                <textarea name="ob_issues" placeholder="e.g. Moisture intrusion, old panels, wood-destroying organisms..." rows="3"></textarea>
+                                <label>Most common problems customers come to you with? <span class="hint">These become great content topics for your site.</span></label>
+                                <textarea name="ob_issues" placeholder="e.g. Outdated wiring, tripping breakers, code violations..." rows="3"></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Local factors affecting homes? <span class="hint">Climate, soil, pests, flood/fire zones, coastal exposure, etc.</span></label>
-                                <textarea name="ob_factors" placeholder="e.g. Sandy soil, fog/moisture causes mold, wildfire zone..." rows="3"></textarea>
+                                <label>Local factors that drive demand? <span class="hint">Climate, housing age, regulations, seasonal patterns, etc.</span></label>
+                                <textarea name="ob_factors" placeholder="e.g. Older homes with knob-and-tube, new solar mandates, storm damage..." rows="3"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Main competitors?</label>
@@ -924,40 +931,42 @@
                         <div class="ob-section-header">👥 Your Customers</div>
                         <div class="ob-form">
                             <div class="form-group">
-                                <label>Who are your typical clients?</label>
+                                <label>Who are your typical customers?</label>
                                 <div class="ob-check-group">
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="first_time"><span class="mark"></span>First-time buyers</label>
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="repeat"><span class="mark"></span>Repeat buyers</label>
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="investors"><span class="mark"></span>Investors</label>
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="sellers"><span class="mark"></span>Sellers (pre-listing)</label>
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="agents"><span class="mark"></span>Real estate agents</label>
-                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="commercial"><span class="mark"></span>Commercial</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="homeowners"><span class="mark"></span>Homeowners</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="property_mgmt"><span class="mark"></span>Property managers</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="contractors"><span class="mark"></span>General contractors</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="builders"><span class="mark"></span>Builders / developers</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="realtors"><span class="mark"></span>Real estate agents</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="commercial"><span class="mark"></span>Commercial / industrial</label>
+                                    <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="emergency"><span class="mark"></span>Emergency / after-hours</label>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Average home price in your market?</label>
-                                <select name="ob_price">
+                                <label>Average job size?</label>
+                                <select name="ob_job_size">
                                     <option value="">Select...</option>
-                                    <option value="under_200k">Under $200K</option>
-                                    <option value="200_400k">$200K – $400K</option>
-                                    <option value="400_600k">$400K – $600K</option>
-                                    <option value="600k_1m">$600K – $1M</option>
-                                    <option value="over_1m">Over $1M</option>
+                                    <option value="under_500">Under $500</option>
+                                    <option value="500_2k">$500 – $2,000</option>
+                                    <option value="2k_5k">$2,000 – $5,000</option>
+                                    <option value="5k_15k">$5,000 – $15,000</option>
+                                    <option value="over_15k">Over $15,000</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label>What questions do clients ask most? <span class="hint">These become FAQ content and blog topics.</span></label>
-                                <textarea name="ob_questions" placeholder="e.g. How long does inspection take? What's included? Should I be there?" rows="3"></textarea>
+                                <textarea name="ob_questions" placeholder="e.g. How much does it cost? How long will it take? Are you licensed and insured?" rows="3"></textarea>
+</invoke>
                             </div>
                             <div class="form-group">
-                                <label>Inspections per month?</label>
+                                <label>Jobs per month?</label>
                                 <select name="ob_volume">
                                     <option value="">Select...</option>
                                     <option value="1_5">1–5</option>
-                                    <option value="5_10">5–10</option>
-                                    <option value="10_20">10–20</option>
-                                    <option value="20_40">20–40</option>
-                                    <option value="40_plus">40+</option>
+                                    <option value="5_15">5–15</option>
+                                    <option value="15_30">15–30</option>
+                                    <option value="30_60">30–60</option>
+                                    <option value="60_plus">60+</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -1009,12 +1018,12 @@
                                 <label>Website platform?</label>
                                 <select name="ob_platform">
                                     <option value="">Select...</option>
-                                    <option value="spectora">Spectora</option>
-                                    <option value="homegauge">HomeGauge</option>
-                                    <option value="hip">Home Inspector Pro</option>
                                     <option value="wordpress">WordPress</option>
                                     <option value="wix">Wix</option>
                                     <option value="squarespace">Squarespace</option>
+                                    <option value="godaddy">GoDaddy Website Builder</option>
+                                    <option value="google_sites">Google Sites</option>
+                                    <option value="none">Don't have one yet</option>
                                     <option value="other">Other</option>
                                     <option value="not_sure">Not sure</option>
                                 </select>
@@ -1046,7 +1055,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Anything else? <span class="hint">Previous SEO, concerns, questions, deadlines — anything at all.</span></label>
-                                <textarea name="ob_notes" placeholder="e.g. Bad experience with last SEO company. Launching second office next month..." rows="3"></textarea>
+                                <textarea name="ob_notes" placeholder="e.g. Never had a website before. Wife started one but it's not live yet. Want to show up on Google..." rows="3"></textarea>
                             </div>
                         </div>
                         <div class="ob-nav">
