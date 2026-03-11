@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Onboarding | Ember SEO</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ember-bg: #0D0D1A;
+            --ember-card: #1A1A2E;
+            --ember-accent: #FF6B35;
+            --ember-text: #E8E8F0;
+            --ember-muted: #8888AA;
+            --ember-border: #2A2A40;
+            --ember-success: #22c55e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--ember-bg);
+            color: var(--ember-text);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header img { height: 45px; margin-bottom: 1rem; }
+
+        .header h1 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: var(--ember-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Progress */
+        .ob-progress {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 2rem;
+        }
+
+        .ob-progress-step {
+            flex: 1;
+            height: 4px;
+            background: var(--ember-border);
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .ob-progress-step.active { background: var(--ember-accent); }
+        .ob-progress-step.done { background: var(--ember-success); }
+
+        /* Card */
+        .ob-card {
+            background: var(--ember-card);
+            border: 1px solid var(--ember-border);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .ob-section-header {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--ember-muted);
+            margin-bottom: 6px;
+        }
+
+        .form-group label .hint {
+            display: block;
+            font-weight: 400;
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px 14px;
+            background: var(--ember-bg);
+            border: 1px solid var(--ember-border);
+            border-radius: 8px;
+            color: var(--ember-text);
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--ember-accent);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: #555; }
+
+        .form-group textarea { resize: vertical; min-height: 80px; }
+
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238888AA' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 32px;
+        }
+
+        .form-group select option { background: var(--ember-card); color: var(--ember-text); }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        /* Checkboxes */
+        .ob-check-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .ob-check {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: var(--ember-bg);
+            border: 1px solid var(--ember-border);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: border-color 0.2s, background 0.2s;
+            user-select: none;
+        }
+
+        .ob-check:hover { border-color: rgba(255, 107, 53, 0.3); }
+
+        .ob-check.checked {
+            border-color: var(--ember-accent);
+            background: rgba(255, 107, 53, 0.08);
+        }
+
+        .ob-check input { display: none; }
+
+        .ob-check .mark {
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--ember-muted);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.2s;
+            font-size: 10px;
+        }
+
+        .ob-check.checked .mark {
+            background: var(--ember-accent);
+            border-color: var(--ember-accent);
+            color: white;
+        }
+
+        /* Navigation */
+        .ob-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--ember-border);
+        }
+
+        .ob-btn {
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            font-family: inherit;
+        }
+
+        .ob-btn-next { background: var(--ember-accent); color: white; }
+        .ob-btn-next:hover { background: #e55a2a; }
+        .ob-btn-back { background: transparent; color: var(--ember-muted); border: 1px solid var(--ember-border); }
+        .ob-btn-back:hover { color: var(--ember-text); border-color: #444; }
+        .ob-btn-submit { background: linear-gradient(135deg, #FF6B35, #F4900C); color: white; padding: 12px 32px; font-size: 1rem; }
+        .ob-btn-submit:hover { opacity: 0.9; }
+        .ob-btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        /* Success */
+        .ob-success {
+            text-align: center;
+            padding: 3rem 1.5rem;
+        }
+
+        .ob-success .icon { font-size: 3rem; margin-bottom: 1rem; }
+        .ob-success h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .ob-success p { color: var(--ember-muted); font-size: 0.95rem; line-height: 1.7; }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: var(--ember-muted);
+        }
+
+        .footer a { color: var(--ember-accent); text-decoration: none; }
+
+        @media (max-width: 480px) {
+            .form-row { grid-template-columns: 1fr; }
+            .ob-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img src="assets/ember-wordmark.png" alt="Ember SEO">
+        <h1>📋 Tell Us About Your Business</h1>
+        <p>The more you tell us, the better your content and strategy will be.</p>
+    </div>
+
+    <div class="ob-progress">
+        <div class="ob-progress-step active" data-ob="1"></div>
+        <div class="ob-progress-step" data-ob="2"></div>
+        <div class="ob-progress-step" data-ob="3"></div>
+        <div class="ob-progress-step" data-ob="4"></div>
+        <div class="ob-progress-step" data-ob="5"></div>
+    </div>
+
+    <div class="ob-card">
+        <div id="obFormContainer">
+            <form id="obForm">
+
+                <!-- Step 1: Your Business -->
+                <div class="ob-step" data-ob="1">
+                    <div class="ob-section-header">📋 Your Business</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" name="ob_company" placeholder="e.g. Arch Electric" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" name="ob_name" placeholder="e.g. Levi Mentz" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="ob_email" placeholder="you@yourcompany.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" name="ob_phone" placeholder="(555) 123-4567">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Website URL <span class="hint">Leave blank if you don't have one yet — that's fine!</span></label>
+                        <input type="url" name="ob_website" placeholder="https://www.yoursite.com">
+                    </div>
+                    <div class="form-group">
+                        <label>What type of trade/service?</label>
+                        <select name="ob_trade">
+                            <option value="">Select...</option>
+                            <option value="electrician">Electrician</option>
+                            <option value="plumber">Plumber</option>
+                            <option value="hvac">HVAC</option>
+                            <option value="roofer">Roofer</option>
+                            <option value="inspector">Home Inspector</option>
+                            <option value="painter">Painter</option>
+                            <option value="landscaper">Landscaper</option>
+                            <option value="general_contractor">General Contractor</option>
+                            <option value="pest_control">Pest Control</option>
+                            <option value="solar">Solar</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>How long have you been in business?</label>
+                        <select name="ob_years">
+                            <option value="">Select...</option>
+                            <option value="less_than_1">Less than 1 year</option>
+                            <option value="1_3">1–3 years</option>
+                            <option value="3_5">3–5 years</option>
+                            <option value="5_10">5–10 years</option>
+                            <option value="10_plus">10+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Service Areas <span class="hint">List every city, county, or region you serve.</span></label>
+                        <textarea name="ob_areas" placeholder="e.g. Prunedale, Salinas, Monterey, Santa Cruz..." rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Licenses & Certifications <span class="hint">License numbers, trade certs, bonded/insured status, etc.</span></label>
+                        <textarea name="ob_certs" placeholder="e.g. CA Electrical License #945992, bonded & insured..." rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>What makes you different? <span class="hint">What do clients love about you? What's your edge?</span></label>
+                        <textarea name="ob_differentiator" placeholder="e.g. 15 years experience, family-owned, same-day service, free estimates..." rows="3"></textarea>
+                    </div>
+                    <div class="ob-nav">
+                        <div></div>
+                        <button type="button" class="ob-btn ob-btn-next" onclick="obNext()">Next: Your Market →</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Your Market -->
+                <div class="ob-step" data-ob="2" style="display:none;">
+                    <div class="ob-section-header">🏠 Your Market</div>
+                    <div class="form-group">
+                        <label>What types of jobs do you do most? <span class="hint">Residential, commercial, new construction, repairs — whatever keeps you busy.</span></label>
+                        <textarea name="ob_job_types" placeholder="e.g. Panel upgrades, whole-house rewires, new construction, EV charger installs..." rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Most common problems customers come to you with? <span class="hint">These become great content topics for your site.</span></label>
+                        <textarea name="ob_issues" placeholder="e.g. Outdated wiring, tripping breakers, code violations..." rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Local factors that drive demand? <span class="hint">Climate, housing age, regulations, seasonal patterns, etc.</span></label>
+                        <textarea name="ob_factors" placeholder="e.g. Older homes with knob-and-tube, new solar mandates, storm damage..." rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Main competitors?</label>
+                        <textarea name="ob_competitors" placeholder="e.g. Other local companies you compete with..." rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Where does most business come from today?</label>
+                        <select name="ob_lead_source">
+                            <option value="">Select...</option>
+                            <option value="word_of_mouth">Word of mouth</option>
+                            <option value="google">Google / search</option>
+                            <option value="referrals">Referrals from other pros</option>
+                            <option value="social">Social media</option>
+                            <option value="directories">Directories (Yelp, Angi, Nextdoor)</option>
+                            <option value="mixed">Mix of several</option>
+                        </select>
+                    </div>
+                    <div class="ob-nav">
+                        <button type="button" class="ob-btn ob-btn-back" onclick="obPrev()">← Back</button>
+                        <button type="button" class="ob-btn ob-btn-next" onclick="obNext()">Next: Customers →</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Your Customers -->
+                <div class="ob-step" data-ob="3" style="display:none;">
+                    <div class="ob-section-header">👥 Your Customers</div>
+                    <div class="form-group">
+                        <label>Who are your typical customers?</label>
+                        <div class="ob-check-group">
+                            <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="homeowners"><span class="mark"></span>Homeowners</label>
+                            <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="property_mgmt"><span class="mark"></span>Property managers</label>
+                            <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="contractors"><span class="mark"></span>General contractors</label>
+                            <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="builders"><span class="mark"></span>Builders / developers</label>
+                            <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="realtors"><span class="mark"></span>Real estate agents</label>
+                            <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="commercial"><span class="mark"></span>Commercial / industrial</label>
+                            <label class="ob-check" onclick="obToggle(this)"><input type="checkbox" name="ob_clients" value="emergency"><span class="mark"></span>Emergency / after-hours</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Average job size?</label>
+                        <select name="ob_job_size">
+                            <option value="">Select...</option>
+                            <option value="under_500">Under $500</option>
+                            <option value="500_2k">$500 – $2,000</option>
+                            <option value="2k_5k">$2,000 – $5,000</option>
+                            <option value="5k_15k">$5,000 – $15,000</option>
+                            <option value="over_15k">Over $15,000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>What questions do customers ask most? <span class="hint">These become FAQ content and blog topics.</span></label>
+                        <textarea name="ob_questions" placeholder="e.g. How much does it cost? How long will it take? Are you licensed and insured?" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Jobs per month?</label>
+                        <select name="ob_volume">
+                            <option value="">Select...</option>
+                            <option value="1_5">1–5</option>
+                            <option value="5_15">5–15</option>
+                            <option value="15_30">15–30</option>
+                            <option value="30_60">30–60</option>
+                            <option value="60_plus">60+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>What's your goal? <span class="hint">More jobs? Dominate an area? Less reliance on word-of-mouth?</span></label>
+                        <textarea name="ob_goals" placeholder="e.g. Show up on Google, get more calls from new customers, grow into new cities..." rows="3"></textarea>
+                    </div>
+                    <div class="ob-nav">
+                        <button type="button" class="ob-btn ob-btn-back" onclick="obPrev()">← Back</button>
+                        <button type="button" class="ob-btn ob-btn-next" onclick="obNext()">Next: Brand →</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Brand & Content -->
+                <div class="ob-step" data-ob="4" style="display:none;">
+                    <div class="ob-section-header">🎨 Brand & Content</div>
+                    <div class="form-group">
+                        <label>What tone fits your brand?</label>
+                        <select name="ob_tone">
+                            <option value="">Select...</option>
+                            <option value="professional">Professional & authoritative</option>
+                            <option value="friendly">Friendly & approachable</option>
+                            <option value="casual">Casual & down-to-earth</option>
+                            <option value="technical">Technical & detailed</option>
+                            <option value="mix">Professional but personable</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Do you have a logo? <span class="hint">If yes, you can email it to us at judd@emberseo.ai</span></label>
+                        <select name="ob_logo">
+                            <option value="">Select...</option>
+                            <option value="yes">Yes — I'll email it</option>
+                            <option value="need_one">No — I need one</option>
+                            <option value="need_update">Yes but it needs updating</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Brand notes <span class="hint">Colors, tagline, things you want or don't want on your site.</span></label>
+                        <textarea name="ob_brand" placeholder="e.g. Red and black colors. Viking theme. No stock photos. Mention family-owned..." rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Anything you like on other websites? <span class="hint">Competitor sites, other businesses, anything that caught your eye.</span></label>
+                        <textarea name="ob_content_ref" placeholder="e.g. I like how XYZ Electric's site looks, clean and simple..." rows="2"></textarea>
+                    </div>
+                    <div class="ob-nav">
+                        <button type="button" class="ob-btn ob-btn-back" onclick="obPrev()">← Back</button>
+                        <button type="button" class="ob-btn ob-btn-next" onclick="obNext()">Next: Website →</button>
+                    </div>
+                </div>
+
+                <!-- Step 5: Website & Access -->
+                <div class="ob-step" data-ob="5" style="display:none;">
+                    <div class="ob-section-header">🔑 Website & Accounts</div>
+                    <div class="form-group">
+                        <label>Do you have a website?</label>
+                        <select name="ob_platform">
+                            <option value="">Select...</option>
+                            <option value="wordpress">Yes — WordPress</option>
+                            <option value="wix">Yes — Wix</option>
+                            <option value="squarespace">Yes — Squarespace</option>
+                            <option value="godaddy">Yes — GoDaddy Website Builder</option>
+                            <option value="other">Yes — something else</option>
+                            <option value="started">Started one but it's not live</option>
+                            <option value="none">No website yet</option>
+                            <option value="not_sure">Not sure</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Google Business Profile?</label>
+                            <select name="ob_gbp">
+                                <option value="">Select...</option>
+                                <option value="yes">Yes, active</option>
+                                <option value="yes_inactive">Yes, but inactive</option>
+                                <option value="no">No</option>
+                                <option value="not_sure">Not sure</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Facebook business page?</label>
+                            <select name="ob_facebook">
+                                <option value="">Select...</option>
+                                <option value="yes">Yes, active</option>
+                                <option value="yes_inactive">Yes, but inactive</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Any other online profiles? <span class="hint">Yelp, Angi, Nextdoor, Instagram, etc.</span></label>
+                        <textarea name="ob_profiles" placeholder="e.g. Yelp page, Nextdoor business profile..." rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Anything else we should know? <span class="hint">Previous marketing, concerns, questions, goals — anything at all.</span></label>
+                        <textarea name="ob_notes" placeholder="e.g. Never had a website before. Wife started one but it's not live yet. Want to show up on Google..." rows="3"></textarea>
+                    </div>
+                    <div class="ob-nav">
+                        <button type="button" class="ob-btn ob-btn-back" onclick="obPrev()">← Back</button>
+                        <button type="button" class="ob-btn ob-btn-submit" id="submitBtn" onclick="obSubmit()">Submit & Let's Get Started 🔥</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- Success -->
+        <div id="obSuccess" style="display:none;">
+            <div class="ob-success">
+                <div class="icon">🔥</div>
+                <h3>All set!</h3>
+                <p>We've got everything we need to start building your strategy.</p>
+                <p style="margin-top: 1rem;">Judd will reach out within 24 hours to walk you through next steps. If you have questions in the meantime:</p>
+                <p style="margin-top: 1rem;">
+                    <a href="mailto:judd@emberseo.ai" style="color: var(--ember-accent); text-decoration: none; font-weight: 600;">judd@emberseo.ai</a>
+                    &nbsp;·&nbsp;
+                    <a href="tel:8314408089" style="color: var(--ember-accent); text-decoration: none; font-weight: 600;">(831) 440-8089</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 <a href="https://emberseo.ai">Ember SEO</a> · Built in Santa Cruz, CA</p>
+    </div>
+</div>
+
+<script>
+let obStep = 1;
+const obTotal = 5;
+
+function obUpdateProgress() {
+    document.querySelectorAll('.ob-progress-step').forEach((s, i) => {
+        s.classList.remove('active', 'done');
+        if (i + 1 === obStep) s.classList.add('active');
+        if (i + 1 < obStep) s.classList.add('done');
+    });
+}
+
+function obShowStep(n) {
+    document.querySelectorAll('.ob-step').forEach(s => s.style.display = 'none');
+    const target = document.querySelector(`.ob-step[data-ob="${n}"]`);
+    if (target) target.style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function obNext() {
+    if (obStep < obTotal) { obStep++; obShowStep(obStep); obUpdateProgress(); }
+}
+
+function obPrev() {
+    if (obStep > 1) { obStep--; obShowStep(obStep); obUpdateProgress(); }
+}
+
+function obToggle(el) {
+    el.classList.toggle('checked');
+    const inp = el.querySelector('input');
+    inp.checked = !inp.checked;
+}
+
+async function obSubmit() {
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+
+    const form = document.getElementById('obForm');
+    const fd = new FormData(form);
+    const data = {};
+
+    for (let [k, v] of fd.entries()) {
+        if (data[k]) {
+            if (!Array.isArray(data[k])) data[k] = [data[k]];
+            data[k].push(v);
+        } else {
+            data[k] = v;
+        }
+    }
+
+    // Send via Formspree-style POST (or fallback to mailto)
+    const formatted = Object.entries(data)
+        .filter(([k, v]) => v && v !== '')
+        .map(([k, v]) => {
+            const label = k.replace(/^ob_/, '').replace(/_/g, ' ').toUpperCase();
+            const val = Array.isArray(v) ? v.join(', ') : v;
+            return `${label}: ${val}`;
+        })
+        .join('\n\n');
+
+    // Try sending via fetch to our endpoint, fallback to mailto
+    try {
+        const response = await fetch('https://formsubmit.co/ajax/judd@emberseo.ai', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+                _subject: '📋 New Client Onboarding: ' + (data.ob_company || 'Unknown'),
+                message: formatted,
+                name: data.ob_name || '',
+                email: data.ob_email || '',
+                company: data.ob_company || ''
+            })
+        });
+    } catch(e) {
+        // Fallback: open mailto
+        const subject = encodeURIComponent('📋 Client Onboarding: ' + (data.ob_company || 'Unknown'));
+        const body = encodeURIComponent(formatted);
+        window.open('mailto:judd@emberseo.ai?subject=' + subject + '&body=' + body, '_blank');
+    }
+
+    // Show success
+    document.getElementById('obFormContainer').style.display = 'none';
+    document.getElementById('obSuccess').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
