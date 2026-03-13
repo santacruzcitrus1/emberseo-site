@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Watsonville Rental Market — Ember Property Tools</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --card: #161822;
+      --border: #2a2d3a;
+      --border-accent: rgba(234, 88, 12, 0.3);
+      --text: #e2e4ea;
+      --text-dim: #8b8fa3;
+      --text-muted: #5c5f72;
+      --green: #34d399;
+      --orange: #f97316;
+      --orange-dim: rgba(234, 88, 12, 0.15);
+      --blue: #60a5fa;
+      --red: #f87171;
+      --yellow: #fbbf24;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    h1 { font-size: 1.75rem; font-weight: 700; }
+    h1 span { color: var(--orange); }
+    .subtitle { color: var(--text-dim); font-size: 0.85rem; margin-top: 4px; }
+
+    .zip-tabs {
+      display: flex;
+      gap: 8px;
+    }
+
+    .zip-tab {
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-dim);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .zip-tab:hover { color: var(--text); background: var(--card); }
+    .zip-tab.active {
+      background: var(--orange-dim);
+      color: var(--orange);
+      border-color: var(--border-accent);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .comps-section {
+      background: var(--card);
+      border: 1px solid var(--border-accent);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    .comps-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+
+    .comps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .comp-card {
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .comp-label { font-size: 0.75rem; color: var(--text-dim); }
+    .comp-value { font-size: 1.15rem; font-weight: 700; margin-top: 2px; }
+    .comp-meta { font-size: 0.7rem; color: var(--text-muted); margin-top: 2px; }
+
+    .breakdown-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    .breakdown-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+
+    .breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 10px;
+    }
+
+    .breakdown-card {
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .breakdown-card .label { font-size: 0.75rem; color: var(--text-dim); }
+    .breakdown-card .value { font-size: 1.1rem; font-weight: 700; margin-top: 2px; }
+    .breakdown-card .count { font-size: 0.7rem; color: var(--text-muted); margin-top: 2px; }
+    .breakdown-card .range { font-size: 0.65rem; color: var(--text-muted); }
+
+    .filters {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    select {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      cursor: pointer;
+      outline: none;
+    }
+
+    select:focus { border-color: var(--orange); }
+
+    .filter-count {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-left: auto;
+    }
+
+    .table-container {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    table { width: 100%; border-collapse: collapse; }
+
+    th {
+      text-align: left;
+      padding: 12px 16px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    th:hover { color: var(--text-dim); }
+    th.sorted { color: var(--orange); }
+
+    td {
+      padding: 10px 16px;
+      font-size: 0.85rem;
+      border-bottom: 1px solid rgba(42, 45, 58, 0.5);
+    }
+
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    tr.stale td { opacity: 0.5; }
+
+    .price { color: var(--green); font-weight: 600; }
+    .days-stale { color: var(--red); }
+    .new-badge {
+      display: inline-block;
+      background: var(--orange-dim);
+      color: var(--orange);
+      font-size: 0.65rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+      font-weight: 600;
+    }
+
+    a { color: var(--text); text-decoration: none; }
+    a:hover { color: var(--orange); }
+
+    .rented-section {
+      margin-top: 24px;
+    }
+
+    .rented-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+
+    .rented-table td { opacity: 0.6; }
+    .rented-badge {
+      display: inline-block;
+      background: rgba(248, 113, 113, 0.15);
+      color: var(--red);
+      font-size: 0.65rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .velocity-bar {
+      margin-bottom: 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .velocity-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      margin-bottom: 8px;
+    }
+
+    .velocity-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 4px;
+      height: 60px;
+    }
+
+    .velocity-bar-item {
+      flex: 1;
+      background: var(--orange-dim);
+      border-radius: 3px 3px 0 0;
+      min-height: 4px;
+      position: relative;
+    }
+
+    .velocity-bar-item:hover { background: var(--orange); }
+
+    .powered-by {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    .powered-by a { color: var(--orange); }
+
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60vh;
+      color: var(--text-dim);
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .comps-grid { grid-template-columns: 1fr; }
+      .filters { flex-direction: column; align-items: stretch; }
+      .filter-count { margin-left: 0; }
+      body { padding: 12px; }
+      h1 { font-size: 1.3rem; }
+      .stat-value { font-size: 1.2rem; }
+      td, th { padding: 8px 10px; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="app">
+    <div class="loading">Loading rental data...</div>
+  </div>
+
+  <script>
+    const TYPE_LABELS = {
+      SINGLE_FAMILY: '🏠 SFH',
+      MULTI_FAMILY: '🏘️ Multi',
+      APARTMENT: '🏢 Apt',
+      CONDOS: '🏠 Condo',
+      TOWNHOMES: '🏘️ TH',
+    };
+
+    let state = {
+      data: null,
+      selectedZip: '95076',
+      filterBeds: 'all',
+      filterBaths: 'all',
+      filterType: 'all',
+      sortBy: 'price',
+      sortDir: 'asc',
+    };
+
+    async function loadData() {
+      try {
+        const resp = await fetch('./data.json?' + Date.now());
+        state.data = await resp.json();
+        render();
+      } catch (e) {
+        document.getElementById('app').innerHTML = '<div class="loading">Error loading data. Please refresh.</div>';
+      }
+    }
+
+    function $(amount) {
+      return amount != null ? '$' + amount.toLocaleString() : '-';
+    }
+
+    function setZip(zip) { state.selectedZip = zip; render(); }
+    function setFilter(key, val) { state[key] = val; render(); }
+
+    function setSort(col) {
+      if (state.sortBy === col) {
+        state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+      } else {
+        state.sortBy = col;
+        state.sortDir = col === 'price' || col === 'beds' || col === 'baths' ? 'asc' : 'desc';
+      }
+      render();
+    }
+
+    function getFilteredListings(zipData) {
+      let listings = [...zipData.listings];
+      if (state.filterBeds !== 'all') listings = listings.filter(l => l.beds === parseInt(state.filterBeds));
+      if (state.filterBaths !== 'all') listings = listings.filter(l => l.baths === parseInt(state.filterBaths));
+      if (state.filterType !== 'all') listings = listings.filter(l => l.type === state.filterType);
+
+      const dir = state.sortDir === 'asc' ? 1 : -1;
+      const key = state.sortBy;
+      listings.sort((a, b) => {
+        const av = a[key] ?? (dir > 0 ? 99999 : -1);
+        const bv = b[key] ?? (dir > 0 ? 99999 : -1);
+        return (av - bv) * dir;
+      });
+
+      return listings;
+    }
+
+    function render() {
+      const d = state.data;
+      if (!d) return;
+
+      const zipData = d.zips[state.selectedZip];
+      if (!zipData) return;
+
+      const listings = getFilteredListings(zipData);
+      const allTypes = [...new Set(zipData.listings.map(l => l.type).filter(Boolean))];
+      const allBeds = [...new Set(zipData.listings.map(l => l.beds).filter(b => b != null))].sort();
+      const allBaths = [...new Set(zipData.listings.map(l => l.baths).filter(b => b != null))].sort();
+      const today = new Date().toISOString().slice(0, 10);
+      const recentlyRented = zipData.recently_rented || [];
+
+      const sortIcon = (col) => state.sortBy === col ? (state.sortDir === 'asc' ? ' ↑' : ' ↓') : '';
+      const sortClass = (col) => state.sortBy === col ? 'sorted' : '';
+
+      // Scrape history chart
+      let historyHtml = '';
+      if (d.scrape_history && d.scrape_history.length > 1) {
+        const history = d.scrape_history.slice(-30);
+        const maxActive = Math.max(...history.map(h => h.total_active));
+        historyHtml = `
+          <div class="velocity-bar">
+            <div class="velocity-title">📈 Market Activity (last ${history.length} scrapes)</div>
+            <div class="velocity-chart">
+              ${history.map(h => {
+                const pct = maxActive > 0 ? (h.total_active / maxActive * 100) : 10;
+                return `<div class="velocity-bar-item" style="height:${Math.max(pct, 8)}%" title="${h.date}: ${h.total_active} active, ${h.new_listings} new"></div>`;
+              }).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // Rented section
+      let rentedHtml = '';
+      if (recentlyRented.length > 0) {
+        rentedHtml = `
+          <div class="rented-section">
+            <div class="rented-title">🏠 Recently Rented (${recentlyRented.length})</div>
+            <div class="table-container">
+              <table class="rented-table">
+                <thead><tr>
+                  <th>Price</th><th>Bed/Bath</th><th>SqFt</th><th>Address</th><th>Type</th><th>Removed</th>
+                </tr></thead>
+                <tbody>
+                  ${recentlyRented.map(l => `
+                    <tr>
+                      <td class="price">${$(l.price)}</td>
+                      <td>${l.beds ?? '?'}/${l.baths ?? '?'}</td>
+                      <td>${l.sqft ? l.sqft.toLocaleString() : '-'}</td>
+                      <td>${l.address}</td>
+                      <td>${TYPE_LABELS[l.type] || l.type || '-'}</td>
+                      <td><span class="rented-badge">Rented ~${l.removed_date || '?'}</span></td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+      }
+
+      document.getElementById('app').innerHTML = `
+        <header>
+          <div>
+            <h1>🏘️ <span>Watsonville</span> Rental Market</h1>
+            <div class="subtitle">Live rental comps • Updated ${new Date(d.last_updated).toLocaleString()}</div>
+          </div>
+          <div class="zip-tabs">
+            ${Object.keys(d.zips).map(zip => `
+              <button class="zip-tab ${state.selectedZip === zip ? 'active' : ''}" onclick="setZip('${zip}')">📍 ${zip}</button>
+            `).join('')}
+          </div>
+        </header>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">Active Rentals</div>
+            <div class="stat-value">${zipData.total}</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Median Rent</div>
+            <div class="stat-value" style="color:var(--green)">${$(zipData.median_rent)}</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Average Rent</div>
+            <div class="stat-value">${$(zipData.avg_rent)}</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Low</div>
+            <div class="stat-value" style="color:var(--blue)">${$(zipData.min_rent)}</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">High</div>
+            <div class="stat-value" style="color:var(--red)">${$(zipData.max_rent)}</div>
+          </div>
+        </div>
+
+        <div class="comps-section">
+          <div class="comps-title">💰 Quick Comps by Bedroom</div>
+          <div class="comps-grid">
+            <div class="comp-card">
+              <div class="comp-label">1-Bed (Plex Units)</div>
+              ${zipData.by_beds['1'] ?
+                `<div class="comp-value">${$(zipData.by_beds['1'].median)}/mo</div>
+                 <div class="comp-meta">${zipData.by_beds['1'].count} comps</div>` :
+                '<div class="comp-meta">Limited data</div>'}
+            </div>
+            <div class="comp-card">
+              <div class="comp-label">2-Bed (Plex + SFH)</div>
+              ${zipData.by_beds['2'] ?
+                `<div class="comp-value">${$(zipData.by_beds['2'].median)}/mo</div>
+                 <div class="comp-meta">${zipData.by_beds['2'].count} comps • ${$(zipData.by_beds['2'].min)}-${$(zipData.by_beds['2'].max)}</div>` :
+                '<div class="comp-meta">Limited data</div>'}
+            </div>
+            <div class="comp-card">
+              <div class="comp-label">3-4 Bed (SFH)</div>
+              ${zipData.by_beds['3'] ?
+                `<div class="comp-value">${$(zipData.by_beds['3'].median)}/mo</div>
+                 <div class="comp-meta">${zipData.by_beds['3'].count} comps • ${$(zipData.by_beds['3'].min)}-${$(zipData.by_beds['3'].max)}</div>` :
+                '<div class="comp-meta">Limited data</div>'}
+            </div>
+          </div>
+        </div>
+
+        <div class="breakdown-section">
+          <div class="breakdown-title">📊 By Bedrooms</div>
+          <div class="breakdown-grid">
+            ${Object.entries(zipData.by_beds).map(([beds, s]) => `
+              <div class="breakdown-card">
+                <div class="label">${beds === '0' ? 'Studio' : beds + '-Bed'}</div>
+                <div class="value">${$(s.median)}</div>
+                <div class="count">${s.count} listing${s.count !== 1 ? 's' : ''}</div>
+                <div class="range">${$(s.min)} – ${$(s.max)}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <div class="breakdown-section">
+          <div class="breakdown-title">🛁 By Bathrooms</div>
+          <div class="breakdown-grid">
+            ${Object.entries(zipData.by_baths || {}).map(([baths, s]) => `
+              <div class="breakdown-card">
+                <div class="label">${baths === '?' ? 'Unknown' : baths + '-Bath'}</div>
+                <div class="value">${$(s.median)}</div>
+                <div class="count">${s.count} listing${s.count !== 1 ? 's' : ''}</div>
+                <div class="range">${$(s.min)} – ${$(s.max)}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        ${historyHtml}
+
+        <div class="filters">
+          <select onchange="setFilter('filterBeds', this.value)">
+            <option value="all">All Beds</option>
+            ${allBeds.map(b => `<option value="${b}" ${state.filterBeds == b ? 'selected' : ''}>${b === 0 ? 'Studio' : b + ' Bed'}</option>`).join('')}
+          </select>
+          <select onchange="setFilter('filterBaths', this.value)">
+            <option value="all">All Baths</option>
+            ${allBaths.map(b => `<option value="${b}" ${state.filterBaths == b ? 'selected' : ''}>${b} Bath</option>`).join('')}
+          </select>
+          <select onchange="setFilter('filterType', this.value)">
+            <option value="all">All Types</option>
+            ${allTypes.map(t => `<option value="${t}" ${state.filterType === t ? 'selected' : ''}>${TYPE_LABELS[t] || t}</option>`).join('')}
+          </select>
+          <div class="filter-count">${listings.length} listing${listings.length !== 1 ? 's' : ''}</div>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead><tr>
+              <th class="${sortClass('price')}" onclick="setSort('price')">Price${sortIcon('price')}</th>
+              <th class="${sortClass('beds')}" onclick="setSort('beds')">Beds${sortIcon('beds')}</th>
+              <th class="${sortClass('baths')}" onclick="setSort('baths')">Baths${sortIcon('baths')}</th>
+              <th class="${sortClass('sqft')}" onclick="setSort('sqft')">SqFt${sortIcon('sqft')}</th>
+              <th>Address</th>
+              <th>Type</th>
+              <th class="${sortClass('days_on_market')}" onclick="setSort('days_on_market')">Days${sortIcon('days_on_market')}</th>
+            </tr></thead>
+            <tbody>
+              ${listings.map(l => {
+                const isStale = l.days_on_market && l.days_on_market > 90;
+                const isNew = l.first_seen === today;
+                return `
+                  <tr class="${isStale ? 'stale' : ''}">
+                    <td class="price">${$(l.price)}</td>
+                    <td>${l.beds ?? '?'}</td>
+                    <td>${l.baths ?? '?'}</td>
+                    <td>${l.sqft ? l.sqft.toLocaleString() : '-'}</td>
+                    <td>
+                      ${l.url ? `<a href="${l.url}" target="_blank">${l.address}</a>` : l.address}
+                      ${isNew ? '<span class="new-badge">NEW</span>' : ''}
+                    </td>
+                    <td>${TYPE_LABELS[l.type] || l.type || '-'}</td>
+                    <td class="${isStale ? 'days-stale' : ''}">${l.days_on_market ?? '-'}${isStale ? ' ⚠️' : ''}</td>
+                  </tr>
+                `;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>
+
+        ${rentedHtml}
+
+        <div class="powered-by">
+          Powered by <a href="https://emberseo.ai">Ember</a> • Data refreshed daily
+        </div>
+      `;
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
