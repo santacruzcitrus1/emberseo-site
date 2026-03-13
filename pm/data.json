@@ -1,0 +1,38 @@
+{
+  "last_updated": "2026-03-13T15:33:31.306494",
+  "zips": {
+    "95076": {
+      "total": 0,
+      "median_rent": 0,
+      "avg_rent": 0,
+      "min_rent": 0,
+      "max_rent": 0,
+      "by_beds": {},
+      "by_baths": {},
+      "by_type": {},
+      "listings": [],
+      "recently_rented": [],
+      "rented_count": 0
+    },
+    "95019": {
+      "total": 0,
+      "median_rent": 0,
+      "avg_rent": 0,
+      "min_rent": 0,
+      "max_rent": 0,
+      "by_beds": {},
+      "by_baths": {},
+      "by_type": {},
+      "listings": [],
+      "recently_rented": [],
+      "rented_count": 0
+    }
+  },
+  "scrape_history": [
+    {
+      "date": "2026-03-13",
+      "total_active": 0,
+      "new_listings": 0
+    }
+  ]
+}
