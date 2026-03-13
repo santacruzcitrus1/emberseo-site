@@ -293,6 +293,49 @@
 
     .velocity-bar-item:hover { background: var(--orange); }
 
+    .zillow-bar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 14px 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .zillow-bar .label {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      flex-shrink: 0;
+    }
+
+    .zillow-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: 1px solid #1277e1;
+      background: rgba(18, 119, 225, 0.1);
+      color: #60a5fa;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .zillow-btn:hover {
+      background: rgba(18, 119, 225, 0.25);
+      color: #93bbfc;
+    }
+
+    .source-note {
+      margin-left: auto;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
     .powered-by {
       text-align: center;
       padding: 24px;
@@ -489,6 +532,20 @@
             <div class="stat-label">High</div>
             <div class="stat-value" style="color:var(--red)">${$(zipData.max_rent)}</div>
           </div>
+        </div>
+
+        <div class="zillow-bar">
+          <span class="label">🔍 Cross-reference on Zillow:</span>
+          <a class="zillow-btn" href="https://www.zillow.com/watsonville-ca-${state.selectedZip}/rentals/" target="_blank" rel="noopener">
+            🏘️ All Rentals
+          </a>
+          <a class="zillow-btn" href="https://www.zillow.com/watsonville-ca-${state.selectedZip}/rent-houses/" target="_blank" rel="noopener">
+            🏠 Houses Only
+          </a>
+          <a class="zillow-btn" href="https://www.zillow.com/watsonville-ca-${state.selectedZip}/apartments/" target="_blank" rel="noopener">
+            🏢 Apartments
+          </a>
+          <span class="source-note">Dashboard data: Realtor.com (auto-updated daily) • Zillow links open in new tab</span>
         </div>
 
         <div class="comps-section">
