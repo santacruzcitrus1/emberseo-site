@@ -1,28 +1,34 @@
 {
-  "last_updated": "2026-03-13T15:33:54.740627",
+  "last_updated": "2026-03-13T16:21:31.161330",
   "zips": {
     "95076": {
-      "total": 15,
-      "median_rent": 3697,
-      "avg_rent": 4744,
-      "min_rent": 1895,
+      "total": 19,
+      "median_rent": 2900,
+      "avg_rent": 4201,
+      "min_rent": 1700,
       "max_rent": 12950,
       "by_beds": {
         "0": {
-          "count": 2,
-          "median": 2295,
-          "min": 1895,
+          "count": 3,
+          "median": 1895,
+          "min": 1700,
           "max": 2695
         },
+        "1": {
+          "count": 1,
+          "median": 2195,
+          "min": 2195,
+          "max": 2195
+        },
         "2": {
-          "count": 3,
-          "median": 2700,
+          "count": 5,
+          "median": 2845,
           "min": 2300,
           "max": 2900
         },
         "3": {
-          "count": 6,
-          "median": 4302,
+          "count": 8,
+          "median": 4576,
           "min": 3400,
           "max": 9750
         },
@@ -31,11 +37,23 @@
           "median": 12950,
           "min": 12950,
           "max": 12950
+        },
+        "?": {
+          "count": 1,
+          "median": 2250,
+          "min": 2250,
+          "max": 2250
         }
       },
       "by_baths": {
+        "0": {
+          "count": 1,
+          "median": 1700,
+          "min": 1700,
+          "max": 1700
+        },
         "1": {
-          "count": 5,
+          "count": 9,
           "median": 2695,
           "min": 1895,
           "max": 2900
@@ -46,6 +64,18 @@
           "min": 3400,
           "max": 12950
         },
+        "2.5": {
+          "count": 1,
+          "median": 4850,
+          "min": 4850,
+          "max": 4850
+        },
+        "3.5": {
+          "count": 1,
+          "median": 6150,
+          "min": 6150,
+          "max": 6150
+        },
         "4": {
           "count": 1,
           "median": 9750,
@@ -54,13 +84,17 @@
         }
       },
       "by_type": {
+        "APARTMENT": {
+          "count": 5,
+          "median": 2250
+        },
         "CONDOS": {
           "count": 1,
           "median": 1895
         },
         "SINGLE_FAMILY": {
-          "count": 9,
-          "median": 3400
+          "count": 11,
+          "median": 3995
         },
         "TOWNHOMES": {
           "count": 2,
@@ -68,6 +102,23 @@
         }
       },
       "listings": [
+        {
+          "address": "202 E Lake Ave, Watsonville, CA",
+          "city": "Watsonville",
+          "price": 1700,
+          "beds": 0,
+          "baths": 0,
+          "sqft": null,
+          "type": "APARTMENT",
+          "days_on_market": null,
+          "url": null,
+          "source": "zillow",
+          "first_seen": "2026-03-13",
+          "last_seen": "2026-03-13",
+          "consecutive_misses": 0,
+          "status": "active",
+          "also_on_zillow": false
+        },
         {
           "address": "225 Pacifica Blvd Unit 104",
           "city": "Watsonville",
@@ -82,7 +133,43 @@
           "first_seen": "2026-03-13",
           "last_seen": "2026-03-13",
           "consecutive_misses": 0,
-          "status": "active"
+          "status": "active",
+          "source": "realtor",
+          "also_on_zillow": false
+        },
+        {
+          "address": "17A Jefferson St",
+          "city": "Watsonville",
+          "price": 2195,
+          "beds": 1,
+          "baths": 1,
+          "sqft": 504,
+          "type": "APARTMENT",
+          "days_on_market": null,
+          "url": null,
+          "source": "zillow",
+          "first_seen": "2026-03-13",
+          "last_seen": "2026-03-13",
+          "consecutive_misses": 0,
+          "status": "active",
+          "also_on_zillow": false
+        },
+        {
+          "address": "245 Pacifica Blvd Unit 102",
+          "city": "Watsonville",
+          "price": 2250,
+          "beds": null,
+          "baths": 1,
+          "sqft": 477,
+          "type": "APARTMENT",
+          "days_on_market": 18,
+          "url": null,
+          "source": "zillow",
+          "first_seen": "2026-03-13",
+          "last_seen": "2026-03-13",
+          "consecutive_misses": 0,
+          "status": "active",
+          "also_on_zillow": false
         },
         {
           "address": "92 Margarita Rd",
@@ -98,7 +185,9 @@
           "first_seen": "2026-03-13",
           "last_seen": "2026-03-13",
           "consecutive_misses": 0,
-          "status": "active"
+          "status": "active",
+          "source": "realtor",
+          "also_on_zillow": false
         },
         {
           "address": "114A Alta Dr",
@@ -114,7 +203,9 @@
           "first_seen": "2026-03-13",
           "last_seen": "2026-03-13",
           "consecutive_misses": 0,
-          "status": "active"
+          "status": "active",
+          "source": "realtor",
+          "also_on_zillow": false
         },
         {
           "address": "39 Paddon Rd",
@@ -130,7 +221,43 @@
           "first_seen": "2026-03-13",
           "last_seen": "2026-03-13",
           "consecutive_misses": 0,
-          "status": "active"
+          "status": "active",
+          "source": "realtor",
+          "also_on_zillow": false
+        },
+        {
+          "address": "217 Brennan St #B",
+          "city": "Watsonville",
+          "price": 2845,
+          "beds": 2,
+          "baths": 1,
+          "sqft": 700,
+          "type": "APARTMENT",
+          "days_on_market": 15,
+          "url": null,
+          "source": "zillow",
+          "first_seen": "2026-03-13",
+          "last_seen": "2026-03-13",
+          "consecutive_misses": 0,
+          "status": "active",
+          "also_on_zillow": false
+        },
+        {
+          "address": "209 Brennan St",
+          "city": "Watsonville",
+          "price": 2895,
+          "beds": 2,
+          "baths": 1,
+          "sqft": null,
+          "type": "APARTMENT",
+          "days_on_market": null,
+          "url": null,
+          "source": "zillow",
+          "first_seen": "2026-03-13",
+          "last_seen": "2026-03-13",
+          "consecutive_misses": 0,
+          "status": "active",
+          "also_on_zillow": false
         },
         {
           "address": "375 Clifford Ave Apt 321",
@@ -146,7 +273,9 @@
           "first_seen": "2026-03-13",
           "last_seen": "2026-03-13",
           "consecutive_misses": 0,
-          "status": "active"
+          "status": "active",
+          "source": "realtor",
+          "also_on_zillow": false
         },
         {
           "address": "201 Silverleaf Dr Apt C",
@@ -162,7 +291,9 @@
           "first_seen": "2026-03-13",
           "last_seen": "2026-03-13",
           "consecutive_misses": 0,
-          "status": "active"
+          "status": "active",
+          "source": "realtor",
+          "also_on_zillow": false
         },
         {
           "address": "601 Cedar Dr",
@@ -178,7 +309,9 @@
           "first_seen": "2026-03-13",
           "last_seen": "2026-03-13",
           "consecutive_misses": 0,
-          "status": "active"
+          "status": "active",
+          "source": "realtor",
+          "also_on_zillow": false
         },
         {
           "address": "23 Blackbird Cir",
@@ -194,7 +327,9 @@
           "first_seen": "2026-03-13",
           "last_seen": "2026-03-13",
           "consecutive_misses": 0,
-          "status": "active"
+          "status": "active",
+          "source": "realtor",
+          "also_on_zillow": false
         },
         {
           "address": "31 Blackbird Cir",
@@ -210,7 +345,26 @@
           "first_seen": "2026-03-13",
           "last_seen": "2026-03-13",
           "consecutive_misses": 0,
-          "status": "active"
+          "status": "active",
+          "source": "realtor",
+          "also_on_zillow": false
+        },
+        {
+          "address": "222 Manfre Rd",
+          "city": "Watsonville",
+          "price": 4850,
+          "beds": 3,
+          "baths": 2.5,
+          "sqft": 1912,
+          "type": "SINGLE_FAMILY",
+          "days_on_market": null,
+          "url": null,
+          "source": "zillow",
+          "first_seen": "2026-03-13",
+          "last_seen": "2026-03-13",
+          "consecutive_misses": 0,
+          "status": "active",
+          "also_on_zillow": false
         },
         {
           "address": "115 Oceanview Dr",
@@ -226,7 +380,26 @@
           "first_seen": "2026-03-13",
           "last_seen": "2026-03-13",
           "consecutive_misses": 0,
-          "status": "active"
+          "status": "active",
+          "source": "realtor",
+          "also_on_zillow": false
+        },
+        {
+          "address": "127 Cormorant Way",
+          "city": "Watsonville",
+          "price": 6150,
+          "beds": 3,
+          "baths": 3.5,
+          "sqft": 1945,
+          "type": "SINGLE_FAMILY",
+          "days_on_market": 8,
+          "url": null,
+          "source": "zillow",
+          "first_seen": "2026-03-13",
+          "last_seen": "2026-03-13",
+          "consecutive_misses": 0,
+          "status": "active",
+          "also_on_zillow": false
         },
         {
           "address": "404 Hidden Valley Rd",
@@ -242,7 +415,9 @@
           "first_seen": "2026-03-13",
           "last_seen": "2026-03-13",
           "consecutive_misses": 0,
-          "status": "active"
+          "status": "active",
+          "source": "realtor",
+          "also_on_zillow": false
         },
         {
           "address": "360 Camino Al Barranco",
@@ -258,55 +433,9 @@
           "first_seen": "2026-03-13",
           "last_seen": "2026-03-13",
           "consecutive_misses": 0,
-          "status": "active"
-        },
-        {
-          "address": "445 Main St",
-          "city": "Watsonville",
-          "price": null,
-          "beds": null,
-          "baths": null,
-          "sqft": null,
-          "type": "APARTMENT",
-          "days_on_market": 282,
-          "url": "https://www.realtor.com/rentals/details/445-Main-St_Watsonville_CA_95076_M90099-36233",
-          "year_built": null,
-          "first_seen": "2026-03-13",
-          "last_seen": "2026-03-13",
-          "consecutive_misses": 0,
-          "status": "active"
-        },
-        {
-          "address": "615 Blackburn St",
-          "city": "Watsonville",
-          "price": null,
-          "beds": null,
-          "baths": null,
-          "sqft": null,
-          "type": "APARTMENT",
-          "days_on_market": 57,
-          "url": "https://www.realtor.com/rentals/details/615-Blackburn-St_Watsonville_CA_95076_M11092-97008",
-          "year_built": null,
-          "first_seen": "2026-03-13",
-          "last_seen": "2026-03-13",
-          "consecutive_misses": 0,
-          "status": "active"
-        },
-        {
-          "address": "809 Browns Valley Rd",
-          "city": "Watsonville",
-          "price": null,
-          "beds": null,
-          "baths": null,
-          "sqft": null,
-          "type": "APARTMENT",
-          "days_on_market": 20,
-          "url": "https://www.realtor.com/rentals/details/809-Browns-Valley-Rd_Watsonville_CA_95076_M13739-42675",
-          "year_built": null,
-          "first_seen": "2026-03-13",
-          "last_seen": "2026-03-13",
-          "consecutive_misses": 0,
-          "status": "active"
+          "status": "active",
+          "source": "realtor",
+          "also_on_zillow": false
         }
       ],
       "recently_rented": [],
@@ -373,5 +502,9 @@
       "total_active": 16,
       "new_listings": 16
     }
+  ],
+  "sources": [
+    "realtor.com",
+    "zillow.com"
   ]
 }

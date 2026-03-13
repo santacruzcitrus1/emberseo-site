@@ -545,7 +545,7 @@
           <a class="zillow-btn" href="https://www.zillow.com/watsonville-ca-${state.selectedZip}/apartments/" target="_blank" rel="noopener">
             🏢 Apartments
           </a>
-          <span class="source-note">Dashboard data: Realtor.com (auto-updated daily) • Zillow links open in new tab</span>
+          <span class="source-note">🟠 Realtor.com + 🔵 Zillow data combined • Auto-updated daily</span>
         </div>
 
         <div class="comps-section">
@@ -630,6 +630,7 @@
               <th class="${sortClass('sqft')}" onclick="setSort('sqft')">SqFt${sortIcon('sqft')}</th>
               <th>Address</th>
               <th>Type</th>
+              <th>Source</th>
               <th class="${sortClass('days_on_market')}" onclick="setSort('days_on_market')">Days${sortIcon('days_on_market')}</th>
             </tr></thead>
             <tbody>
@@ -647,6 +648,7 @@
                       ${isNew ? '<span class="new-badge">NEW</span>' : ''}
                     </td>
                     <td>${TYPE_LABELS[l.type] || l.type || '-'}</td>
+                    <td style="font-size:0.75rem;color:${l.source === 'zillow' ? '#60a5fa' : 'var(--text-muted)'}">${l.source === 'zillow' ? '🔵 Zillow' : l.also_on_zillow ? '🟢 Both' : '🟠 Realtor'}</td>
                     <td class="${isStale ? 'days-stale' : ''}">${l.days_on_market ?? '-'}${isStale ? ' ⚠️' : ''}</td>
                   </tr>
                 `;
