@@ -1,0 +1,8 @@
+# Site build artifacts (not our files)
+node_modules/
+dashboard/frontend/node_modules/
+hayden-tutor/backend/node_modules/
+*.tar.gz
+
+# DO NOT ignore identity, memory, session, or soul files
+# GitHub is our master backup - everything gets saved
