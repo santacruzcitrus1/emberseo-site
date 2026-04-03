@@ -1,0 +1,86 @@
+{
+  "landmark": {
+    "pages": 33,
+    "rankings": "Tracking",
+    "score": "72",
+    "cityPages": [
+      { "city": "Santa Cruz", "live": true },
+      { "city": "Watsonville", "live": true },
+      { "city": "Capitola", "live": true },
+      { "city": "Aptos", "live": true },
+      { "city": "Scotts Valley", "live": true },
+      { "city": "Soquel", "live": true },
+      { "city": "Ben Lomond", "live": true },
+      { "city": "Boulder Creek", "live": true },
+      { "city": "Felton", "live": true },
+      { "city": "Bonny Doon", "live": true },
+      { "city": "Davenport", "live": true },
+      { "city": "Freedom", "live": true },
+      { "city": "Corralitos", "live": true },
+      { "city": "La Selva Beach", "live": true },
+      { "city": "Rio Del Mar", "live": true },
+      { "city": "Seacliff", "live": true },
+      { "city": "Live Oak", "live": true },
+      { "city": "Pleasure Point", "live": true },
+      { "city": "Pajaro", "live": true },
+      { "city": "Monterey", "live": true },
+      { "city": "Pacific Grove", "live": true },
+      { "city": "Carmel", "live": true },
+      { "city": "Seaside", "live": true },
+      { "city": "Marina", "live": true },
+      { "city": "Salinas", "live": true },
+      { "city": "Hollister", "live": true },
+      { "city": "Gilroy", "live": true },
+      { "city": "Morgan Hill", "live": true },
+      { "city": "Los Gatos", "live": true },
+      { "city": "Fresno", "live": true },
+      { "city": "Clovis", "live": true },
+      { "city": "Visalia", "live": true },
+      { "city": "Hanford", "live": true }
+    ],
+    "actions": [
+      { "title": "Submit sitemap fix to Spectora (Matt)", "status": "todo" },
+      { "title": "Add LocalBusiness schema to all pages", "status": "todo" },
+      { "title": "Add FAQPage schema (+40% AI visibility)", "status": "todo" },
+      { "title": "Write first blog post", "status": "backlog" },
+      { "title": "Block AI bots in robots.txt (needs Spectora)", "status": "todo" },
+      { "title": "Update content freshness (last updated Feb 2023)", "status": "inprogress" },
+      { "title": "33 city pages built and deployed", "status": "done" },
+      { "title": "GSC MCP installed", "status": "done" },
+      { "title": "WordPress admin access acquired", "status": "done" }
+    ],
+    "metrics": {
+      "technical": 75,
+      "content": 45,
+      "local": 60,
+      "aiVisibility": 30,
+      "backlinks": 20
+    }
+  },
+  "bull": {
+    "pages": 0,
+    "rankings": "—",
+    "score": "—",
+    "cityPages": [],
+    "actions": [
+      { "title": "Audit bull-cpa.com (stale since Feb 2023)", "status": "backlog" },
+      { "title": "Apply Landmark SEO playbook to Austin market", "status": "backlog" },
+      { "title": "Research Austin CPA competitive landscape", "status": "backlog" }
+    ],
+    "metrics": {}
+  },
+  "arch": {
+    "pages": 0,
+    "rankings": "—",
+    "score": "—",
+    "cityPages": [],
+    "actions": [
+      { "title": "Swap vector logo", "status": "todo" },
+      { "title": "Purchase archelectricca.com domain", "status": "todo" },
+      { "title": "Deploy to GitHub Pages", "status": "backlog" },
+      { "title": "Update Google Business Profile", "status": "backlog" },
+      { "title": "Mock site built — Levi approved", "status": "done" }
+    ],
+    "metrics": {}
+  }
+}
