@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-04-08T00:44:57.793472",
+  "last_updated": "2026-04-08T15:00:02.081717",
   "zips": {
     "95076": {
-      "total": 22,
+      "total": 21,
       "median_rent": 3772,
       "avg_rent": 4744,
       "min_rent": 1895,
@@ -427,8 +427,8 @@
           "source": "realtor",
           "first_seen": "2026-03-23",
           "last_seen": "2026-04-08",
-          "consecutive_misses": 0,
-          "status": "active"
+          "consecutive_misses": 1,
+          "status": "missing"
         },
         {
           "address": "164 Grant St",
@@ -438,7 +438,7 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 12,
+          "days_on_market": 13,
           "url": "https://www.realtor.com/rentals/details/164-Grant-St_Watsonville_CA_95076_M27130-15996",
           "year_built": null,
           "source": "realtor",
@@ -692,6 +692,11 @@
     },
     {
       "date": "2026-04-07",
+      "total_active": 23,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-04-08",
       "total_active": 23,
       "new_listings": 0
     },
