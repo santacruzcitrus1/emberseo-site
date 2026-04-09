@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-09T15:00:02.589214",
+  "last_updated": "2026-04-09T15:49:30.845408",
   "zips": {
     "95076": {
       "total": 22,
@@ -465,27 +465,8 @@
           "status": "active"
         }
       ],
-      "recently_rented": [
-        {
-          "address": "615 Blackburn St",
-          "city": "Watsonville",
-          "price": null,
-          "beds": null,
-          "baths": null,
-          "sqft": null,
-          "type": "APARTMENT",
-          "days_on_market": 83,
-          "url": "https://www.realtor.com/rentals/details/615-Blackburn-St_Watsonville_CA_95076_M11092-97008",
-          "year_built": null,
-          "source": "realtor",
-          "first_seen": "2026-03-23",
-          "last_seen": "2026-04-08",
-          "consecutive_misses": 3,
-          "status": "rented",
-          "removed_date": "2026-04-09"
-        }
-      ],
-      "rented_count": 1
+      "recently_rented": [],
+      "rented_count": 0
     },
     "95019": {
       "total": 1,
@@ -728,6 +709,16 @@
       "date": "2026-04-08",
       "total_active": 23,
       "new_listings": 0
+    },
+    {
+      "date": "2026-04-09",
+      "total_active": 23,
+      "new_listings": 1
+    },
+    {
+      "date": "2026-04-09",
+      "total_active": 23,
+      "new_listings": 1
     },
     {
       "date": "2026-04-09",
