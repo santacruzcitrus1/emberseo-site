@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-04-09T15:49:30.845408",
+  "last_updated": "2026-04-09T23:00:02.167341",
   "zips": {
     "95076": {
-      "total": 22,
+      "total": 21,
       "median_rent": 3950,
       "avg_rent": 4731,
       "min_rent": 1895,
@@ -115,7 +115,7 @@
           "baths": 1,
           "sqft": 460,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 279,
+          "days_on_market": 280,
           "url": "https://www.realtor.com/rentals/details/249-Lakeview-Rd_Watsonville_CA_95076_M94961-50414",
           "year_built": null,
           "source": "realtor",
@@ -387,7 +387,7 @@
           "baths": 6,
           "sqft": 3100,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 7,
+          "days_on_market": 8,
           "url": "https://www.realtor.com/rentals/details/610-Hazel-Dell-Rd_Watsonville_CA_95076_M20753-09817",
           "year_built": null,
           "source": "realtor",
@@ -404,7 +404,7 @@
           "baths": 2,
           "sqft": 2886,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 208,
+          "days_on_market": 209,
           "url": "https://www.realtor.com/rentals/details/360-Camino-Al-Barranco_La-Selva-Beach_CA_95076_M14385-09391",
           "year_built": 1981,
           "source": "realtor",
@@ -421,7 +421,7 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 352,
+          "days_on_market": 353,
           "url": "https://www.realtor.com/rentals/details/261-Clifford-Ave_Watsonville_CA_95076_M94746-04165",
           "year_built": null,
           "source": "realtor",
@@ -444,8 +444,8 @@
           "source": "realtor",
           "first_seen": "2026-03-26",
           "last_seen": "2026-04-09",
-          "consecutive_misses": 0,
-          "status": "active"
+          "consecutive_misses": 1,
+          "status": "missing"
         },
         {
           "address": "445 Main St",
@@ -709,6 +709,11 @@
       "date": "2026-04-08",
       "total_active": 23,
       "new_listings": 0
+    },
+    {
+      "date": "2026-04-09",
+      "total_active": 23,
+      "new_listings": 1
     },
     {
       "date": "2026-04-09",
