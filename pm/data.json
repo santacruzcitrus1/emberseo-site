@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-10T23:00:02.154059",
+  "last_updated": "2026-04-11T23:00:02.650412",
   "zips": {
     "95076": {
       "total": 20,
@@ -103,7 +103,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -115,12 +115,12 @@
           "baths": 1,
           "sqft": 460,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 281,
+          "days_on_market": 282,
           "url": "https://www.realtor.com/rentals/details/249-Lakeview-Rd_Watsonville_CA_95076_M94961-50414",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -137,26 +137,9 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
-        },
-        {
-          "address": "613 Cedar Dr",
-          "city": "Watsonville",
-          "price": 2800,
-          "beds": 2,
-          "baths": 2,
-          "sqft": 1263,
-          "type": "SINGLE_FAMILY",
-          "days_on_market": null,
-          "url": "https://www.realtor.com/rentals/details/613-Cedar-Dr_Watsonville_CA_95076_M27257-23683",
-          "year_built": null,
-          "source": "realtor",
-          "first_seen": "2026-03-31",
-          "last_seen": "2026-04-10",
-          "consecutive_misses": 1,
-          "status": "missing"
         },
         {
           "address": "29-A Packard Ln",
@@ -171,7 +154,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-01",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -188,7 +171,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -205,7 +188,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -222,7 +205,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -239,7 +222,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -256,7 +239,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-02",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -268,12 +251,12 @@
           "baths": 2,
           "sqft": 2175,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 14,
+          "days_on_market": 15,
           "url": "https://www.realtor.com/rentals/details/97-LA-Jolla-St_Watsonville_CA_95076_M13810-92539",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-27",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -290,7 +273,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -307,7 +290,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -324,7 +307,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-09",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -341,7 +324,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-31",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -358,7 +341,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -370,12 +353,12 @@
           "baths": 4,
           "sqft": 3730,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 1374,
+          "days_on_market": 1375,
           "url": "https://www.realtor.com/rentals/details/404-Hidden-Valley-Rd_Royal-Oaks_CA_95076_M15367-08084",
           "year_built": 1987,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -387,12 +370,12 @@
           "baths": 6,
           "sqft": 3100,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 9,
+          "days_on_market": 10,
           "url": "https://www.realtor.com/rentals/details/610-Hazel-Dell-Rd_Watsonville_CA_95076_M20753-09817",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-02",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -404,12 +387,12 @@
           "baths": 2,
           "sqft": 2886,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 210,
+          "days_on_market": 211,
           "url": "https://www.realtor.com/rentals/details/360-Camino-Al-Barranco_La-Selva-Beach_CA_95076_M14385-09391",
           "year_built": 1981,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -421,12 +404,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 354,
+          "days_on_market": 355,
           "url": "https://www.realtor.com/rentals/details/261-Clifford-Ave_Watsonville_CA_95076_M94746-04165",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -438,34 +421,34 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 310,
+          "days_on_market": 311,
           "url": "https://www.realtor.com/rentals/details/445-Main-St_Watsonville_CA_95076_M90099-36233",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-06",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         }
       ],
       "recently_rented": [
         {
-          "address": "164 Grant St",
+          "address": "613 Cedar Dr",
           "city": "Watsonville",
-          "price": null,
-          "beds": null,
-          "baths": null,
-          "sqft": null,
-          "type": "APARTMENT",
-          "days_on_market": 14,
-          "url": "https://www.realtor.com/rentals/details/164-Grant-St_Watsonville_CA_95076_M27130-15996",
+          "price": 2800,
+          "beds": 2,
+          "baths": 2,
+          "sqft": 1263,
+          "type": "SINGLE_FAMILY",
+          "days_on_market": null,
+          "url": "https://www.realtor.com/rentals/details/613-Cedar-Dr_Watsonville_CA_95076_M27257-23683",
           "year_built": null,
           "source": "realtor",
-          "first_seen": "2026-03-26",
-          "last_seen": "2026-04-09",
+          "first_seen": "2026-03-31",
+          "last_seen": "2026-04-10",
           "consecutive_misses": 3,
           "status": "rented",
-          "removed_date": "2026-04-10"
+          "removed_date": "2026-04-11"
         }
       ],
       "rented_count": 1
@@ -512,7 +495,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-10",
+          "last_seen": "2026-04-11",
           "consecutive_misses": 0,
           "status": "active"
         }
@@ -740,6 +723,16 @@
     {
       "date": "2026-04-10",
       "total_active": 22,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-04-11",
+      "total_active": 22,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-04-11",
+      "total_active": 21,
       "new_listings": 0
     }
   ]
