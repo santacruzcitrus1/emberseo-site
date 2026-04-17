@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-16T21:30:38.261644",
+  "last_updated": "2026-04-16T23:00:01.829320",
   "zips": {
     "95076": {
       "total": 20,
@@ -115,7 +115,7 @@
           "source": "realtor",
           "first_seen": "2026-03-23",
           "last_seen": "2026-04-16",
-          "consecutive_misses": 1,
+          "consecutive_misses": 2,
           "status": "missing"
         },
         {
@@ -200,7 +200,7 @@
           "source": "realtor",
           "first_seen": "2026-04-15",
           "last_seen": "2026-04-16",
-          "consecutive_misses": 1,
+          "consecutive_misses": 2,
           "status": "missing"
         },
         {
@@ -398,7 +398,7 @@
           "baths": 6,
           "sqft": 3100,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 14,
+          "days_on_market": 15,
           "url": "https://www.realtor.com/rentals/details/610-Hazel-Dell-Rd_Watsonville_CA_95076_M20753-09817",
           "year_built": null,
           "source": "realtor",
@@ -788,6 +788,11 @@
       "date": "2026-04-16",
       "total_active": 22,
       "new_listings": 2
+    },
+    {
+      "date": "2026-04-16",
+      "total_active": 23,
+      "new_listings": 3
     },
     {
       "date": "2026-04-16",
