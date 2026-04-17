@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-04-15T23:00:02.048509",
+  "last_updated": "2026-04-16T21:30:38.261644",
   "zips": {
     "95076": {
-      "total": 19,
+      "total": 20,
       "median_rent": 3950,
-      "avg_rent": 4361,
+      "avg_rent": 4434,
       "min_rent": 1895,
       "max_rent": 9900,
       "by_beds": {
@@ -14,20 +14,14 @@
           "min": 1895,
           "max": 1895
         },
-        "1": {
-          "count": 1,
-          "median": 2300,
-          "min": 2300,
-          "max": 2300
-        },
         "2": {
           "count": 4,
           "median": 2800,
           "min": 2600,
-          "max": 3200
+          "max": 2800
         },
         "3": {
-          "count": 7,
+          "count": 8,
           "median": 4302,
           "min": 3595,
           "max": 9750
@@ -48,14 +42,14 @@
       "by_baths": {
         "1": {
           "count": 6,
-          "median": 2700,
+          "median": 2800,
           "min": 1895,
-          "max": 3400
+          "max": 3950
         },
         "2": {
           "count": 9,
           "median": 4302,
-          "min": 3200,
+          "min": 2800,
           "max": 5449
         },
         "4": {
@@ -82,7 +76,7 @@
         },
         "SINGLE_FAMILY": {
           "count": 12,
-          "median": 3947
+          "median": 4125
         },
         "TOWNHOMES": {
           "count": 3,
@@ -103,7 +97,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -120,9 +114,9 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-15",
-          "consecutive_misses": 0,
-          "status": "active"
+          "last_seen": "2026-04-16",
+          "consecutive_misses": 1,
+          "status": "missing"
         },
         {
           "address": "514 Argos Cir",
@@ -137,26 +131,9 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
-        },
-        {
-          "address": "710-A E Lake Ave",
-          "city": "Watsonville",
-          "price": 2800,
-          "beds": 2,
-          "baths": 2,
-          "sqft": 1200,
-          "type": "SINGLE_FAMILY",
-          "days_on_market": null,
-          "url": "https://www.realtor.com/rentals/details/710A-E-Lake-Ave_Watsonville_CA_95076_M96056-76535",
-          "year_built": null,
-          "source": "realtor",
-          "first_seen": "2026-03-25",
-          "last_seen": "2026-04-14",
-          "consecutive_misses": 2,
-          "status": "missing"
         },
         {
           "address": "29-A Packard Ln",
@@ -171,7 +148,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-01",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -188,7 +165,24 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "710-A E Lake Ave",
+          "city": "Watsonville",
+          "price": 2800,
+          "beds": 2,
+          "baths": 2,
+          "sqft": 1200,
+          "type": "SINGLE_FAMILY",
+          "days_on_market": null,
+          "url": "https://www.realtor.com/rentals/details/710A-E-Lake-Ave_Watsonville_CA_95076_M96056-76535",
+          "year_built": null,
+          "source": "realtor",
+          "first_seen": "2026-04-16",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -205,9 +199,9 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-15",
-          "last_seen": "2026-04-15",
-          "consecutive_misses": 0,
-          "status": "active"
+          "last_seen": "2026-04-16",
+          "consecutive_misses": 1,
+          "status": "missing"
         },
         {
           "address": "239 Sunnyhills Dr",
@@ -222,7 +216,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -239,7 +233,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -256,7 +250,24 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-02",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "229 Silver Leaf Dr Apt B",
+          "city": "Watsonville",
+          "price": 3950,
+          "beds": 3,
+          "baths": 1,
+          "sqft": 1191,
+          "type": "SINGLE_FAMILY",
+          "days_on_market": null,
+          "url": "https://www.realtor.com/rentals/details/229-Silver-Leaf-Dr-Apt-B_Watsonville_CA_95076_M27853-49191",
+          "year_built": null,
+          "source": "realtor",
+          "first_seen": "2026-04-16",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -268,12 +279,12 @@
           "baths": 2,
           "sqft": 2175,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 19,
+          "days_on_market": 20,
           "url": "https://www.realtor.com/rentals/details/97-LA-Jolla-St_Watsonville_CA_95076_M13810-92539",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-27",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -290,7 +301,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -307,7 +318,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -324,7 +335,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-09",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -341,7 +352,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-31",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -358,7 +369,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -370,12 +381,12 @@
           "baths": 4,
           "sqft": 3730,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 1379,
+          "days_on_market": 1380,
           "url": "https://www.realtor.com/rentals/details/404-Hidden-Valley-Rd_Royal-Oaks_CA_95076_M15367-08084",
           "year_built": 1987,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -392,7 +403,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-02",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -404,12 +415,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 359,
+          "days_on_market": 360,
           "url": "https://www.realtor.com/rentals/details/261-Clifford-Ave_Watsonville_CA_95076_M94746-04165",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -421,37 +432,35 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 315,
+          "days_on_market": 316,
           "url": "https://www.realtor.com/rentals/details/445-Main-St_Watsonville_CA_95076_M90099-36233",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-06",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "12 8th St",
+          "city": "Watsonville",
+          "price": null,
+          "beds": null,
+          "baths": null,
+          "sqft": null,
+          "type": "APARTMENT",
+          "days_on_market": 101,
+          "url": "https://www.realtor.com/rentals/details/12-8th-St_Watsonville_CA_95076_M17346-02467",
+          "year_built": null,
+          "source": "realtor",
+          "first_seen": "2026-04-16",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         }
       ],
-      "recently_rented": [
-        {
-          "address": "360 Camino Al Barranco",
-          "city": "La Selva Beach",
-          "price": 12950,
-          "beds": 4,
-          "baths": 2,
-          "sqft": 2886,
-          "type": "SINGLE_FAMILY",
-          "days_on_market": 213,
-          "url": "https://www.realtor.com/rentals/details/360-Camino-Al-Barranco_La-Selva-Beach_CA_95076_M14385-09391",
-          "year_built": 1981,
-          "source": "realtor",
-          "first_seen": "2026-03-25",
-          "last_seen": "2026-04-14",
-          "consecutive_misses": 3,
-          "status": "rented",
-          "removed_date": "2026-04-15"
-        }
-      ],
-      "rented_count": 1
+      "recently_rented": [],
+      "rented_count": 0
     },
     "95019": {
       "total": 1,
@@ -495,7 +504,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-04-15",
+          "last_seen": "2026-04-16",
           "consecutive_misses": 0,
           "status": "active"
         }
@@ -774,6 +783,16 @@
       "date": "2026-04-15",
       "total_active": 21,
       "new_listings": 1
+    },
+    {
+      "date": "2026-04-16",
+      "total_active": 22,
+      "new_listings": 2
+    },
+    {
+      "date": "2026-04-16",
+      "total_active": 23,
+      "new_listings": 3
     }
   ]
 }
