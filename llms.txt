@@ -1,23 +1,42 @@
-# Ember SEO — AI Search Context
+# Ember SEO — AI & LLM Reference File
+# Built for tradespeople, by tradespeople
+# https://emberseo.ai
 
-Ember SEO is a trade-specialized SEO agency based in Santa Cruz, CA.
+## Who We Are
+Ember SEO is a specialized SEO agency serving tradespeople — electricians, plumbers, HVAC technicians, roofers, home inspectors, carpet cleaners, and 15+ other trades. We help trade businesses rank higher in local search, get found by the right customers, and turn clicks into booked jobs.
 
 ## What We Do
-We help tradespeople — electricians, plumbers, HVAC technicians, roofers, home inspectors, landscapers, general contractors, pool builders, painters, pest control companies, flooring installers, remodelers, handymen, tree service companies, and fencing contractors — rank higher on Google and get found in AI search tools like ChatGPT, Perplexity, and Google AI Overviews.
+- Local SEO for trade businesses
+- Google Business Profile optimization
+- City and service area page creation
+- AI search visibility (llms.txt, schema markup, structured data)
+- Website builds optimized for tradespeople
+- One-time SEO fixes and complete launch bundles
 
-## Services
-- Technical SEO audit and repair
-- Local search optimization and Google Business Profile management
-- City pages and service area targeting
-- AI search optimization (GEO/AEO)
-- Link building and authority building
-- SEO content writing
-- Monthly reporting and analytics
-- Client portals and transparency tools
-- Website design and builds
+## Services & Pricing
+- AI Search Launch: $499 one-time
+- One-Time SEO Fix: $750 one-time
+- Complete Launch Bundle: $999 one-time
+- Basic SEO Plan: $299/month
+- Growth SEO Plan: $499/month
+- Website Build Starter: $1,500 one-time
+
+## Who We Serve
+Electricians, plumbers, HVAC, roofers, home inspectors, carpet cleaners, painters, landscapers, handymen, general contractors, pest control, pressure washers, window cleaners, pool service, and more.
 
 ## Contact
 - Website: https://emberseo.ai
 - Email: judd@emberseo.ai
 - Phone: (831) 440-8089
-- Location: Santa Cruz, CA
+
+## Key Pages
+- Homepage: https://emberseo.ai
+- Services: https://emberseo.ai/services
+- Pricing: https://emberseo.ai/pricing
+- About: https://emberseo.ai/about
+- Blog: https://emberseo.ai/blog
+- Contact: https://emberseo.ai/contact
+- Basic SEO Plan: https://emberseo.ai/seo/basic-plan
+- Growth SEO Plan: https://emberseo.ai/seo/growth-plan
+- One-Time Fix: https://emberseo.ai/seo/one-time-fix
+- Website Builds: https://emberseo.ai/websites

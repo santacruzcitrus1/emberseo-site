@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# AI Crawlers — explicitly allowed
+# Welcome AI crawlers — Ember SEO is an AI-first SEO agency
 User-agent: GPTBot
 Allow: /
 
@@ -12,9 +12,6 @@ User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended
-Allow: /
-
-User-agent: Applebot-Extended
 Allow: /
 
 User-agent: Amazonbot
