@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-19T23:00:02.216332",
+  "last_updated": "2026-05-20T23:00:02.330084",
   "zips": {
     "95076": {
       "total": 21,
@@ -93,7 +93,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -105,12 +105,12 @@
           "baths": 1,
           "sqft": 650,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 260,
+          "days_on_market": 261,
           "url": "https://www.realtor.com/rentals/details/380-Whippet-Run-Unit-Studio_Corralitos_CA_95076_M96821-70080",
           "year_built": 2020,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -127,7 +127,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -144,7 +144,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-18",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -161,7 +161,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -178,7 +178,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -195,7 +195,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -212,7 +212,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-19",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -229,7 +229,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-16",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -241,12 +241,12 @@
           "baths": 2,
           "sqft": 2175,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 53,
+          "days_on_market": 54,
           "url": "https://www.realtor.com/rentals/details/97-LA-Jolla-St_Watsonville_CA_95076_M13810-92539",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-27",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -263,7 +263,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-14",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -280,7 +280,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -292,12 +292,12 @@
           "baths": 2,
           "sqft": 1402,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 14,
+          "days_on_market": 15,
           "url": "https://www.realtor.com/rentals/details/Magnolia-Dr_Watsonville_CA_95076_M96016-80032",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-18",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -314,7 +314,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -326,12 +326,12 @@
           "baths": 3,
           "sqft": 2694,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 5,
+          "days_on_market": 6,
           "url": "https://www.realtor.com/rentals/details/27-LA-Salle-St_Watsonville_CA_95076_M24385-69815",
           "year_built": 2004,
           "source": "realtor",
           "first_seen": "2026-05-14",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -343,12 +343,12 @@
           "baths": 2,
           "sqft": 1408,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 14,
+          "days_on_market": 15,
           "url": "https://www.realtor.com/rentals/details/48-Jeanette-Way_Watsonville_CA_95076_M26432-91418",
           "year_built": 1979,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -360,12 +360,12 @@
           "baths": 4,
           "sqft": 3730,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 1413,
+          "days_on_market": 1414,
           "url": "https://www.realtor.com/rentals/details/404-Hidden-Valley-Rd_Royal-Oaks_CA_95076_M15367-08084",
           "year_built": 1987,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -377,12 +377,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 393,
+          "days_on_market": 394,
           "url": "https://www.realtor.com/rentals/details/261-Clifford-Ave_Watsonville_CA_95076_M94746-04165",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -394,12 +394,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 381,
+          "days_on_market": 382,
           "url": "https://www.realtor.com/rentals/details/611-Tuttle-Ave_Watsonville_CA_95076_M94286-95512",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -411,12 +411,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 14,
+          "days_on_market": 15,
           "url": "https://www.realtor.com/rentals/details/34-Sudden-St_Watsonville_CA_95076_M97538-73238",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -428,12 +428,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 4,
+          "days_on_market": 5,
           "url": "https://www.realtor.com/rentals/details/558-Main-St_Watsonville_CA_95076_M93554-10512",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-15",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         }
@@ -483,7 +483,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-19",
+          "last_seen": "2026-05-20",
           "consecutive_misses": 0,
           "status": "active"
         }
@@ -927,6 +927,16 @@
       "date": "2026-05-19",
       "total_active": 22,
       "new_listings": 1
+    },
+    {
+      "date": "2026-05-20",
+      "total_active": 22,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-05-20",
+      "total_active": 22,
+      "new_listings": 0
     }
   ]
 }
