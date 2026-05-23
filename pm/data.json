@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-05-21T23:00:02.126387",
+  "last_updated": "2026-05-22T23:00:02.988183",
   "zips": {
     "95076": {
-      "total": 21,
+      "total": 19,
       "median_rent": 3950,
-      "avg_rent": 3800,
+      "avg_rent": 3557,
       "min_rent": 1895,
-      "max_rent": 7750,
+      "max_rent": 5500,
       "by_beds": {
         "0": {
           "count": 1,
@@ -21,16 +21,16 @@
           "max": 2500
         },
         "2": {
-          "count": 4,
-          "median": 2585,
+          "count": 3,
+          "median": 2575,
           "min": 2500,
-          "max": 3500
+          "max": 2595
         },
         "3": {
-          "count": 7,
-          "median": 4295,
+          "count": 6,
+          "median": 4272,
           "min": 3950,
-          "max": 7750
+          "max": 5500
         },
         "4": {
           "count": 3,
@@ -47,9 +47,9 @@
           "max": 4250
         },
         "2": {
-          "count": 6,
-          "median": 4247,
-          "min": 3500,
+          "count": 5,
+          "median": 4295,
+          "min": 4095,
           "max": 5500
         },
         "3": {
@@ -57,12 +57,6 @@
           "median": 4800,
           "min": 4800,
           "max": 4800
-        },
-        "4": {
-          "count": 1,
-          "median": 7750,
-          "min": 7750,
-          "max": 7750
         }
       },
       "by_type": {
@@ -71,7 +65,7 @@
           "median": 2500
         },
         "SINGLE_FAMILY": {
-          "count": 11,
+          "count": 9,
           "median": 4095
         },
         "TOWNHOMES": {
@@ -93,7 +87,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -105,12 +99,12 @@
           "baths": 1,
           "sqft": 650,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 262,
+          "days_on_market": 263,
           "url": "https://www.realtor.com/rentals/details/380-Whippet-Run-Unit-Studio_Corralitos_CA_95076_M96821-70080",
           "year_built": 2020,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -127,7 +121,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -144,7 +138,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-18",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -161,7 +155,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -178,7 +172,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -195,7 +189,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -212,9 +206,9 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-19",
-          "last_seen": "2026-05-21",
-          "consecutive_misses": 0,
-          "status": "active"
+          "last_seen": "2026-05-22",
+          "consecutive_misses": 1,
+          "status": "missing"
         },
         {
           "address": "229 Silver Leaf Dr Apt B",
@@ -229,7 +223,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-16",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -241,12 +235,12 @@
           "baths": 2,
           "sqft": 2175,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 55,
+          "days_on_market": 56,
           "url": "https://www.realtor.com/rentals/details/97-LA-Jolla-St_Watsonville_CA_95076_M13810-92539",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-27",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -263,7 +257,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-14",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -280,7 +274,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -292,12 +286,12 @@
           "baths": 2,
           "sqft": 1402,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 16,
+          "days_on_market": 17,
           "url": "https://www.realtor.com/rentals/details/Magnolia-Dr_Watsonville_CA_95076_M96016-80032",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-04-18",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -314,7 +308,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -326,12 +320,12 @@
           "baths": 3,
           "sqft": 2694,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 7,
+          "days_on_market": 8,
           "url": "https://www.realtor.com/rentals/details/27-LA-Salle-St_Watsonville_CA_95076_M24385-69815",
           "year_built": 2004,
           "source": "realtor",
           "first_seen": "2026-05-14",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -343,12 +337,12 @@
           "baths": 2,
           "sqft": 1408,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 16,
+          "days_on_market": 17,
           "url": "https://www.realtor.com/rentals/details/48-Jeanette-Way_Watsonville_CA_95076_M26432-91418",
           "year_built": 1979,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -360,14 +354,14 @@
           "baths": 4,
           "sqft": 3730,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 1415,
+          "days_on_market": 1416,
           "url": "https://www.realtor.com/rentals/details/404-Hidden-Valley-Rd_Royal-Oaks_CA_95076_M15367-08084",
           "year_built": 1987,
           "source": "realtor",
           "first_seen": "2026-03-25",
-          "last_seen": "2026-05-21",
-          "consecutive_misses": 0,
-          "status": "active"
+          "last_seen": "2026-05-22",
+          "consecutive_misses": 1,
+          "status": "missing"
         },
         {
           "address": "261 Clifford Ave",
@@ -377,12 +371,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 395,
+          "days_on_market": 396,
           "url": "https://www.realtor.com/rentals/details/261-Clifford-Ave_Watsonville_CA_95076_M94746-04165",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-03-23",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -394,12 +388,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 383,
+          "days_on_market": 384,
           "url": "https://www.realtor.com/rentals/details/611-Tuttle-Ave_Watsonville_CA_95076_M94286-95512",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -411,12 +405,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 16,
+          "days_on_market": 17,
           "url": "https://www.realtor.com/rentals/details/34-Sudden-St_Watsonville_CA_95076_M97538-73238",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -428,12 +422,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 6,
+          "days_on_market": 7,
           "url": "https://www.realtor.com/rentals/details/558-Main-St_Watsonville_CA_95076_M93554-10512",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-15",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         }
@@ -483,7 +477,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-05-21",
+          "last_seen": "2026-05-22",
           "consecutive_misses": 0,
           "status": "active"
         }
@@ -493,16 +487,6 @@
     }
   },
   "scrape_history": [
-    {
-      "date": "2026-03-25",
-      "total_active": 38,
-      "new_listings": 2
-    },
-    {
-      "date": "2026-03-26",
-      "total_active": 76,
-      "new_listings": 8
-    },
     {
       "date": "2026-03-26",
       "total_active": 74,
@@ -940,6 +924,16 @@
     },
     {
       "date": "2026-05-21",
+      "total_active": 22,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-05-22",
+      "total_active": 22,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-05-22",
       "total_active": 22,
       "new_listings": 0
     }
