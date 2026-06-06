@@ -1,0 +1,501 @@
+     1|<!DOCTYPE html>
+     2|<html lang="en">
+     3|<head>
+     4|<meta charset="UTF-8">
+     5|<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     6|<title>Peninsula Construction — Website Questionnaire | Ember SEO</title>
+     7|<style>
+     8|  * { box-sizing: border-box; margin: 0; padding: 0; }
+     9|  body {
+    10|    font-family: 'Segoe UI', Arial, sans-serif;
+    11|    background: #f4f4f0;
+    12|    color: #1a1a1a;
+    13|    padding: 40px 20px;
+    14|  }
+    15|  .wrapper {
+    16|    max-width: 760px;
+    17|    margin: 0 auto;
+    18|  }
+    19|  .header {
+    20|    background: #1a1a1a;
+    21|    border-radius: 12px 12px 0 0;
+    22|    padding: 36px 40px;
+    23|    display: flex;
+    24|    align-items: center;
+    25|    justify-content: space-between;
+    26|  }
+    27|  .header img {
+    28|    height: 42px;
+    29|  }
+    30|  .header-text h1 {
+    31|    color: #fff;
+    32|    font-size: 22px;
+    33|    font-weight: 700;
+    34|  }
+    35|  .header-text p {
+    36|    color: #aaa;
+    37|    font-size: 13px;
+    38|    margin-top: 4px;
+    39|  }
+    40|  .intro {
+    41|    background: #fff;
+    42|    padding: 28px 40px;
+    43|    border-left: 1px solid #e0e0e0;
+    44|    border-right: 1px solid #e0e0e0;
+    45|    font-size: 14px;
+    46|    color: #444;
+    47|    line-height: 1.6;
+    48|  }
+    49|  .intro strong { color: #e85c0d; }
+    50|  .section {
+    51|    background: #fff;
+    52|    margin-top: 16px;
+    53|    border-radius: 10px;
+    54|    border: 1px solid #e0e0e0;
+    55|    overflow: hidden;
+    56|  }
+    57|  .section-header {
+    58|    background: #e85c0d;
+    59|    padding: 14px 28px;
+    60|    display: flex;
+    61|    align-items: center;
+    62|    gap: 12px;
+    63|  }
+    64|  .section-num {
+    65|    background: rgba(255,255,255,0.25);
+    66|    color: #fff;
+    67|    font-weight: 800;
+    68|    font-size: 13px;
+    69|    width: 26px;
+    70|    height: 26px;
+    71|    border-radius: 50%;
+    72|    display: flex;
+    73|    align-items: center;
+    74|    justify-content: center;
+    75|    flex-shrink: 0;
+    76|  }
+    77|  .section-header h2 {
+    78|    color: #fff;
+    79|    font-size: 15px;
+    80|    font-weight: 700;
+    81|    letter-spacing: 0.3px;
+    82|  }
+    83|  .section-body {
+    84|    padding: 24px 28px;
+    85|  }
+    86|  .q {
+    87|    margin-bottom: 22px;
+    88|  }
+    89|  .q:last-child { margin-bottom: 0; }
+    90|  label {
+    91|    display: block;
+    92|    font-size: 13.5px;
+    93|    font-weight: 600;
+    94|    color: #1a1a1a;
+    95|    margin-bottom: 7px;
+    96|  }
+    97|  label .optional {
+    98|    font-weight: 400;
+    99|    color: #999;
+   100|    font-size: 12px;
+   101|    margin-left: 6px;
+   102|  }
+   103|  input[type="text"], input[type="email"], input[type="tel"], input[type="url"], textarea, select {
+   104|    width: 100%;
+   105|    padding: 10px 14px;
+   106|    border: 1.5px solid #ddd;
+   107|    border-radius: 7px;
+   108|    font-size: 14px;
+   109|    color: #1a1a1a;
+   110|    background: #fafafa;
+   111|    transition: border-color 0.2s;
+   112|    outline: none;
+   113|    font-family: inherit;
+   114|  }
+   115|  input:focus, textarea:focus, select:focus {
+   116|    border-color: #e85c0d;
+   117|    background: #fff;
+   118|  }
+   119|  textarea { resize: vertical; min-height: 90px; }
+   120|  .checkbox-group, .radio-group {
+   121|    display: flex;
+   122|    flex-direction: column;
+   123|    gap: 8px;
+   124|    margin-top: 4px;
+   125|  }
+   126|  .checkbox-group label, .radio-group label {
+   127|    display: flex;
+   128|    align-items: flex-start;
+   129|    gap: 10px;
+   130|    font-weight: 400;
+   131|    cursor: pointer;
+   132|    font-size: 13.5px;
+   133|  }
+   134|  input[type="checkbox"], input[type="radio"] {
+   135|    width: 17px;
+   136|    height: 17px;
+   137|    flex-shrink: 0;
+   138|    margin-top: 1px;
+   139|    accent-color: #e85c0d;
+   140|  }
+   141|  .hint {
+   142|    font-size: 12px;
+   143|    color: #888;
+   144|    margin-top: 5px;
+   145|    font-style: italic;
+   146|  }
+   147|  .prefilled {
+   148|    background: #fff8f4;
+   149|    border: 1.5px solid #f4c9a8;
+   150|    color: #c04a00;
+   151|    font-size: 13px;
+   152|    padding: 8px 14px;
+   153|    border-radius: 7px;
+   154|  }
+   155|  .footer {
+   156|    background: #1a1a1a;
+   157|    border-radius: 0 0 12px 12px;
+   158|    padding: 24px 40px;
+   159|    text-align: center;
+   160|    color: #888;
+   161|    font-size: 12px;
+   162|    margin-top: 0;
+   163|  }
+   164|  .footer a { color: #e85c0d; text-decoration: none; }
+   165|  .submit-area {
+   166|    text-align: center;
+   167|    margin: 28px 0 16px;
+   168|  }
+   169|  .submit-btn {
+   170|    background: #e85c0d;
+   171|    color: #fff;
+   172|    border: none;
+   173|    padding: 14px 48px;
+   174|    border-radius: 8px;
+   175|    font-size: 16px;
+   176|    font-weight: 700;
+   177|    cursor: pointer;
+   178|    letter-spacing: 0.3px;
+   179|    transition: background 0.2s;
+   180|  }
+   181|  .submit-btn:hover { background: #c44d0a; }
+   182|  @media (max-width: 600px) {
+   183|    .header { flex-direction: column; gap: 16px; text-align: center; padding: 28px 20px; }
+   184|    .section-body, .intro { padding: 20px 18px; }
+   185|  }
+   186|</style>
+   187|</head>
+   188|<body>
+   189|<div class="wrapper">
+   190|
+   191|  <div class="header">
+   192|    <div class="header-text">
+   193|      <h1>Peninsula Construction</h1>
+   194|      <p>Website Build Questionnaire &mdash; Prepared by Ember SEO</p>
+   195|    </div>
+   196|    <img src="https://emberseo.ai/assets/ember-logo-white.png" alt="Ember SEO" onerror="this.style.display='none'" />
+   197|  </div>
+   198|
+   199|  <div class="intro">
+   200|    Hi Richie! We're building your new website and want to make sure it's a perfect fit for your business.
+   201|    This questionnaire helps us understand your brand, your work, and your goals.
+   202|    <br><br>
+   203|    <strong>Takes about 10&ndash;15 minutes.</strong> Fill out as much as you can &mdash; the more detail you give us, the better the site will turn out. Some fields are pre-filled with what we already know; just confirm or correct them.
+   204|  </div>
+   205|
+   206|  <form action="https://formspree.io/judd@emberseo.ai" method="POST">
+   207|    <input type="hidden" name="_subject" value="Peninsula Construction — Website Questionnaire Submitted" />
+   208|    <input type="hidden" name="_next" value="https://emberseo.ai" />
+   209|
+   210|    <!-- SECTION 1 -->
+   211|    <div class="section">
+   212|      <div class="section-header">
+   213|        <div class="section-num">1</div>
+   214|        <h2>Business Basics</h2>
+   215|      </div>
+   216|      <div class="section-body">
+   217|        <div class="q">
+   218|          <label>Business Name</label>
+   219|          <input type="text" name="business_name" value="Peninsula Construction" />
+   220|        </div>
+   221|        <div class="q">
+   222|          <label>Your Name</label>
+   223|          <input type="text" name="contact_name" value="Richard Rodriguez" />
+   224|        </div>
+   225|        <div class="q">
+   226|          <label>Phone Number</label>
+   227|          <input type="tel" name="phone" value="(831) 319-6492" />
+   228|        </div>
+   229|        <div class="q">
+   230|          <label>Business Address</label>
+   231|          <input type="text" name="address" value="1185 San Andreas Rd, Watsonville CA 95076" />
+   232|        </div>
+   233|        <div class="q">
+   234|          <label>Email Address <span class="optional">(for the website contact form)</span></label>
+   235|          <input type="email" name="business_email" placeholder="richie@example.com" />
+   236|        </div>
+   237|        <div class="q">
+   238|          <label>Website Domain <span class="optional">(do you already own one?)</span></label>
+   239|          <input type="url" name="domain" placeholder="e.g. peninsulaconstruction.com" />
+   240|        </div>
+   241|        <div class="q">
+   242|          <label>CSLB License Number</label>
+   243|          <input type="text" name="cslb_license" value="723364" />
+   244|          <p class="hint">We'll display this on the site to build trust with potential clients.</p>
+   245|        </div>
+   246|        <div class="q">
+   247|          <label>Years in Business</label>
+   248|          <input type="text" name="years_in_business" value="30+ years (licensed since 1996)" />
+   249|        </div>
+   250|      </div>
+   251|    </div>
+   252|
+   253|    <!-- SECTION 2 -->
+   254|    <div class="section">
+   255|      <div class="section-header">
+   256|        <div class="section-num">2</div>
+   257|        <h2>Branding &amp; Visual Identity</h2>
+   258|      </div>
+   259|      <div class="section-body">
+   260|        <div class="q">
+   261|          <label>Do you have a new logo ready to share?</label>
+   262|          <div class="radio-group">
+   263|            <label><input type="radio" name="logo_status" value="yes_email" /> Yes — I'll email it to you</label>
+   264|            <label><input type="radio" name="logo_status" value="yes_link" /> Yes — I'll share a link</label>
+   265|            <label><input type="radio" name="logo_status" value="design_needed" /> Not yet — please design one for me</label>
+   266|          </div>
+   267|        </div>
+   268|        <div class="q">
+   269|          <label>Logo / file share link <span class="optional">(if you have one)</span></label>
+   270|          <input type="text" name="logo_link" placeholder="Google Drive / Dropbox link" />
+   271|        </div>
+   272|        <div class="q">
+   273|          <label>What are your brand colors? <span class="optional">(hex codes or describe them)</span></label>
+   274|          <input type="text" name="brand_colors" placeholder="e.g. Navy blue #1B2A4A and orange #E85C0D" />
+   275|          <p class="hint">If you have a brand guide or color sheet, share that too.</p>
+   276|        </div>
+   277|        <div class="q">
+   278|          <label>What feeling should your website give visitors? <span class="optional">(check all that apply)</span></label>
+   279|          <div class="checkbox-group">
+   280|            <label><input type="checkbox" name="vibe[]" value="professional_trustworthy" /> Professional &amp; trustworthy</label>
+   281|            <label><input type="checkbox" name="vibe[]" value="modern_clean" /> Modern &amp; clean</label>
+   282|            <label><input type="checkbox" name="vibe[]" value="bold_confident" /> Bold &amp; confident</label>
+   283|            <label><input type="checkbox" name="vibe[]" value="warm_approachable" /> Warm &amp; approachable</label>
+   284|            <label><input type="checkbox" name="vibe[]" value="high_end" /> High-end / premium</label>
+   285|          </div>
+   286|        </div>
+   287|        <div class="q">
+   288|          <label>Any websites whose design you like? <span class="optional">(optional)</span></label>
+   289|          <textarea name="design_inspiration" placeholder="Paste URLs or describe what you like about them"></textarea>
+   290|        </div>
+   291|      </div>
+   292|    </div>
+   293|
+   294|    <!-- SECTION 3 -->
+   295|    <div class="section">
+   296|      <div class="section-header">
+   297|        <div class="section-num">3</div>
+   298|        <h2>ADU Specialization</h2>
+   299|      </div>
+   300|      <div class="section-body">
+   301|        <div class="q">
+   302|          <label>What types of ADUs do you build? <span class="optional">(check all that apply)</span></label>
+   303|          <div class="checkbox-group">
+   304|            <label><input type="checkbox" name="adu_types[]" value="detached" /> Detached ADU (backyard cottage)</label>
+   305|            <label><input type="checkbox" name="adu_types[]" value="attached" /> Attached ADU (addition to main house)</label>
+   306|            <label><input type="checkbox" name="adu_types[]" value="garage_conversion" /> Garage conversion</label>
+   307|            <label><input type="checkbox" name="adu_types[]" value="jadu" /> Junior ADU (JADU — inside main home)</label>
+   308|            <label><input type="checkbox" name="adu_types[]" value="two_story" /> 2-story ADU</label>
+   309|            <label><input type="checkbox" name="adu_types[]" value="prefab" /> Prefab / modular ADU</label>
+   310|          </div>
+   311|        </div>
+   312|        <div class="q">
+   313|          <label>Other ADU types you build <span class="optional">(optional)</span></label>
+   314|          <input type="text" name="adu_types_other" placeholder="Describe any other types..." />
+   315|        </div>
+   316|        <div class="q">
+   317|          <label>Do you handle the full ADU process or just the construction?</label>
+   318|          <div class="checkbox-group">
+   319|            <label><input type="checkbox" name="adu_process[]" value="full_process" /> Full process — design, permits, AND build</label>
+   320|            <label><input type="checkbox" name="adu_process[]" value="construction_only" /> Construction only (client handles permits/design)</label>
+   321|            <label><input type="checkbox" name="adu_process[]" value="with_architect" /> We work alongside an architect or designer</label>
+   322|          </div>
+   323|        </div>
+   324|        <div class="q">
+   325|          <label>What's your typical ADU price range?</label>
+   326|          <input type="text" name="adu_price_range" placeholder="e.g. $150,000 – $300,000 depending on size and finish" />
+   327|          <p class="hint">We can display this as a range or just say "call for a quote" — your choice.</p>
+   328|        </div>
+   329|        <div class="q">
+   330|          <label>Typical project timeline from start to finish?</label>
+   331|          <input type="text" name="adu_timeline" placeholder="e.g. 6–10 months including permits" />
+   332|        </div>
+   333|        <div class="q">
+   334|          <label>What makes Peninsula Construction different from other ADU contractors?</label>
+   335|          <textarea name="differentiators" placeholder="e.g. 30 years experience, family-owned, we handle everything, quality materials..."></textarea>
+   336|        </div>
+   337|        <div class="q">
+   338|          <label>Do you have completed ADU projects you can share photos of?</label>
+   339|          <div class="radio-group">
+   340|            <label><input type="radio" name="adu_photos" value="yes_several" /> Yes, several</label>
+   341|            <label><input type="radio" name="adu_photos" value="a_few" /> A few</label>
+   342|            <label><input type="radio" name="adu_photos" value="none_yet" /> Not yet (new to ADUs)</label>
+   343|          </div>
+   344|        </div>
+   345|      </div>
+   346|    </div>
+   347|
+   348|    <!-- SECTION 4 -->
+   349|    <div class="section">
+   350|      <div class="section-header">
+   351|        <div class="section-num">4</div>
+   352|        <h2>Other Services</h2>
+   353|      </div>
+   354|      <div class="section-body">
+   355|        <div class="q">
+   356|          <label>Beyond ADUs, what other construction services do you offer? <span class="optional">(check all that apply)</span></label>
+   357|          <div class="checkbox-group">
+   358|            <label><input type="checkbox" name="other_services[]" value="room_additions" /> Room additions</label>
+   359|            <label><input type="checkbox" name="other_services[]" value="kitchen_remodels" /> Kitchen remodels</label>
+   360|            <label><input type="checkbox" name="other_services[]" value="bathroom_remodels" /> Bathroom remodels</label>
+   361|            <label><input type="checkbox" name="other_services[]" value="new_home" /> New home construction</label>
+   362|            <label><input type="checkbox" name="other_services[]" value="commercial" /> Commercial construction</label>
+   363|            <label><input type="checkbox" name="other_services[]" value="decks" /> Decks &amp; outdoor structures</label>
+   364|            <label><input type="checkbox" name="other_services[]" value="roofing" /> Roofing</label>
+   365|          </div>
+   366|        </div>
+   367|        <div class="q">
+   368|          <label>Any other services not listed above? <span class="optional">(optional)</span></label>
+   369|          <input type="text" name="other_services_other" placeholder="Describe..." />
+   370|        </div>
+   371|        <div class="q">
+   372|          <label>Which service do you most want to grow (besides ADUs)?</label>
+   373|          <input type="text" name="growth_service" placeholder="e.g. kitchen remodels, room additions..." />
+   374|        </div>
+   375|      </div>
+   376|    </div>
+   377|
+   378|    <!-- SECTION 5 -->
+   379|    <div class="section">
+   380|      <div class="section-header">
+   381|        <div class="section-num">5</div>
+   382|        <h2>Service Area &amp; Ideal Clients</h2>
+   383|      </div>
+   384|      <div class="section-body">
+   385|        <div class="q">
+   386|          <label>What cities/areas do you serve?</label>
+   387|          <textarea name="service_area" placeholder="e.g. Watsonville, Santa Cruz, Aptos, Capitola, Scotts Valley, Monterey County..."></textarea>
+   388|        </div>
+   389|        <div class="q">
+   390|          <label>Describe your ideal client</label>
+   391|          <textarea name="ideal_client" placeholder="e.g. Homeowners who want to add rental income, families building for aging parents, property investors..."></textarea>
+   392|        </div>
+   393|        <div class="q">
+   394|          <label>How do most of your clients find you right now? <span class="optional">(check all that apply)</span></label>
+   395|          <div class="checkbox-group">
+   396|            <label><input type="checkbox" name="lead_sources[]" value="referrals" /> Word of mouth / referrals</label>
+   397|            <label><input type="checkbox" name="lead_sources[]" value="google" /> Google search</label>
+   398|            <label><input type="checkbox" name="lead_sources[]" value="yelp" /> Yelp</label>
+   399|            <label><input type="checkbox" name="lead_sources[]" value="social_media" /> Social media</label>
+   400|            <label><input type="checkbox" name="lead_sources[]" value="nextdoor" /> Nextdoor</label>
+   401|          </div>
+   402|        </div>
+   403|        <div class="q">
+   404|          <label>Other lead sources <span class="optional">(optional)</span></label>
+   405|          <input type="text" name="lead_sources_other" placeholder="Describe..." />
+   406|        </div>
+   407|      </div>
+   408|    </div>
+   409|
+   410|    <!-- SECTION 6 -->
+   411|    <div class="section">
+   412|      <div class="section-header">
+   413|        <div class="section-num">6</div>
+   414|        <h2>Photos &amp; Project Portfolio</h2>
+   415|      </div>
+   416|      <div class="section-body">
+   417|        <div class="q">
+   418|          <label>How many completed projects do you have photos of?</label>
+   419|          <div class="radio-group">
+   420|            <label><input type="radio" name="photo_count" value="10_plus" /> 10 or more</label>
+   421|            <label><input type="radio" name="photo_count" value="5_to_9" /> 5–9</label>
+   422|            <label><input type="radio" name="photo_count" value="1_to_4" /> 1–4</label>
+   423|            <label><input type="radio" name="photo_count" value="none" /> None yet</label>
+   424|          </div>
+   425|        </div>
+   426|        <div class="q">
+   427|          <label>How will you share photos with us?</label>
+   428|          <div class="radio-group">
+   429|            <label><input type="radio" name="photo_share_method" value="drive_link" /> Google Drive / Dropbox link</label>
+   430|            <label><input type="radio" name="photo_share_method" value="email" /> Email them directly</label>
+   431|            <label><input type="radio" name="photo_share_method" value="stock_ok" /> I need help — use stock photos for now</label>
+   432|          </div>
+   433|        </div>
+   434|        <div class="q">
+   435|          <label>Photo share link <span class="optional">(if you have one ready)</span></label>
+   436|          <input type="text" name="photo_link" placeholder="Google Drive / Dropbox link" />
+   437|        </div>
+   438|        <div class="q">
+   439|          <label>Do you have any standout "hero" projects to feature prominently?</label>
+   440|          <textarea name="hero_project" placeholder="Describe the project — size, location, what made it special..."></textarea>
+   441|        </div>
+   442|        <div class="q">
+   443|          <label>Do you have a photo of yourself or your crew? <span class="optional">(great for trust)</span></label>
+   444|          <div class="radio-group">
+   445|            <label><input type="radio" name="crew_photo" value="yes" /> Yes, I'll share it</label>
+   446|            <label><input type="radio" name="crew_photo" value="can_get_one" /> Not yet but I can get one</label>
+   447|            <label><input type="radio" name="crew_photo" value="skip" /> Skip this</label>
+   448|          </div>
+   449|        </div>
+   450|      </div>
+   451|    </div>
+   452|
+   453|    <!-- SECTION 7 -->
+   454|    <div class="section">
+   455|      <div class="section-header">
+   456|        <div class="section-num">7</div>
+   457|        <h2>Reviews &amp; Credibility</h2>
+   458|      </div>
+   459|      <div class="section-body">
+   460|        <div class="q">
+   461|          <label>Do you have a Google Business Profile?</label>
+   462|          <div class="radio-group">
+   463|            <label><input type="radio" name="gbp_status" value="yes" /> Yes</label>
+   464|            <label><input type="radio" name="gbp_status" value="no" /> No</label>
+   465|            <label><input type="radio" name="gbp_status" value="not_sure" /> Not sure</label>
+   466|          </div>
+   467|        </div>
+   468|        <div class="q">
+   469|          <label>Google Business Profile link <span class="optional">(if you have it)</span></label>
+   470|          <input type="url" name="gbp_link" placeholder="https://maps.google.com/..." />
+   471|        </div>
+   472|        <div class="q">
+   473|          <label>Do you have Google or Yelp reviews we can feature?</label>
+   474|          <div class="radio-group">
+   475|            <label><input type="radio" name="reviews_status" value="yes_several" /> Yes, several good ones</label>
+   476|            <label><input type="radio" name="reviews_status" value="a_few" /> A few</label>
+   477|            <label><input type="radio" name="reviews_status" value="none" /> No reviews yet</label>
+   478|          </div>
+   479|        </div>
+   480|        <div class="q">
+   481|          <label>Client testimonials <span class="optional">(paste quotes we can use on the site)</span></label>
+   482|          <textarea name="testimonials" placeholder="Paste them here, or let us know if we should pull them from Google/Yelp"></textarea>
+   483|        </div>
+   484|        <div class="q">
+   485|          <label>Any certifications, awards, or memberships worth highlighting? <span class="optional">(optional)</span></label>
+   486|          <textarea name="certifications" placeholder="e.g. NARI member, Houzz Pro, EPA certified..."></textarea>
+   487|        </div>
+   488|      </div>
+   489|    </div>
+   490|
+   491|    <!-- SECTION 8 -->
+   492|    <div class="section">
+   493|      <div class="section-header">
+   494|        <div class="section-num">8</div>
+   495|        <h2>Website Goals</h2>
+   496|      </div>
+   497|      <div class="section-body">
+   498|        <div class="q">
+   499|          <label>What is the #1 goal of your website?</label>
+   500|          <div class="radio-group">
+   501|
