@@ -1,17 +1,17 @@
 {
-  "last_updated": "2026-07-20T15:00:14.510836",
+  "last_updated": "2026-07-20T23:00:01.813883",
   "zips": {
     "95076": {
-      "total": 29,
-      "median_rent": 3300,
-      "avg_rent": 3354,
-      "min_rent": 975,
+      "total": 28,
+      "median_rent": 3450,
+      "avg_rent": 3473,
+      "min_rent": 2195,
       "max_rent": 5000,
       "by_beds": {
         "1": {
-          "count": 6,
-          "median": 2197,
-          "min": 975,
+          "count": 5,
+          "median": 2200,
+          "min": 2195,
           "max": 2600
         },
         "2": {
@@ -35,9 +35,9 @@
       },
       "by_baths": {
         "1": {
-          "count": 13,
-          "median": 2600,
-          "min": 975,
+          "count": 12,
+          "median": 2700,
+          "min": 2195,
           "max": 4000
         },
         "2": {
@@ -49,7 +49,7 @@
       },
       "by_type": {
         "APARTMENT": {
-          "count": 4,
+          "count": 3,
           "median": 2195
         },
         "CONDOS": {
@@ -80,8 +80,8 @@
           "source": "realtor",
           "first_seen": "2026-06-27",
           "last_seen": "2026-07-20",
-          "consecutive_misses": 0,
-          "status": "active"
+          "consecutive_misses": 1,
+          "status": "missing"
         },
         {
           "address": "290 Pennsylvania Dr Apt 10",
@@ -91,7 +91,7 @@
           "baths": 1,
           "sqft": 450,
           "type": "APARTMENT",
-          "days_on_market": 45,
+          "days_on_market": 46,
           "url": "https://www.realtor.com/rentals/details/290-Pennsylvania-Dr-Apt-10_Watsonville_CA_95076_M94885-96098",
           "year_built": null,
           "source": "realtor",
@@ -176,7 +176,7 @@
           "baths": 1,
           "sqft": 550,
           "type": "APARTMENT",
-          "days_on_market": 13,
+          "days_on_market": 14,
           "url": "https://www.realtor.com/rentals/details/708-Hidden-Valley-Rd_Royal-Oaks_CA_95076_M15534-03226",
           "year_built": null,
           "source": "realtor",
@@ -244,7 +244,7 @@
           "baths": 2,
           "sqft": 1674,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 10,
+          "days_on_market": 11,
           "url": "https://www.realtor.com/rentals/details/500-Cloudview-Dr_Watsonville_CA_95076_M27354-87360",
           "year_built": 1984,
           "source": "realtor",
@@ -312,7 +312,7 @@
           "baths": 1,
           "sqft": 1320,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 2,
+          "days_on_market": 3,
           "url": "https://www.realtor.com/rentals/details/20-Arbolado-Dr_La-Selva-Beach_CA_95076_M14530-43109",
           "year_built": 1969,
           "source": "realtor",
@@ -397,7 +397,7 @@
           "baths": 2,
           "sqft": 1408,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 75,
+          "days_on_market": 76,
           "url": "https://www.realtor.com/rentals/details/48-Jeanette-Way_Watsonville_CA_95076_M26432-91418",
           "year_built": 1979,
           "source": "realtor",
@@ -414,7 +414,7 @@
           "baths": 2,
           "sqft": 2487,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 44,
+          "days_on_market": 45,
           "url": "https://www.realtor.com/rentals/details/37-Pelican-Dr_Watsonville_CA_95076_M29489-94429",
           "year_built": 2003,
           "source": "realtor",
@@ -448,7 +448,7 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 65,
+          "days_on_market": 66,
           "url": "https://www.realtor.com/rentals/details/558-Main-St_Watsonville_CA_95076_M93554-10512",
           "year_built": null,
           "source": "realtor",
@@ -616,16 +616,6 @@
   },
   "scrape_history": [
     {
-      "date": "2026-06-17",
-      "total_active": 24,
-      "new_listings": 0
-    },
-    {
-      "date": "2026-06-17",
-      "total_active": 23,
-      "new_listings": 0
-    },
-    {
       "date": "2026-06-18",
       "total_active": 23,
       "new_listings": 0
@@ -1057,6 +1047,16 @@
     },
     {
       "date": "2026-07-19",
+      "total_active": 30,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-07-20",
+      "total_active": 30,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-07-20",
       "total_active": 30,
       "new_listings": 0
     },
