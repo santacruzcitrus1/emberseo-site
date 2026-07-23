@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21T23:00:03.185422",
+  "last_updated": "2026-07-22T23:00:02.397552",
   "zips": {
     "95076": {
       "total": 29,
@@ -85,7 +85,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-07-21",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -97,12 +97,12 @@
           "baths": 1,
           "sqft": 450,
           "type": "APARTMENT",
-          "days_on_market": 47,
+          "days_on_market": 48,
           "url": "https://www.realtor.com/rentals/details/290-Pennsylvania-Dr-Apt-10_Watsonville_CA_95076_M94885-96098",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-06-05",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -114,12 +114,12 @@
           "baths": 1,
           "sqft": 450,
           "type": "APARTMENT",
-          "days_on_market": 20,
+          "days_on_market": 21,
           "url": "https://www.realtor.com/rentals/details/290-Pennsylvania-Dr-Apt-9_Watsonville_CA_95076_M97110-63109",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-06-30",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -136,7 +136,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-27",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -153,7 +153,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-06-11",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -170,7 +170,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-06-25",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -182,12 +182,12 @@
           "baths": 1,
           "sqft": 550,
           "type": "APARTMENT",
-          "days_on_market": 15,
+          "days_on_market": 16,
           "url": "https://www.realtor.com/rentals/details/708-Hidden-Valley-Rd_Royal-Oaks_CA_95076_M15534-03226",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-07-06",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -204,7 +204,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-07-10",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -221,7 +221,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-07-21",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -238,7 +238,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-06-16",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -255,7 +255,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-07-14",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -267,12 +267,12 @@
           "baths": 2,
           "sqft": 1674,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 12,
+          "days_on_market": 13,
           "url": "https://www.realtor.com/rentals/details/500-Cloudview-Dr_Watsonville_CA_95076_M27354-87360",
           "year_built": 1984,
           "source": "realtor",
           "first_seen": "2026-07-09",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -289,7 +289,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-07-10",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -306,7 +306,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -318,12 +318,12 @@
           "baths": 1,
           "sqft": 1285,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 843,
+          "days_on_market": 844,
           "url": "https://www.realtor.com/rentals/details/14-E-High-St_Watsonville_CA_95076_M25039-88818",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-06-15",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -335,12 +335,12 @@
           "baths": 1,
           "sqft": 1320,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 4,
+          "days_on_market": 5,
           "url": "https://www.realtor.com/rentals/details/20-Arbolado-Dr_La-Selva-Beach_CA_95076_M14530-43109",
           "year_built": 1969,
           "source": "realtor",
           "first_seen": "2026-07-18",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -357,7 +357,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-07-01",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -374,7 +374,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-07-01",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -391,7 +391,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-07-08",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -408,7 +408,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-27",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -420,12 +420,12 @@
           "baths": 2,
           "sqft": 1408,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 77,
+          "days_on_market": 78,
           "url": "https://www.realtor.com/rentals/details/48-Jeanette-Way_Watsonville_CA_95076_M26432-91418",
           "year_built": 1979,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -437,12 +437,12 @@
           "baths": 2,
           "sqft": 2487,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 46,
+          "days_on_market": 47,
           "url": "https://www.realtor.com/rentals/details/37-Pelican-Dr_Watsonville_CA_95076_M29489-94429",
           "year_built": 2003,
           "source": "realtor",
           "first_seen": "2026-06-05",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -454,12 +454,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 444,
+          "days_on_market": 445,
           "url": "https://www.realtor.com/rentals/details/611-Tuttle-Ave_Watsonville_CA_95076_M94286-95512",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -471,12 +471,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 67,
+          "days_on_market": 68,
           "url": "https://www.realtor.com/rentals/details/558-Main-St_Watsonville_CA_95076_M93554-10512",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-15",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -488,12 +488,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 53,
+          "days_on_market": 54,
           "url": "https://www.realtor.com/rentals/details/308-Estrella-Ave_Watsonville_CA_95076_M10874-81269",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-05-29",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -505,12 +505,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 34,
+          "days_on_market": 35,
           "url": "https://www.realtor.com/rentals/details/236-Locust-St-Apt-1_Watsonville_CA_95076_M18092-41256",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-06-16",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -522,31 +522,14 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 14,
+          "days_on_market": 15,
           "url": "https://www.realtor.com/rentals/details/809-Browns-Valley-Rd_Watsonville_CA_95076_M13739-42675",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-07-07",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
-        },
-        {
-          "address": "34 Sudden St",
-          "city": "Watsonville",
-          "price": null,
-          "beds": null,
-          "baths": null,
-          "sqft": null,
-          "type": "APARTMENT",
-          "days_on_market": 77,
-          "url": "https://www.realtor.com/rentals/details/34-Sudden-St_Watsonville_CA_95076_M97538-73238",
-          "year_built": null,
-          "source": "realtor",
-          "first_seen": "2026-07-10",
-          "last_seen": "2026-07-21",
-          "consecutive_misses": 1,
-          "status": "missing"
         },
         {
           "address": "23 Broadis St",
@@ -556,12 +539,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 4,
+          "days_on_market": 5,
           "url": "https://www.realtor.com/rentals/details/23-Broadis-St_Watsonville_CA_95076_M18139-49882",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-07-18",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -573,12 +556,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 5,
+          "days_on_market": 6,
           "url": "https://www.realtor.com/rentals/details/109-Atkinson-Ln_Watsonville_CA_95076_M25170-00929",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-07-18",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         }
@@ -628,7 +611,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-06-28",
-          "last_seen": "2026-07-21",
+          "last_seen": "2026-07-22",
           "consecutive_misses": 0,
           "status": "active"
         }
@@ -639,21 +622,6 @@
   },
   "scrape_history": [
     {
-      "date": "2026-06-19",
-      "total_active": 23,
-      "new_listings": 0
-    },
-    {
-      "date": "2026-06-19",
-      "total_active": 23,
-      "new_listings": 0
-    },
-    {
-      "date": "2026-06-19",
-      "total_active": 24,
-      "new_listings": 1
-    },
-    {
       "date": "2026-06-20",
       "total_active": 24,
       "new_listings": 0
@@ -1087,6 +1055,21 @@
       "date": "2026-07-21",
       "total_active": 31,
       "new_listings": 2
+    },
+    {
+      "date": "2026-07-22",
+      "total_active": 31,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-07-22",
+      "total_active": 30,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-07-22",
+      "total_active": 30,
+      "new_listings": 0
     }
   ]
 }
