@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-08T15:00:15.213574",
+  "last_updated": "2026-08-08T23:00:03.000424",
   "zips": {
     "95076": {
       "total": 26,
@@ -80,7 +80,7 @@
           "baths": 1,
           "sqft": 450,
           "type": "APARTMENT",
-          "days_on_market": 64,
+          "days_on_market": 65,
           "url": "https://www.realtor.com/rentals/details/290-Pennsylvania-Dr-Apt-10_Watsonville_CA_95076_M94885-96098",
           "year_built": null,
           "source": "realtor",
@@ -124,23 +124,6 @@
           "status": "active"
         },
         {
-          "address": "410 E Beach St Apt 8",
-          "city": "Watsonville",
-          "price": 2275,
-          "beds": 1,
-          "baths": 1,
-          "sqft": 0,
-          "type": "SINGLE_FAMILY",
-          "days_on_market": null,
-          "url": "https://www.realtor.com/rentals/details/410-E-Beach-St-Apt-8_Watsonville_CA_95076_M90740-22624",
-          "year_built": null,
-          "source": "realtor",
-          "first_seen": "2026-06-11",
-          "last_seen": "2026-08-07",
-          "consecutive_misses": 2,
-          "status": "missing"
-        },
-        {
           "address": "249 Lakeview Rd",
           "city": "Watsonville",
           "price": 2300,
@@ -148,7 +131,7 @@
           "baths": 1,
           "sqft": 460,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 400,
+          "days_on_market": 401,
           "url": "https://www.realtor.com/rentals/details/249-Lakeview-Rd_Watsonville_CA_95076_M94961-50414",
           "year_built": null,
           "source": "realtor",
@@ -216,7 +199,7 @@
           "baths": 2,
           "sqft": 1674,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 29,
+          "days_on_market": 30,
           "url": "https://www.realtor.com/rentals/details/500-Cloudview-Dr_Watsonville_CA_95076_M27354-87360",
           "year_built": 1984,
           "source": "realtor",
@@ -267,7 +250,7 @@
           "baths": 1,
           "sqft": 1320,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 21,
+          "days_on_market": 22,
           "url": "https://www.realtor.com/rentals/details/20-Arbolado-Dr_La-Selva-Beach_CA_95076_M14530-43109",
           "year_built": 1969,
           "source": "realtor",
@@ -386,7 +369,7 @@
           "baths": 2,
           "sqft": 1408,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 94,
+          "days_on_market": 95,
           "url": "https://www.realtor.com/rentals/details/48-Jeanette-Way_Watsonville_CA_95076_M26432-91418",
           "year_built": 1979,
           "source": "realtor",
@@ -437,7 +420,7 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 84,
+          "days_on_market": 85,
           "url": "https://www.realtor.com/rentals/details/558-Main-St_Watsonville_CA_95076_M93554-10512",
           "year_built": null,
           "source": "realtor",
@@ -534,18 +517,18 @@
       ],
       "recently_rented": [
         {
-          "address": "34 Sudden St",
+          "address": "410 E Beach St Apt 8",
           "city": "Watsonville",
-          "price": null,
-          "beds": null,
-          "baths": null,
-          "sqft": null,
-          "type": "APARTMENT",
-          "days_on_market": 94,
-          "url": "https://www.realtor.com/rentals/details/34-Sudden-St_Watsonville_CA_95076_M97538-73238",
+          "price": 2275,
+          "beds": 1,
+          "baths": 1,
+          "sqft": 0,
+          "type": "SINGLE_FAMILY",
+          "days_on_market": null,
+          "url": "https://www.realtor.com/rentals/details/410-E-Beach-St-Apt-8_Watsonville_CA_95076_M90740-22624",
           "year_built": null,
           "source": "realtor",
-          "first_seen": "2026-08-05",
+          "first_seen": "2026-06-11",
           "last_seen": "2026-08-07",
           "consecutive_misses": 3,
           "status": "rented",
@@ -570,11 +553,6 @@
   },
   "scrape_history": [
     {
-      "date": "2026-07-06",
-      "total_active": 23,
-      "new_listings": 1
-    },
-    {
       "date": "2026-07-07",
       "total_active": 24,
       "new_listings": 1
@@ -1017,6 +995,11 @@
     {
       "date": "2026-08-08",
       "total_active": 27,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-08-08",
+      "total_active": 26,
       "new_listings": 0
     }
   ]
