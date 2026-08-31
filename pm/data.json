@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-30T15:00:15.186581",
+  "last_updated": "2026-08-30T23:00:02.781960",
   "zips": {
     "95076": {
       "total": 24,
@@ -127,7 +127,7 @@
           "baths": 2,
           "sqft": 1039,
           "type": "CONDOS",
-          "days_on_market": 2,
+          "days_on_market": 3,
           "url": "https://www.realtor.com/rentals/details/191-Crestview-Ct_Watsonville_CA_95076_M23926-29959",
           "year_built": null,
           "source": "realtor",
@@ -161,7 +161,7 @@
           "baths": 1,
           "sqft": 1320,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 43,
+          "days_on_market": 44,
           "url": "https://www.realtor.com/rentals/details/20-Arbolado-Dr_La-Selva-Beach_CA_95076_M14530-43109",
           "year_built": 1969,
           "source": "realtor",
@@ -331,7 +331,7 @@
           "baths": 2,
           "sqft": 1408,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 116,
+          "days_on_market": 117,
           "url": "https://www.realtor.com/rentals/details/48-Jeanette-Way_Watsonville_CA_95076_M26432-91418",
           "year_built": 1979,
           "source": "realtor",
@@ -382,7 +382,7 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 106,
+          "days_on_market": 107,
           "url": "https://www.realtor.com/rentals/details/558-Main-St_Watsonville_CA_95076_M93554-10512",
           "year_built": null,
           "source": "realtor",
@@ -534,7 +534,7 @@
           "baths": 1,
           "sqft": 1200,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 12,
+          "days_on_market": 13,
           "url": "https://www.realtor.com/rentals/details/120-Buena-Vista-Dr-A_Freedom_CA_95019_M90078-27232",
           "year_built": 1930,
           "source": "realtor",
@@ -549,16 +549,6 @@
     }
   },
   "scrape_history": [
-    {
-      "date": "2026-07-21",
-      "total_active": 31,
-      "new_listings": 2
-    },
-    {
-      "date": "2026-07-22",
-      "total_active": 31,
-      "new_listings": 0
-    },
     {
       "date": "2026-07-22",
       "total_active": 30,
@@ -991,6 +981,16 @@
     },
     {
       "date": "2026-08-29",
+      "total_active": 26,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-08-30",
+      "total_active": 26,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-08-30",
       "total_active": 26,
       "new_listings": 0
     },
