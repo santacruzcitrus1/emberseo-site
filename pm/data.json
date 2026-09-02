@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-01T15:00:16.005774",
+  "last_updated": "2026-09-01T23:00:02.496677",
   "zips": {
     "95076": {
       "total": 27,
@@ -107,23 +107,6 @@
           "status": "active"
         },
         {
-          "address": "224 Green Meadow Dr Apt A",
-          "city": "Watsonville",
-          "price": 2800,
-          "beds": 2,
-          "baths": 1,
-          "sqft": 924,
-          "type": "SINGLE_FAMILY",
-          "days_on_market": null,
-          "url": "https://www.realtor.com/rentals/details/224-Green-Meadow-Dr-Apt-A_Watsonville_CA_95076_M27631-01423",
-          "year_built": null,
-          "source": "realtor",
-          "first_seen": "2026-08-28",
-          "last_seen": "2026-08-31",
-          "consecutive_misses": 2,
-          "status": "missing"
-        },
-        {
           "address": "555 Bridge St",
           "city": "Watsonville",
           "price": 2995,
@@ -165,7 +148,7 @@
           "baths": 2,
           "sqft": 1039,
           "type": "CONDOS",
-          "days_on_market": 4,
+          "days_on_market": 5,
           "url": "https://www.realtor.com/rentals/details/191-Crestview-Ct_Watsonville_CA_95076_M23926-29959",
           "year_built": null,
           "source": "realtor",
@@ -182,7 +165,7 @@
           "baths": 1,
           "sqft": 1200,
           "type": "APARTMENT",
-          "days_on_market": 0,
+          "days_on_market": 1,
           "url": "https://www.realtor.com/rentals/details/130-Miles-Ln-Apt-D_Watsonville_CA_95076_M27194-88040",
           "year_built": null,
           "source": "realtor",
@@ -216,7 +199,7 @@
           "baths": 1,
           "sqft": 1320,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 45,
+          "days_on_market": 46,
           "url": "https://www.realtor.com/rentals/details/20-Arbolado-Dr_La-Selva-Beach_CA_95076_M14530-43109",
           "year_built": 1969,
           "source": "realtor",
@@ -386,7 +369,7 @@
           "baths": 2,
           "sqft": 1408,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 118,
+          "days_on_market": 119,
           "url": "https://www.realtor.com/rentals/details/48-Jeanette-Way_Watsonville_CA_95076_M26432-91418",
           "year_built": 1979,
           "source": "realtor",
@@ -437,7 +420,7 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 108,
+          "days_on_market": 109,
           "url": "https://www.realtor.com/rentals/details/558-Main-St_Watsonville_CA_95076_M93554-10512",
           "year_built": null,
           "source": "realtor",
@@ -589,7 +572,7 @@
           "baths": 1,
           "sqft": 1200,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 14,
+          "days_on_market": 15,
           "url": "https://www.realtor.com/rentals/details/120-Buena-Vista-Dr-A_Freedom_CA_95019_M90078-27232",
           "year_built": 1930,
           "source": "realtor",
@@ -621,16 +604,6 @@
     }
   },
   "scrape_history": [
-    {
-      "date": "2026-07-23",
-      "total_active": 30,
-      "new_listings": 0
-    },
-    {
-      "date": "2026-07-24",
-      "total_active": 30,
-      "new_listings": 0
-    },
     {
       "date": "2026-07-24",
       "total_active": 28,
@@ -1069,6 +1042,16 @@
     {
       "date": "2026-09-01",
       "total_active": 30,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-09-01",
+      "total_active": 29,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-09-01",
+      "total_active": 29,
       "new_listings": 0
     }
   ]
