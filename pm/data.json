@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-19T15:00:15.077052",
+  "last_updated": "2026-09-19T23:00:02.651191",
   "zips": {
     "95076": {
       "total": 29,
@@ -130,40 +130,6 @@
           "status": "active"
         },
         {
-          "address": "745 Cedar Dr",
-          "city": "Watsonville",
-          "price": 2800,
-          "beds": 2,
-          "baths": 2,
-          "sqft": 1256,
-          "type": "SINGLE_FAMILY",
-          "days_on_market": null,
-          "url": "https://www.realtor.com/rentals/details/745-Cedar-Dr_Watsonville_CA_95076_M27239-34918",
-          "year_built": null,
-          "source": "realtor",
-          "first_seen": "2026-09-17",
-          "last_seen": "2026-09-18",
-          "consecutive_misses": 2,
-          "status": "missing"
-        },
-        {
-          "address": "835 Cynthia Dr",
-          "city": "Watsonville",
-          "price": 3000,
-          "beds": 2,
-          "baths": 2,
-          "sqft": 972,
-          "type": "SINGLE_FAMILY",
-          "days_on_market": null,
-          "url": "https://www.realtor.com/rentals/details/835-Cynthia-Dr_Watsonville_CA_95076_M27303-81926",
-          "year_built": null,
-          "source": "realtor",
-          "first_seen": "2026-08-31",
-          "last_seen": "2026-09-18",
-          "consecutive_misses": 2,
-          "status": "missing"
-        },
-        {
           "address": "191 Crestview Ct",
           "city": "Watsonville",
           "price": 3195,
@@ -171,7 +137,7 @@
           "baths": 2,
           "sqft": 1039,
           "type": "CONDOS",
-          "days_on_market": 22,
+          "days_on_market": 23,
           "url": "https://www.realtor.com/rentals/details/191-Crestview-Ct_Watsonville_CA_95076_M23926-29959",
           "year_built": null,
           "source": "realtor",
@@ -188,7 +154,7 @@
           "baths": 2,
           "sqft": 1200,
           "type": "TOWNHOMES",
-          "days_on_market": 1,
+          "days_on_market": 2,
           "url": "https://www.realtor.com/rentals/details/151-Brennan-St_Watsonville_CA_95076_M94959-63139",
           "year_built": null,
           "source": "realtor",
@@ -205,7 +171,7 @@
           "baths": 1,
           "sqft": 1200,
           "type": "APARTMENT",
-          "days_on_market": 18,
+          "days_on_market": 19,
           "url": "https://www.realtor.com/rentals/details/130-Miles-Ln-Apt-D_Watsonville_CA_95076_M27194-88040",
           "year_built": null,
           "source": "realtor",
@@ -239,7 +205,7 @@
           "baths": 1,
           "sqft": 1320,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 63,
+          "days_on_market": 64,
           "url": "https://www.realtor.com/rentals/details/20-Arbolado-Dr_La-Selva-Beach_CA_95076_M14530-43109",
           "year_built": 1969,
           "source": "realtor",
@@ -273,7 +239,7 @@
           "baths": 2,
           "sqft": 1587,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 1,
+          "days_on_market": 2,
           "url": "https://www.realtor.com/rentals/details/984-McKenzie-Ave_Watsonville_CA_95076_M27506-54598",
           "year_built": 1977,
           "source": "realtor",
@@ -409,7 +375,7 @@
           "baths": 2,
           "sqft": 1408,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 136,
+          "days_on_market": 137,
           "url": "https://www.realtor.com/rentals/details/48-Jeanette-Way_Watsonville_CA_95076_M26432-91418",
           "year_built": 1979,
           "source": "realtor",
@@ -460,7 +426,7 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 126,
+          "days_on_market": 127,
           "url": "https://www.realtor.com/rentals/details/558-Main-St_Watsonville_CA_95076_M93554-10512",
           "year_built": null,
           "source": "realtor",
@@ -624,16 +590,6 @@
     }
   },
   "scrape_history": [
-    {
-      "date": "2026-08-03",
-      "total_active": 29,
-      "new_listings": 1
-    },
-    {
-      "date": "2026-08-03",
-      "total_active": 28,
-      "new_listings": 1
-    },
     {
       "date": "2026-08-03",
       "total_active": 27,
@@ -1072,6 +1028,16 @@
     {
       "date": "2026-09-19",
       "total_active": 31,
+      "new_listings": 1
+    },
+    {
+      "date": "2026-09-19",
+      "total_active": 29,
+      "new_listings": 1
+    },
+    {
+      "date": "2026-09-19",
+      "total_active": 29,
       "new_listings": 1
     }
   ]
