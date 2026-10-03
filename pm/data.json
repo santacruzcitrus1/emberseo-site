@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-10-02T15:00:17.669481",
+  "last_updated": "2026-10-02T23:00:02.971057",
   "zips": {
     "95076": {
-      "total": 27,
+      "total": 26,
       "median_rent": 4250,
-      "avg_rent": 4014,
+      "avg_rent": 4003,
       "min_rent": 2695,
       "max_rent": 5050,
       "by_beds": {
@@ -60,7 +60,7 @@
         },
         "SINGLE_FAMILY": {
           "count": 15,
-          "median": 4302
+          "median": 4300
         },
         "TOWNHOMES": {
           "count": 2,
@@ -110,7 +110,7 @@
           "baths": 2,
           "sqft": 1200,
           "type": "TOWNHOMES",
-          "days_on_market": 14,
+          "days_on_market": 15,
           "url": "https://www.realtor.com/rentals/details/151-Brennan-St_Watsonville_CA_95076_M94959-63139",
           "year_built": null,
           "source": "realtor",
@@ -127,7 +127,7 @@
           "baths": 1,
           "sqft": 1200,
           "type": "APARTMENT",
-          "days_on_market": 31,
+          "days_on_market": 32,
           "url": "https://www.realtor.com/rentals/details/130-Miles-Ln-Apt-D_Watsonville_CA_95076_M27194-88040",
           "year_built": null,
           "source": "realtor",
@@ -178,7 +178,7 @@
           "baths": 1,
           "sqft": 1320,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 76,
+          "days_on_market": 77,
           "url": "https://www.realtor.com/rentals/details/20-Arbolado-Dr_La-Selva-Beach_CA_95076_M14530-43109",
           "year_built": 1969,
           "source": "realtor",
@@ -212,7 +212,7 @@
           "baths": 2,
           "sqft": 1587,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 14,
+          "days_on_market": 15,
           "url": "https://www.realtor.com/rentals/details/984-McKenzie-Ave_Watsonville_CA_95076_M27506-54598",
           "year_built": 1977,
           "source": "realtor",
@@ -234,6 +234,23 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-08-25",
+          "last_seen": "2026-10-02",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "17240 Tamara Ln",
+          "city": "Royal Oaks",
+          "price": 4300,
+          "beds": 3,
+          "baths": 2,
+          "sqft": 1882,
+          "type": "SINGLE_FAMILY",
+          "days_on_market": null,
+          "url": "https://www.realtor.com/rentals/details/17240-Tamara-Ln_Royal-Oaks_CA_95076_M22832-19445",
+          "year_built": null,
+          "source": "realtor",
+          "first_seen": "2026-08-04",
           "last_seen": "2026-10-02",
           "consecutive_misses": 0,
           "status": "active"
@@ -307,40 +324,6 @@
           "status": "active"
         },
         {
-          "address": "4 Las Flores St",
-          "city": "Watsonville",
-          "price": 4350,
-          "beds": 4,
-          "baths": 3,
-          "sqft": 2800,
-          "type": "SINGLE_FAMILY",
-          "days_on_market": 10,
-          "url": "https://www.realtor.com/rentals/details/4-Las-Flores-St_Watsonville_CA_95076_M12727-54146",
-          "year_built": null,
-          "source": "realtor",
-          "first_seen": "2026-09-20",
-          "last_seen": "2026-10-01",
-          "consecutive_misses": 1,
-          "status": "missing"
-        },
-        {
-          "address": "17240 Tamara Ln",
-          "city": "Royal Oaks",
-          "price": 4500,
-          "beds": 3,
-          "baths": 2,
-          "sqft": 1882,
-          "type": "SINGLE_FAMILY",
-          "days_on_market": null,
-          "url": "https://www.realtor.com/rentals/details/17240-Tamara-Ln_Royal-Oaks_CA_95076_M22832-19445",
-          "year_built": null,
-          "source": "realtor",
-          "first_seen": "2026-08-04",
-          "last_seen": "2026-10-02",
-          "consecutive_misses": 0,
-          "status": "active"
-        },
-        {
           "address": "15 Dolores Ave",
           "city": "Watsonville",
           "price": 4635,
@@ -365,7 +348,7 @@
           "baths": 2,
           "sqft": 1408,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 149,
+          "days_on_market": 150,
           "url": "https://www.realtor.com/rentals/details/48-Jeanette-Way_Watsonville_CA_95076_M26432-91418",
           "year_built": 1979,
           "source": "realtor",
@@ -416,7 +399,7 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 139,
+          "days_on_market": 140,
           "url": "https://www.realtor.com/rentals/details/558-Main-St_Watsonville_CA_95076_M93554-10512",
           "year_built": null,
           "source": "realtor",
@@ -490,8 +473,8 @@
           "source": "realtor",
           "first_seen": "2026-08-31",
           "last_seen": "2026-10-02",
-          "consecutive_misses": 0,
-          "status": "active"
+          "consecutive_misses": 1,
+          "status": "missing"
         },
         {
           "address": "445 Main St",
@@ -545,8 +528,27 @@
           "status": "active"
         }
       ],
-      "recently_rented": [],
-      "rented_count": 0
+      "recently_rented": [
+        {
+          "address": "4 Las Flores St",
+          "city": "Watsonville",
+          "price": 4350,
+          "beds": 4,
+          "baths": 3,
+          "sqft": 2800,
+          "type": "SINGLE_FAMILY",
+          "days_on_market": 10,
+          "url": "https://www.realtor.com/rentals/details/4-Las-Flores-St_Watsonville_CA_95076_M12727-54146",
+          "year_built": null,
+          "source": "realtor",
+          "first_seen": "2026-09-20",
+          "last_seen": "2026-10-01",
+          "consecutive_misses": 3,
+          "status": "rented",
+          "removed_date": "2026-10-02"
+        }
+      ],
+      "rented_count": 1
     },
     "95019": {
       "total": 0,
@@ -563,16 +565,6 @@
     }
   },
   "scrape_history": [
-    {
-      "date": "2026-08-25",
-      "total_active": 31,
-      "new_listings": 5
-    },
-    {
-      "date": "2026-08-26",
-      "total_active": 31,
-      "new_listings": 0
-    },
     {
       "date": "2026-08-26",
       "total_active": 30,
@@ -1011,6 +1003,16 @@
     {
       "date": "2026-10-02",
       "total_active": 28,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-10-02",
+      "total_active": 28,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-10-02",
+      "total_active": 27,
       "new_listings": 0
     }
   ]
