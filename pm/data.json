@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-10-05T15:00:12.768696",
+  "last_updated": "2026-10-05T23:00:02.556646",
   "zips": {
     "95076": {
-      "total": 26,
-      "median_rent": 4250,
-      "avg_rent": 4003,
+      "total": 25,
+      "median_rent": 4300,
+      "avg_rent": 3992,
       "min_rent": 2695,
       "max_rent": 5050,
       "by_beds": {
@@ -21,7 +21,7 @@
           "max": 5050
         },
         "3": {
-          "count": 9,
+          "count": 8,
           "median": 4302,
           "min": 3800,
           "max": 4999
@@ -47,7 +47,7 @@
           "max": 3900
         },
         "2": {
-          "count": 12,
+          "count": 11,
           "median": 4302,
           "min": 3200,
           "max": 5050
@@ -59,8 +59,8 @@
           "median": 3380
         },
         "SINGLE_FAMILY": {
-          "count": 15,
-          "median": 4300
+          "count": 14,
+          "median": 4301
         },
         "TOWNHOMES": {
           "count": 2,
@@ -110,7 +110,7 @@
           "baths": 2,
           "sqft": 1200,
           "type": "TOWNHOMES",
-          "days_on_market": 17,
+          "days_on_market": 18,
           "url": "https://www.realtor.com/rentals/details/151-Brennan-St_Watsonville_CA_95076_M94959-63139",
           "year_built": null,
           "source": "realtor",
@@ -127,7 +127,7 @@
           "baths": 1,
           "sqft": 1200,
           "type": "APARTMENT",
-          "days_on_market": 34,
+          "days_on_market": 35,
           "url": "https://www.realtor.com/rentals/details/130-Miles-Ln-Apt-D_Watsonville_CA_95076_M27194-88040",
           "year_built": null,
           "source": "realtor",
@@ -178,7 +178,7 @@
           "baths": 1,
           "sqft": 1320,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 79,
+          "days_on_market": 80,
           "url": "https://www.realtor.com/rentals/details/20-Arbolado-Dr_La-Selva-Beach_CA_95076_M14530-43109",
           "year_built": 1969,
           "source": "realtor",
@@ -218,8 +218,8 @@
           "source": "realtor",
           "first_seen": "2026-09-17",
           "last_seen": "2026-10-05",
-          "consecutive_misses": 0,
-          "status": "active"
+          "consecutive_misses": 2,
+          "status": "missing"
         },
         {
           "address": "162 Amesti Rd",
@@ -348,7 +348,7 @@
           "baths": 2,
           "sqft": 1408,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 152,
+          "days_on_market": 153,
           "url": "https://www.realtor.com/rentals/details/48-Jeanette-Way_Watsonville_CA_95076_M26432-91418",
           "year_built": 1979,
           "source": "realtor",
@@ -399,7 +399,7 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 142,
+          "days_on_market": 143,
           "url": "https://www.realtor.com/rentals/details/558-Main-St_Watsonville_CA_95076_M93554-10512",
           "year_built": null,
           "source": "realtor",
@@ -529,16 +529,6 @@
     }
   },
   "scrape_history": [
-    {
-      "date": "2026-08-28",
-      "total_active": 28,
-      "new_listings": 1
-    },
-    {
-      "date": "2026-08-29",
-      "total_active": 28,
-      "new_listings": 0
-    },
     {
       "date": "2026-08-29",
       "total_active": 26,
@@ -971,6 +961,16 @@
     },
     {
       "date": "2026-10-04",
+      "total_active": 26,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-10-05",
+      "total_active": 26,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-10-05",
       "total_active": 26,
       "new_listings": 0
     },
