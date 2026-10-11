@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-10-11T03:39:29.522873",
+  "last_updated": "2026-10-11T15:00:07.894628",
   "zips": {
     "95076": {
-      "total": 30,
-      "median_rent": 3950,
-      "avg_rent": 3836,
+      "total": 31,
+      "median_rent": 4000,
+      "avg_rent": 3891,
       "min_rent": 2000,
       "max_rent": 6000,
       "by_beds": {
@@ -27,7 +27,7 @@
           "max": 5050
         },
         "3": {
-          "count": 10,
+          "count": 11,
           "median": 4302,
           "min": 3495,
           "max": 6000
@@ -46,14 +46,20 @@
         }
       },
       "by_baths": {
+        "0": {
+          "count": 1,
+          "median": 2125,
+          "min": 2125,
+          "max": 2125
+        },
         "1": {
-          "count": 9,
-          "median": 3080,
+          "count": 8,
+          "median": 3230,
           "min": 2000,
           "max": 3900
         },
         "2": {
-          "count": 13,
+          "count": 14,
           "median": 4302,
           "min": 3200,
           "max": 6000
@@ -61,8 +67,8 @@
       },
       "by_type": {
         "APARTMENT": {
-          "count": 3,
-          "median": 2125
+          "count": 4,
+          "median": 2752
         },
         "SINGLE_FAMILY": {
           "count": 17,
@@ -103,7 +109,7 @@
           "source": "zillow",
           "first_seen": "2026-10-11",
           "last_seen": "2026-10-11",
-          "consecutive_misses": 1,
+          "consecutive_misses": 2,
           "status": "missing"
         },
         {
@@ -112,6 +118,22 @@
           "price": 2125,
           "beds": 1,
           "baths": 1,
+          "sqft": null,
+          "type": "APARTMENT",
+          "days_on_market": null,
+          "url": "https://www.zillow.com/b/tuttle-watsonville-ca-C8vRMK/",
+          "source": "zillow",
+          "first_seen": "2026-10-11",
+          "last_seen": "2026-10-11",
+          "consecutive_misses": 1,
+          "status": "missing"
+        },
+        {
+          "address": "601-605 & 609 Tuttle Ave",
+          "city": "Watsonville",
+          "price": 2125,
+          "beds": 1,
+          "baths": 0,
           "sqft": null,
           "type": "APARTMENT",
           "days_on_market": null,
@@ -446,6 +468,22 @@
           "status": "active"
         },
         {
+          "address": "Watsonville, CA 95076",
+          "city": "Watsonville",
+          "price": 5100,
+          "beds": 3,
+          "baths": 2,
+          "sqft": 2300,
+          "type": "APARTMENT",
+          "days_on_market": 1,
+          "url": "https://www.zillow.com/homedetails/Watsonville-CA-95076/465902744_zpid/",
+          "source": "zillow",
+          "first_seen": "2026-10-11",
+          "last_seen": "2026-10-11",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
           "address": "355 Corralitos Rd",
           "city": "Watsonville",
           "price": 6000,
@@ -505,7 +543,7 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 95,
+          "days_on_market": 96,
           "url": "https://www.realtor.com/rentals/details/809-Browns-Valley-Rd_Watsonville_CA_95076_M13739-42675",
           "year_built": null,
           "source": "realtor",
@@ -522,7 +560,7 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 85,
+          "days_on_market": 86,
           "url": "https://www.realtor.com/rentals/details/23-Broadis-St_Watsonville_CA_95076_M18139-49882",
           "year_built": null,
           "source": "realtor",
@@ -556,7 +594,7 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 31,
+          "days_on_market": 32,
           "url": "https://www.realtor.com/rentals/details/445-Main-St_Watsonville_CA_95076_M90099-36233",
           "year_built": null,
           "also_on_zillow": true,
@@ -897,11 +935,6 @@
     }
   },
   "scrape_history": [
-    {
-      "date": "2026-09-05",
-      "total_active": 29,
-      "new_listings": 0
-    },
     {
       "date": "2026-09-06",
       "total_active": 29,
@@ -1346,6 +1379,11 @@
       "date": "2026-10-11",
       "total_active": 44,
       "new_listings": 18
+    },
+    {
+      "date": "2026-10-11",
+      "total_active": 46,
+      "new_listings": 20
     }
   ]
 }
