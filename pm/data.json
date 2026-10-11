@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-10T15:00:13.824096",
+  "last_updated": "2026-10-10T23:00:03.080766",
   "zips": {
     "95076": {
       "total": 26,
@@ -110,7 +110,7 @@
           "baths": 2,
           "sqft": 1200,
           "type": "TOWNHOMES",
-          "days_on_market": 22,
+          "days_on_market": 23,
           "url": "https://www.realtor.com/rentals/details/151-Brennan-St_Watsonville_CA_95076_M94959-63139",
           "year_built": null,
           "source": "realtor",
@@ -127,7 +127,7 @@
           "baths": 1,
           "sqft": 1200,
           "type": "APARTMENT",
-          "days_on_market": 39,
+          "days_on_market": 40,
           "url": "https://www.realtor.com/rentals/details/130-Miles-Ln-Apt-D_Watsonville_CA_95076_M27194-88040",
           "year_built": null,
           "source": "realtor",
@@ -171,23 +171,6 @@
           "status": "active"
         },
         {
-          "address": "66 Roosevelt St",
-          "city": "Watsonville",
-          "price": 3550,
-          "beds": 2,
-          "baths": 1,
-          "sqft": 920,
-          "type": "SINGLE_FAMILY",
-          "days_on_market": null,
-          "url": "https://www.realtor.com/rentals/details/66-Roosevelt-St_Watsonville_CA_95076_M27901-19232",
-          "year_built": null,
-          "source": "realtor",
-          "first_seen": "2026-09-21",
-          "last_seen": "2026-10-09",
-          "consecutive_misses": 2,
-          "status": "missing"
-        },
-        {
           "address": "10 Allston Way",
           "city": "Watsonville",
           "price": 3800,
@@ -212,7 +195,7 @@
           "baths": 1,
           "sqft": 1320,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 84,
+          "days_on_market": 85,
           "url": "https://www.realtor.com/rentals/details/20-Arbolado-Dr_La-Selva-Beach_CA_95076_M14530-43109",
           "year_built": 1969,
           "source": "realtor",
@@ -365,7 +348,7 @@
           "baths": 2,
           "sqft": 1408,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 157,
+          "days_on_market": 158,
           "url": "https://www.realtor.com/rentals/details/48-Jeanette-Way_Watsonville_CA_95076_M26432-91418",
           "year_built": 1979,
           "source": "realtor",
@@ -416,7 +399,7 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 147,
+          "days_on_market": 148,
           "url": "https://www.realtor.com/rentals/details/558-Main-St_Watsonville_CA_95076_M93554-10512",
           "year_built": null,
           "source": "realtor",
@@ -546,16 +529,6 @@
     }
   },
   "scrape_history": [
-    {
-      "date": "2026-09-02",
-      "total_active": 30,
-      "new_listings": 2
-    },
-    {
-      "date": "2026-09-03",
-      "total_active": 30,
-      "new_listings": 0
-    },
     {
       "date": "2026-09-03",
       "total_active": 30,
@@ -994,6 +967,16 @@
     {
       "date": "2026-10-10",
       "total_active": 27,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-10-10",
+      "total_active": 26,
+      "new_listings": 0
+    },
+    {
+      "date": "2026-10-10",
+      "total_active": 26,
       "new_listings": 0
     }
   ]
