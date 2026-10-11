@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-11T03:20:40.441129",
+  "last_updated": "2026-10-11T03:39:29.522873",
   "zips": {
     "95076": {
       "total": 30,
@@ -46,15 +46,9 @@
         }
       },
       "by_baths": {
-        "0": {
-          "count": 1,
-          "median": 2125,
-          "min": 2125,
-          "max": 2125
-        },
         "1": {
-          "count": 8,
-          "median": 3230,
+          "count": 9,
+          "median": 3080,
           "min": 2000,
           "max": 3900
         },
@@ -102,6 +96,22 @@
           "price": 2125,
           "beds": 1,
           "baths": 0,
+          "sqft": null,
+          "type": "APARTMENT",
+          "days_on_market": null,
+          "url": "https://www.zillow.com/b/tuttle-watsonville-ca-C8vRMK/",
+          "source": "zillow",
+          "first_seen": "2026-10-11",
+          "last_seen": "2026-10-11",
+          "consecutive_misses": 1,
+          "status": "missing"
+        },
+        {
+          "address": "tuttle | 601-605 & 609 Tuttle Ave, Watsonville, CA",
+          "city": "Watsonville",
+          "price": 2125,
+          "beds": 1,
+          "baths": 1,
           "sqft": null,
           "type": "APARTMENT",
           "days_on_market": null,
@@ -893,11 +903,6 @@
       "new_listings": 0
     },
     {
-      "date": "2026-09-05",
-      "total_active": 29,
-      "new_listings": 0
-    },
-    {
       "date": "2026-09-06",
       "total_active": 29,
       "new_listings": 0
@@ -1336,6 +1341,11 @@
       "date": "2026-10-11",
       "total_active": 43,
       "new_listings": 17
+    },
+    {
+      "date": "2026-10-11",
+      "total_active": 44,
+      "new_listings": 18
     }
   ]
 }
