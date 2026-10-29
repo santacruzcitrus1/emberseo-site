@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-10-28T15:00:24.491571",
+  "last_updated": "2026-10-29T15:00:42.851981",
   "zips": {
     "95076": {
-      "total": 29,
-      "median_rent": 4000,
-      "avg_rent": 3827,
+      "total": 28,
+      "median_rent": 3950,
+      "avg_rent": 3724,
       "min_rent": 2195,
-      "max_rent": 6000,
+      "max_rent": 4999,
       "by_beds": {
         "1": {
           "count": 2,
@@ -16,15 +16,15 @@
         },
         "2": {
           "count": 8,
-          "median": 3100,
+          "median": 2997,
           "min": 2500,
           "max": 3900
         },
         "3": {
-          "count": 11,
+          "count": 10,
           "median": 4300,
           "min": 3500,
-          "max": 6000
+          "max": 4999
         },
         "4": {
           "count": 3,
@@ -48,24 +48,24 @@
         },
         "1.5": {
           "count": 2,
-          "median": 3397,
-          "min": 3295,
+          "median": 3247,
+          "min": 2995,
           "max": 3500
         },
         "2": {
-          "count": 15,
+          "count": 14,
           "median": 4300,
           "min": 2895,
-          "max": 6000
+          "max": 4999
         }
       },
       "by_type": {
         "APARTMENT": {
           "count": 6,
-          "median": 3100
+          "median": 2997
         },
         "SINGLE_FAMILY": {
-          "count": 15,
+          "count": 14,
           "median": 4300
         },
         "TOWNHOMES": {
@@ -88,7 +88,7 @@
           "source": "realtor",
           "first_seen": "2026-10-20",
           "last_seen": "2026-10-27",
-          "consecutive_misses": 1,
+          "consecutive_misses": 2,
           "status": "missing"
         },
         {
@@ -103,7 +103,7 @@
           "url": "https://www.zillow.com/b/tuttle-watsonville-ca-C8vRMK/",
           "source": "zillow",
           "first_seen": "2026-10-23",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -120,7 +120,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-06-16",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -135,9 +135,10 @@
           "days_on_market": null,
           "url": "https://www.realtor.com/rentals/details/228-Altivo-Ave_Watsonville_CA_95076_M22815-75247",
           "year_built": null,
+          "also_on_zillow": true,
           "source": "realtor",
           "first_seen": "2026-10-13",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -149,11 +150,11 @@
           "baths": 2,
           "sqft": 1256,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 13,
+          "days_on_market": 16,
           "url": "https://www.zillow.com/homedetails/745-Cedar-Dr-Watsonville-CA-95076/16117260_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-15",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -165,11 +166,27 @@
           "baths": 1,
           "sqft": 900,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 16,
+          "days_on_market": 19,
           "url": "https://www.zillow.com/homedetails/529-Lincoln-St-Watsonville-CA-95076/465902914_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-21",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "Miles Lane Apartments, 140 & 146 Miles Ln #140-B",
+          "city": "Watsonville",
+          "price": 2995,
+          "beds": 2,
+          "baths": 1.5,
+          "sqft": 946,
+          "type": "APARTMENT",
+          "days_on_market": null,
+          "url": "https://www.zillow.com/apartments/watsonville-ca/miles-lane-apartments/CtgFW5/",
+          "source": "zillow",
+          "first_seen": "2026-10-26",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -181,12 +198,12 @@
           "baths": 1,
           "sqft": 1200,
           "type": "APARTMENT",
-          "days_on_market": 57,
+          "days_on_market": 58,
           "url": "https://www.realtor.com/rentals/details/130-Miles-Ln-Apt-D_Watsonville_CA_95076_M27194-88040",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-08-31",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -198,12 +215,12 @@
           "baths": 2,
           "sqft": 1200,
           "type": "TOWNHOMES",
-          "days_on_market": 40,
+          "days_on_market": 41,
           "url": "https://www.realtor.com/rentals/details/151-Brennan-St_Watsonville_CA_95076_M94959-63139",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-09-17",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -215,12 +232,12 @@
           "baths": 1,
           "sqft": 924,
           "type": "APARTMENT",
-          "days_on_market": 8,
+          "days_on_market": 9,
           "url": "https://www.realtor.com/rentals/details/233-Silver-Leaf-Dr-Apt-A_Watsonville_CA_95076_M27780-07800",
           "year_built": 1987,
           "source": "realtor",
           "first_seen": "2026-10-19",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -237,22 +254,6 @@
           "source": "zillow",
           "first_seen": "2026-10-13",
           "last_seen": "2026-10-28",
-          "consecutive_misses": 0,
-          "status": "active"
-        },
-        {
-          "address": "Miles Lane Apartments, 140 & 146 Miles Ln #140-B",
-          "city": "Watsonville",
-          "price": 3295,
-          "beds": 2,
-          "baths": 1.5,
-          "sqft": 946,
-          "type": "APARTMENT",
-          "days_on_market": null,
-          "url": "https://www.zillow.com/apartments/watsonville-ca/miles-lane-apartments/CtgFW5/",
-          "source": "zillow",
-          "first_seen": "2026-10-26",
-          "last_seen": "2026-10-27",
           "consecutive_misses": 1,
           "status": "missing"
         },
@@ -268,7 +269,7 @@
           "url": "https://www.zillow.com/homedetails/231-Sunnyhills-Dr-Watsonville-CA-95076/16114139_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-23",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -285,7 +286,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-09-29",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -297,12 +298,12 @@
           "baths": 1,
           "sqft": 1320,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 102,
+          "days_on_market": 103,
           "url": "https://www.realtor.com/rentals/details/20-Arbolado-Dr_Watsonville_CA_95076_M14530-43109",
           "year_built": 1969,
           "source": "realtor",
           "first_seen": "2026-07-18",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -320,6 +321,23 @@
           "source": "realtor",
           "first_seen": "2026-07-08",
           "last_seen": "2026-10-28",
+          "consecutive_misses": 1,
+          "status": "missing"
+        },
+        {
+          "address": "58 Del Rio Ct",
+          "city": "Watsonville",
+          "price": 4000,
+          "beds": 3,
+          "baths": 2,
+          "sqft": 1391,
+          "type": "TOWNHOMES",
+          "days_on_market": null,
+          "url": "https://www.realtor.com/rentals/details/58-Del-Rio-Ct_Watsonville_CA_95076_M24110-64402",
+          "year_built": null,
+          "source": "realtor",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -331,12 +349,12 @@
           "baths": 2,
           "sqft": 1648,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 155,
+          "days_on_market": 156,
           "url": "https://www.realtor.com/rentals/details/10-Parker-Dr_Watsonville_CA_95076_M17703-59612",
           "year_built": 1985,
           "source": "realtor",
           "first_seen": "2026-10-13",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -353,7 +371,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-08-25",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -371,7 +389,7 @@
           "also_on_zillow": true,
           "source": "realtor",
           "first_seen": "2026-08-04",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -383,12 +401,12 @@
           "baths": 2,
           "sqft": 1400,
           "type": "TOWNHOMES",
-          "days_on_market": 5,
+          "days_on_market": 6,
           "url": "https://www.realtor.com/rentals/details/23-Ihlam-Pl_Watsonville_CA_95076_M93145-42098",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-10-22",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -400,12 +418,12 @@
           "baths": 2,
           "sqft": 1400,
           "type": "TOWNHOMES",
-          "days_on_market": 5,
+          "days_on_market": 6,
           "url": "https://www.realtor.com/rentals/details/10-Kamilah-Deyn-Cir_Watsonville_CA_95076_M90049-88182",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-10-22",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -422,7 +440,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-07-01",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -439,7 +457,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-08-26",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -456,7 +474,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-08-26",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -473,7 +491,7 @@
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-10-15",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -485,12 +503,12 @@
           "baths": 2,
           "sqft": 1700,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 55,
+          "days_on_market": 56,
           "url": "https://www.realtor.com/rentals/details/15-Dolores-Ave_Watsonville_CA_95076_M23104-20187",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-09-02",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -502,12 +520,12 @@
           "baths": 2,
           "sqft": 1408,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 175,
+          "days_on_market": 176,
           "url": "https://www.realtor.com/rentals/details/48-Jeanette-Way_Watsonville_CA_95076_M26432-91418",
           "year_built": 1979,
           "source": "realtor",
           "first_seen": "2026-05-13",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -524,8 +542,8 @@
           "source": "zillow",
           "first_seen": "2026-10-11",
           "last_seen": "2026-10-28",
-          "consecutive_misses": 0,
-          "status": "active"
+          "consecutive_misses": 1,
+          "status": "missing"
         },
         {
           "address": "558 Main St",
@@ -535,13 +553,13 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 165,
+          "days_on_market": 166,
           "url": "https://www.realtor.com/rentals/details/558-Main-St_Watsonville_CA_95076_M93554-10512",
           "year_built": null,
           "also_on_zillow": true,
           "source": "realtor",
           "first_seen": "2026-05-15",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -553,12 +571,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 286,
+          "days_on_market": 287,
           "url": "https://www.realtor.com/rentals/details/615-Blackburn-St_Watsonville_CA_95076_M11092-97008",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-08-25",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -570,13 +588,13 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 36,
+          "days_on_market": 37,
           "url": "https://www.realtor.com/rentals/details/17-Sunset-Dr_Watsonville_CA_95076_M14450-30931",
           "year_built": null,
           "also_on_zillow": true,
           "source": "realtor",
           "first_seen": "2026-09-21",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -588,12 +606,12 @@
           "baths": null,
           "sqft": null,
           "type": "APARTMENT",
-          "days_on_market": 28,
+          "days_on_market": 29,
           "url": "https://www.realtor.com/rentals/details/601-605_Watsonville_CA_95076_M94849-30109",
           "year_built": null,
           "source": "realtor",
           "first_seen": "2026-09-29",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         }
@@ -602,74 +620,74 @@
       "rented_count": 0
     },
     "95019": {
-      "total": 14,
-      "median_rent": 4250,
-      "avg_rent": 3928,
-      "min_rent": 2100,
+      "total": 25,
+      "median_rent": 4200,
+      "avg_rent": 3812,
+      "min_rent": 2186,
       "max_rent": 4999,
       "by_beds": {
         "1": {
-          "count": 2,
-          "median": 2650,
-          "min": 2100,
+          "count": 3,
+          "median": 2250,
+          "min": 2186,
           "max": 3200
         },
         "2": {
-          "count": 1,
-          "median": 3200,
-          "min": 3200,
+          "count": 5,
+          "median": 3000,
+          "min": 2795,
           "max": 3200
         },
         "3": {
-          "count": 9,
+          "count": 13,
           "median": 4300,
           "min": 3500,
           "max": 4999
         },
         "4": {
-          "count": 2,
-          "median": 4250,
+          "count": 4,
+          "median": 4414,
           "min": 4200,
-          "max": 4300
+          "max": 4550
         }
       },
       "by_baths": {
         "1": {
-          "count": 4,
-          "median": 3500,
-          "min": 2100,
+          "count": 7,
+          "median": 3200,
+          "min": 2186,
           "max": 4200
         },
         "1.5": {
-          "count": 2,
-          "median": 3350,
-          "min": 3200,
+          "count": 4,
+          "median": 3100,
+          "min": 2995,
           "max": 3500
         },
         "2": {
-          "count": 5,
+          "count": 6,
           "median": 4302,
           "min": 4200,
           "max": 4999
         },
         "2.5": {
-          "count": 3,
-          "median": 4300,
-          "min": 4300,
-          "max": 4300
+          "count": 8,
+          "median": 4301,
+          "min": 3200,
+          "max": 4528
         }
       },
       "by_type": {
         "APARTMENT": {
-          "count": 5,
+          "count": 11,
           "median": 3200
         },
         "SINGLE_FAMILY": {
-          "count": 6,
-          "median": 4250
+          "count": 10,
+          "median": 4302
         },
         "TOWNHOMES": {
-          "count": 3,
+          "count": 4,
           "median": 4300
         }
       },
@@ -687,6 +705,86 @@
           "source": "zillow",
           "first_seen": "2026-10-23",
           "last_seen": "2026-10-28",
+          "consecutive_misses": 1,
+          "status": "missing"
+        },
+        {
+          "address": "21 Bronson St #A",
+          "city": "Watsonville",
+          "price": 2186,
+          "beds": 1,
+          "baths": 1,
+          "sqft": 400,
+          "type": "APARTMENT",
+          "days_on_market": 40,
+          "url": "https://www.zillow.com/homedetails/21-Bronson-St-A-Watsonville-CA-95076/456579055_zpid/",
+          "source": "zillow",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "109 E High St #A",
+          "city": "Watsonville",
+          "price": 2250,
+          "beds": 1,
+          "baths": 1,
+          "sqft": 500,
+          "type": "APARTMENT",
+          "days_on_market": 3,
+          "url": "https://www.zillow.com/homedetails/109-E-High-St-A-Watsonville-CA-95076/450553548_zpid/",
+          "source": "zillow",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "217 Brennan St #B",
+          "city": "Watsonville",
+          "price": 2795,
+          "beds": 2,
+          "baths": 1,
+          "sqft": 700,
+          "type": "APARTMENT",
+          "days_on_market": 7,
+          "url": "https://www.zillow.com/homedetails/217-Brennan-St-B-Watsonville-CA-95076/460450960_zpid/",
+          "source": "zillow",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "2 Miles Lane Apartments, 140 & 146 Miles Ln #140-B",
+          "city": "Watsonville",
+          "price": 2995,
+          "beds": 2,
+          "baths": 1.5,
+          "sqft": 946,
+          "type": "APARTMENT",
+          "days_on_market": null,
+          "url": "https://www.zillow.com/apartments/watsonville-ca/miles-lane-apartments/CtgFW5/",
+          "source": "zillow",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "130 Miles Ln APT D",
+          "city": "Watsonville",
+          "price": 3000,
+          "beds": 2,
+          "baths": 1.5,
+          "sqft": 1200,
+          "type": "APARTMENT",
+          "days_on_market": 58,
+          "url": "https://www.zillow.com/homedetails/130-Miles-Ln-APT-D-Watsonville-CA-95076/464955760_zpid/",
+          "source": "zillow",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -698,11 +796,11 @@
           "baths": 1,
           "sqft": 450,
           "type": "APARTMENT",
-          "days_on_market": 36,
+          "days_on_market": 39,
           "url": "https://www.zillow.com/homedetails/222-Manfre-Rd-B-Watsonville-CA-95076/463690718_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-11",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -714,11 +812,27 @@
           "baths": 1.5,
           "sqft": 924,
           "type": "APARTMENT",
-          "days_on_market": 7,
+          "days_on_market": 10,
           "url": "https://www.zillow.com/homedetails/233-Silver-Leaf-Dr-APT-A-Watsonville-CA-95076/16118642_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-23",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "151 Brennan St APT C",
+          "city": "Watsonville",
+          "price": 3200,
+          "beds": 2,
+          "baths": 2.5,
+          "sqft": 1200,
+          "type": "TOWNHOMES",
+          "days_on_market": 42,
+          "url": "https://www.zillow.com/homedetails/151-Brennan-St-APT-C-Watsonville-CA-95076/2058823244_zpid/",
+          "source": "zillow",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -734,7 +848,7 @@
           "url": "https://www.zillow.com/homedetails/231-Sunnyhills-Dr-Watsonville-CA-95076/16114139_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-11",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -746,11 +860,27 @@
           "baths": 1,
           "sqft": 1020,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 27,
+          "days_on_market": 30,
           "url": "https://www.zillow.com/homedetails/10-Allston-Way-Watsonville-CA-95076/16115030_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-11",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "135 Monte Vista Ave #B",
+          "city": "Watsonville",
+          "price": 4000,
+          "beds": 3,
+          "baths": 1,
+          "sqft": 1000,
+          "type": "APARTMENT",
+          "days_on_market": 59,
+          "url": "https://www.zillow.com/homedetails/135-Monte-Vista-Ave-B-Watsonville-CA-95076/299229256_zpid/",
+          "source": "zillow",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -768,7 +898,7 @@
           "also_on_zillow": true,
           "source": "realtor",
           "first_seen": "2026-10-11",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -778,13 +908,13 @@
           "price": 4200,
           "beds": 3,
           "baths": 1,
-          "sqft": 700,
+          "sqft": 750,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 19,
+          "days_on_market": 22,
           "url": "https://www.zillow.com/homedetails/9-Memorial-Ave-Freedom-CA-95019/16142475_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-11",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -796,11 +926,11 @@
           "baths": 2.5,
           "sqft": 2451,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 62,
+          "days_on_market": 65,
           "url": "https://www.zillow.com/homedetails/162-Amesti-Rd-Watsonville-CA-95076/456655224_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-11",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -817,8 +947,8 @@
           "source": "zillow",
           "first_seen": "2026-10-11",
           "last_seen": "2026-10-28",
-          "consecutive_misses": 0,
-          "status": "active"
+          "consecutive_misses": 1,
+          "status": "missing"
         },
         {
           "address": "10 Kamilah Deyn Cir #10",
@@ -828,11 +958,11 @@
           "baths": 2.5,
           "sqft": 1400,
           "type": "TOWNHOMES",
-          "days_on_market": 10,
+          "days_on_market": 13,
           "url": "https://www.zillow.com/homedetails/10-Kamilah-Deyn-Cir-10-Freedom-CA-95019/466069236_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-18",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -844,11 +974,27 @@
           "baths": 2,
           "sqft": 1381,
           "type": "APARTMENT",
-          "days_on_market": 9,
+          "days_on_market": 12,
           "url": "https://www.zillow.com/homedetails/10-Kamilah-Deyn-Cir-Watsonville-CA-95076/466078546_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-18",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "23 Ihlam Pl",
+          "city": "Watsonville",
+          "price": 4300,
+          "beds": 3,
+          "baths": 2.5,
+          "sqft": 1400,
+          "type": "TOWNHOMES",
+          "days_on_market": 13,
+          "url": "https://www.zillow.com/homedetails/23-Ihlam-Pl-Watsonville-CA-95076/318335082_zpid/",
+          "source": "zillow",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -860,11 +1006,11 @@
           "baths": 2,
           "sqft": 1223,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 18,
+          "days_on_market": 21,
           "url": "https://www.zillow.com/homedetails/45-Airport-Rd-Freedom-CA-95019/16114412_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-11",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -876,11 +1022,91 @@
           "baths": 2,
           "sqft": 1381,
           "type": "TOWNHOMES",
-          "days_on_market": 277,
+          "days_on_market": 280,
           "url": "https://www.zillow.com/homedetails/221-Airport-Blvd-Freedom-CA-95019/2060763539_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-11",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "34 Blackbird Cir",
+          "city": "Watsonville",
+          "price": 4302,
+          "beds": 3,
+          "baths": 2.5,
+          "sqft": 1350,
+          "type": "SINGLE_FAMILY",
+          "days_on_market": 120,
+          "url": "https://www.zillow.com/homedetails/34-Blackbird-Cir-Watsonville-CA-95076/332970546_zpid/",
+          "source": "zillow",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "45 Blackbird Cir",
+          "city": "Watsonville",
+          "price": 4302,
+          "beds": 3,
+          "baths": 2.5,
+          "sqft": 1418,
+          "type": "SINGLE_FAMILY",
+          "days_on_market": 64,
+          "url": "https://www.zillow.com/homedetails/45-Blackbird-Cir-Watsonville-CA-95076/332970577_zpid/",
+          "source": "zillow",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "80 Blackbird Cir",
+          "city": "Watsonville",
+          "price": 4302,
+          "beds": 3,
+          "baths": 2.5,
+          "sqft": 1512,
+          "type": "SINGLE_FAMILY",
+          "days_on_market": 80,
+          "url": "https://www.zillow.com/homedetails/80-Blackbird-Cir-Watsonville-CA-95076/332970553_zpid/",
+          "source": "zillow",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "70 Blackbird Cir",
+          "city": "Watsonville",
+          "price": 4528,
+          "beds": 4,
+          "baths": 2.5,
+          "sqft": 2002,
+          "type": "SINGLE_FAMILY",
+          "days_on_market": 16,
+          "url": "https://www.zillow.com/homedetails/70-Blackbird-Cir-Watsonville-CA-95076/332970558_zpid/",
+          "source": "zillow",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
+          "consecutive_misses": 0,
+          "status": "active"
+        },
+        {
+          "address": "99 Junipero Serra Dr #122",
+          "city": "Watsonville",
+          "price": 4550,
+          "beds": 4,
+          "baths": 2,
+          "sqft": 1764,
+          "type": "APARTMENT",
+          "days_on_market": 24,
+          "url": "https://www.zillow.com/homedetails/99-Junipero-Serra-Dr-122-Watsonville-CA-95076/464651337_zpid/",
+          "source": "zillow",
+          "first_seen": "2026-10-29",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         },
@@ -892,11 +1118,11 @@
           "baths": 2,
           "sqft": 1408,
           "type": "SINGLE_FAMILY",
-          "days_on_market": 174,
+          "days_on_market": 177,
           "url": "https://www.zillow.com/homedetails/48-Jeanette-Way-Watsonville-CA-95076/16114108_zpid/",
           "source": "zillow",
           "first_seen": "2026-10-11",
-          "last_seen": "2026-10-28",
+          "last_seen": "2026-10-29",
           "consecutive_misses": 0,
           "status": "active"
         }
@@ -906,11 +1132,6 @@
     }
   },
   "scrape_history": [
-    {
-      "date": "2026-09-19",
-      "total_active": 31,
-      "new_listings": 1
-    },
     {
       "date": "2026-09-19",
       "total_active": 29,
@@ -1355,6 +1576,11 @@
       "date": "2026-10-28",
       "total_active": 45,
       "new_listings": 0
+    },
+    {
+      "date": "2026-10-29",
+      "total_active": 59,
+      "new_listings": 14
     }
   ]
 }
